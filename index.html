@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>언커먼 타올 페이스타월</title>
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="언커먼 타올 페이스타월">
+<meta property="og:description" content="세안 끝, 부드러운 한 장으로.">
+<meta property="og:url" content="https://nofaildesignoffice.github.io/uncommon-detail-y6l8/">
+<meta property="og:image" content="https://nofaildesignoffice.github.io/uncommon-detail-y6l8/img/og.jpg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<!--
+  언커먼 타올 모바일 상세페이지 초안 v0.1 (2026-10-23)
+  기획: 07_상세페이지_기획안_v2.md
+  노란 [확인] 표시 = 제작 메모 (공개 전 삭제). 우측 상단 버튼으로 숨겨서 실제 화면처럼 볼 수 있음.
+  시험 결과 섹션(#test)은 A안 — FITI 결과 전문·광고 사용 동의(G2) 확보 전에는 통째로 삭제.
+-->
+<style>
+:root{
+  --bg:#f7f6f3; --white:#fff; --ink:#1a1a1a; --ink2:#363636; --muted:#8a8a8a; --line:#e8e8e8;
+  --point:#0ABAB5; --point-deep:#078a86; --point-soft:rgba(10,186,181,.08); --dark:#1c1c1a;
+  --chk:#ffe55c;
+  --font:'Pretendard Variable','Pretendard','Apple SD Gothic Neo',-apple-system,system-ui,'Noto Sans KR',sans-serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:#e9e8e4;line-height:1.7;word-break:keep-all;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+.page{max-width:480px;margin:0 auto;background:var(--white);padding-bottom:84px;box-shadow:0 0 30px rgba(0,0,0,.08);overflow-x:hidden}
+img{display:block;width:100%;height:auto}
+section{padding:72px 20px 56px}
+.bg{background:var(--bg)}
+.eyebrow{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--point-deep);text-align:center;margin-bottom:12px}
+.h2{font-size:26px;font-weight:800;line-height:1.38;text-align:center;letter-spacing:-.035em}
+.h2 em{font-style:normal;color:var(--point-deep)}
+.sub{font-size:14.5px;color:var(--ink2);text-align:center;margin-top:14px}
+.small{font-size:12px;color:var(--muted)}
+.mt8{margin-top:8px}.mt16{margin-top:16px}.mt24{margin-top:24px}.mt32{margin-top:32px}.mt40{margin-top:40px}
+.rad{border-radius:14px;overflow:hidden}
+
+/* 제작 메모 */
+.chk{display:inline;background:var(--chk);color:#5a4a00;font-size:11px;font-weight:700;padding:1px 6px;border-radius:4px;margin:0 2px;letter-spacing:0;line-height:1.9}
+.chk-block{display:block;background:#fff8c9;border:1.5px dashed #e0c200;color:#5a4a00;font-size:12px;padding:10px 12px;border-radius:10px;margin:14px 0;line-height:1.6}
+.memo-off .chk,.memo-off .chk-block{display:none!important}
+.memo-toggle{position:fixed;top:12px;right:12px;z-index:60;background:#222;color:#fff;border:0;border-radius:999px;font:700 12px var(--font);padding:8px 12px;cursor:pointer;opacity:.85}
+.ph{background:repeating-linear-gradient(45deg,#f1f1ef 0 10px,#e9e9e6 10px 20px);color:#777;font-size:13px;text-align:center;display:flex;align-items:center;justify-content:center;padding:16px;border-radius:14px}
+
+/* 01 Hero */
+.hero{padding:0;position:relative}
+.hero .copy{padding:40px 24px 36px;text-align:center}
+.hero .brand{font-size:12px;font-weight:700;letter-spacing:.24em;color:var(--muted)}
+.hero h1{font-size:34px;font-weight:800;line-height:1.3;letter-spacing:-.04em;margin-top:14px}
+.hero p{font-size:15px;color:var(--ink2);margin-top:12px}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:22px}
+.chips span{font-size:12.5px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--white)}
+
+/* 02 실물 가까이 */
+.swipe{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:28px -20px 0;padding:0 20px 6px;scrollbar-width:none}
+.swipe::-webkit-scrollbar{display:none}
+.swipe figure{flex:0 0 82%;scroll-snap-align:center}
+.swipe img{border-radius:14px;aspect-ratio:4/5;object-fit:cover}
+.swipe figcaption{font-size:13px;color:var(--ink2);margin-top:10px}
+.swipe figcaption b{display:block;font-size:14.5px;color:var(--ink)}
+
+/* 03 질문 카드 */
+.qcards{display:grid;gap:10px;margin-top:28px}
+.qcard{display:flex;justify-content:space-between;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px;text-decoration:none;color:var(--ink);font-weight:700;font-size:15.5px}
+.qcard small{display:block;font-weight:500;font-size:12.5px;color:var(--muted);margin-top:2px}
+.qcard i{font-style:normal;color:var(--point-deep);font-size:18px}
+
+/* 04 브랜드 */
+.story p{font-size:15px;color:var(--ink2);text-align:center;line-height:1.9}
+.story .quote{font-size:19px;font-weight:700;color:var(--ink);line-height:1.6;margin-top:28px}
+
+/* 05 기준 교육 */
+.crit{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:22px 20px;margin-top:14px}
+.crit .n{font-size:12px;font-weight:800;color:var(--point-deep);letter-spacing:.1em}
+.crit h3{font-size:18px;font-weight:800;margin-top:6px}
+.crit p{font-size:14.5px;color:var(--ink2);margin-top:8px}
+.crit .ans{margin-top:14px;padding:14px;background:var(--point-soft);border-radius:10px;font-size:14px}
+.crit .ans b{color:var(--point-deep)}
+.aside{margin-top:20px;border-left:3px solid var(--point);padding:4px 0 4px 14px;font-size:13.5px;color:var(--ink2)}
+.honest{margin-top:24px;text-align:center;font-size:14px;font-weight:700;color:var(--ink)}
+
+/* 06 디테일 */
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:28px}
+.detail-grid img{border-radius:12px;aspect-ratio:1/1;object-fit:cover}
+.detail-grid .wide{grid-column:1/-1}
+.detail-grid .wide img{aspect-ratio:3/2}
+.spec{margin-top:24px;border-top:1px solid var(--ink)}
+.spec div{display:flex;justify-content:space-between;padding:13px 2px;border-bottom:1px solid var(--line);font-size:14px}
+.spec dt{color:var(--muted)}
+.spec dd{font-weight:700;text-align:right}
+
+/* 07 시험 결과 */
+.test-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:12px}
+.test-card .k{font-size:12px;font-weight:700;color:var(--muted)}
+.test-card h3{font-size:16.5px;font-weight:800;margin-top:4px}
+.test-card .v{font-size:24px;font-weight:800;color:var(--point-deep);margin-top:10px;letter-spacing:-.03em}
+.test-card .v small{font-size:13px;color:var(--ink2);font-weight:600}
+.test-card .meta{font-size:12px;color:var(--muted);margin-top:10px;line-height:1.6}
+.test-card .lim{font-size:12.5px;color:var(--ink2);margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
+
+/* 08 납품 (보조) */
+.trust{padding:40px 20px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust .lead{font-size:16px;color:var(--ink2);line-height:1.7}
+.trust .lead b{color:var(--ink);font-weight:800}
+.trust .cats{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:16px}
+.trust .cats span{border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:12.5px;color:var(--ink2)}
+.trust .small{margin-top:14px}
+
+/* 09 컬러 */
+.colors{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.colors figure img{border-radius:12px;aspect-ratio:1/1;object-fit:cover}
+.colors figcaption{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;margin-top:8px}
+.dot{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
+
+/* 10 관리 */
+.steps{margin-top:28px;counter-reset:s}
+.step{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.step::before{counter-increment:s;content:counter(s);flex:0 0 30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.step b{display:block;font-size:15.5px}
+.step p{font-size:13.5px;color:var(--ink2);margin-top:2px}
+.care-icons{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px;text-align:center}
+.care-icons div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 4px;font-size:12px;font-weight:600;color:var(--ink2)}
+.care-icons div strong{display:block;font-size:20px;margin-bottom:4px}
+.promise{display:grid;gap:8px;margin-top:22px}
+.promise div{background:var(--point-soft);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600}
+.promise div::before{content:"✓ ";color:var(--point-deep);font-weight:800}
+
+/* 11 선물 */
+.gift{text-align:center}
+.gift .pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:28px}
+.gift .pair img{border-radius:12px;aspect-ratio:2/3;object-fit:cover}
+.gift p.body{font-size:15px;color:var(--ink2);margin-top:22px;line-height:1.9}
+
+/* 12 Offer */
+.offer-list{display:grid;gap:12px;margin-top:28px}
+.opt{position:relative;display:block;background:var(--white);border:1.5px solid var(--line);border-radius:16px;padding:20px;cursor:pointer}
+.opt input{position:absolute;opacity:0}
+.opt:has(input:checked){border-color:var(--point);box-shadow:0 0 0 3px var(--point-soft)}
+.opt .row{display:flex;justify-content:space-between;align-items:baseline}
+.opt .qty{font-size:19px;font-weight:800}
+.opt .badge{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:var(--point);border-radius:6px;padding:2px 7px;margin-left:6px;vertical-align:3px}
+.opt .price{font-size:22px;font-weight:800;letter-spacing:-.03em}
+.opt .was{font-size:13px;color:var(--muted);text-decoration:line-through;text-align:right}
+.opt .per{font-size:13px;color:var(--ink2);margin-top:6px}
+.btn{display:block;width:100%;text-align:center;padding:17px;border-radius:14px;font:800 16px var(--font);border:0;cursor:pointer;text-decoration:none}
+.btn-main{background:var(--ink);color:#fff}
+.btn-line{background:var(--white);color:var(--ink);border:1.5px solid var(--ink)}
+
+/* 13 FAQ / 고시 */
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:18px 28px 18px 0;font-weight:700;font-size:15px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"Q. ";color:var(--point-deep)}
+summary::after{content:"+";position:absolute;right:4px;top:15px;font-size:20px;font-weight:400;color:var(--muted)}
+details[open] summary::after{content:"−"}
+details .a{padding:0 0 18px;font-size:14px;color:var(--ink2)}
+.notice{font-size:12.5px;width:100%;border-collapse:collapse;margin-top:16px}
+.notice th,.notice td{border-top:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top}
+.notice th{width:34%;background:var(--bg);font-weight:600;color:var(--ink2)}
+.notice tr:last-child th,.notice tr:last-child td{border-bottom:1px solid var(--line)}
+
+/* 하단 고정 바 + 옵션 시트 */
+.bar{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:480px;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;align-items:center}
+.bar .p{flex:0 0 auto;line-height:1.3}
+.bar .p small{display:block;font-size:11px;color:var(--muted)}
+.bar .p b{font-size:17px;font-weight:800}
+.bar .btn{padding:15px 10px;font-size:15px}
+.dim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:70;opacity:0;pointer-events:none;transition:opacity .25s}
+.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,100%);width:100%;max-width:480px;z-index:80;background:var(--white);border-radius:20px 20px 0 0;padding:22px 20px calc(18px + env(safe-area-inset-bottom));transition:transform .3s ease;max-height:86vh;overflow-y:auto}
+.open .dim{opacity:1;pointer-events:auto}
+.open .sheet{transform:translate(-50%,0)}
+.sheet h4{font-size:15px;font-weight:800;margin:18px 0 10px}
+.sheet h4:first-of-type{margin-top:4px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.seg button{border:1.5px solid var(--line);background:var(--white);border-radius:12px;padding:12px 4px;font:700 14px var(--font);cursor:pointer;color:var(--ink)}
+.seg button.on{border-color:var(--point);background:var(--point-soft)}
+.seg button small{display:block;font-weight:500;font-size:11.5px;color:var(--muted)}
+.crow{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px;font-weight:600}
+.crow .l{display:flex;align-items:center;gap:8px}
+.stepper{display:flex;align-items:center;gap:12px}
+.stepper button{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--white);font-size:17px;cursor:pointer}
+.stepper span{min-width:18px;text-align:center;font-weight:800}
+.sum{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 12px}
+.sum b{font-size:22px;font-weight:800}
+.left{font-size:12.5px;color:var(--point-deep);font-weight:700}
+.left.ok{color:var(--muted)}
+</style>
+</head>
+<body>
+<button class="memo-toggle" type="button" onclick="document.body.classList.toggle('memo-off');this.textContent=document.body.classList.contains('memo-off')?'제작 메모 보기':'제작 메모 숨기기'">제작 메모 숨기기</button>
+<div class="page">
+
+<!-- ═══ 01 HERO ═══ -->
+<section class="hero">
+  <img src="img/hero.jpg" alt="흰색 언커먼 페이스타월 세 장을 말아 욕실 선반에 올려둔 모습">
+  <div class="copy">
+    <span class="brand">UNCOMMON TOWEL</span>
+    <h1>세안 끝,<br>부드러운 한 장으로.</h1>
+    <p>매일 닿는 감촉부터 욕실에 둘 색까지,<br>직접 고르세요.</p>
+    <div class="chips">
+      <span>밤부 비스코스 100%<span class="chk">G1 최종 혼용률</span></span>
+      <span>40×80cm</span>
+      <span>장당 220g</span>
+      <span>국내 생산<span class="chk">확인</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 02 실물 가까이 ═══ -->
+<section class="bg" id="close">
+  <span class="eyebrow">CLOSE UP</span>
+  <h2 class="h2">사진만으로 감촉을<br>다 전할 수는 없습니다.</h2>
+  <p class="sub">그래서 결, 두께, 마감까지<br>가까이 보여드립니다.</p>
+  <span class="chk-block">[신규 촬영] 손으로 접고 펼치는 감촉 영상 + 전체를 펼친 컷을 이 자리 맨 앞에 넣기</span>
+  <div class="swipe">
+    <figure><img src="img/loop.jpg" alt="수건 표면 루프 확대"><figcaption><b>촘촘하게 선 표면 루프</b>얼굴에 먼저 닿는 면입니다.</figcaption></figure>
+    <figure><img src="img/edge.jpg" alt="수건 가장자리 봉제 확대"><figcaption><b>가장자리 봉제</b>가장자리의 마감을 가까이 보여드립니다.</figcaption></figure>
+    <figure><img src="img/fold2.jpg" alt="접힌 수건의 두께감"><figcaption><b>접었을 때의 두께</b>한 장 220g, 손에 쥐면 도톰합니다.<span class="chk">단면 보이게 접은 컷으로 교체</span></figcaption></figure>
+    <figure><img src="img/spread.jpg" alt="펼쳐둔 수건의 결"><figcaption><b>펼쳤을 때의 결</b>빛이 비치는 방향에 따라 결이 보입니다.</figcaption></figure>
+  </div>
+  <span class="chk-block">[후기 확보 후] 실사용 후기 2~3개 — 사용 기간·세탁 횟수·광고 관계 표기 필수</span>
+</section>
+
+<!-- ═══ 03 PROBLEM ═══ -->
+<section id="question">
+  <span class="eyebrow">QUESTION</span>
+  <h2 class="h2">수건을 고를 때,<br><em>가격 말고</em> 무엇을 보셨나요?</h2>
+  <p class="sub">페이스타월을 바꾸기 전에<br>많이들 궁금해하시는 것부터 답합니다.</p>
+  <div class="qcards">
+    <a class="qcard" href="#close">닦을 때 감촉이 어떤가요?<i>→</i></a>
+    <a class="qcard" href="#criteria">한 장이 얼마나 도톰한가요?<i>→</i></a>
+    <a class="qcard" href="#care">우리 집 세탁 방식에 맞나요?<i>→</i></a>
+    <a class="qcard" href="#offer">몇 장이 필요할까요?<i>→</i></a>
+  </div>
+  <span class="chk-block">실제 CS·DM 원문 질문으로 교체</span>
+</section>
+
+<!-- ═══ 04 브랜드 ═══ -->
+<section class="bg story">
+  <span class="eyebrow">WHY ONE TOWEL</span>
+  <h2 class="h2">그래서<br>페이스타월 하나만 만듭니다</h2>
+  <img class="rad mt32" src="img/roll2.jpg" alt="말아둔 흰 페이스타월">
+  <p class="mt32">세수하고 나서, 화장 지우고 나서,<br>운동 끝나고 땀을 닦을 때.</p>
+  <p class="mt16">하루에도 몇 번씩 얼굴에 닿는 수건이라<br>소재부터 다시 살폈습니다.<br>원사부터 직조, 염색까지 다시 봤습니다.</p>
+  <p class="quote">많이 만드는 수건보다,<br>매일 손이 가는 한 장을.</p>
+  <span class="chk-block">원사·직조 공정 컷이 있으면 위 사진과 교체</span>
+</section>
+
+<!-- ═══ 05 선택 기준 ═══ -->
+<section id="criteria">
+  <span class="eyebrow">HOW TO CHOOSE</span>
+  <h2 class="h2">밤부 수건,<br><em>이 세 가지만</em> 보고 고르세요</h2>
+
+  <div class="crit mt32">
+    <span class="n">CHECK 01</span>
+    <h3>무엇으로 만들었나요?</h3>
+    <p>'천연 대나무'라는 말보다, 어떤 실로 만들었는지 정확히 적혀 있는지 보세요.</p>
+    <div class="ans"><b>언커먼</b> · 대나무 유래 비스코스(레이온) 100%<span class="chk">G1 라벨·고시와 일치</span></div>
+  </div>
+
+  <div class="crit">
+    <span class="n">CHECK 02</span>
+    <h3>크기와 무게는요?</h3>
+    <p>같은 40×80cm라도 한 장의 무게는 제품마다 다릅니다. 지금 쓰는 수건의 무게와 비교해 보세요.</p>
+    <div class="ans"><b>언커먼</b> · 40×80cm, 장당 220g</div>
+    <p class="small mt8">무게가 곧 품질이라는 뜻은 아닙니다. 손에 쥐었을 때의 도톰함을 가늠하는 기준입니다.</p>
+  </div>
+
+  <div class="crit">
+    <span class="n">CHECK 03</span>
+    <h3>우리 집에서 어떻게 관리하나요?</h3>
+    <p>매일 빨아 쓰는 물건입니다. 세탁·건조 방법이 우리 집 방식과 맞는지 먼저 보세요.</p>
+    <div class="ans"><b>언커먼</b> · 세탁 가이드 동봉 · <a href="#care" style="color:inherit">관리 방법 보기 →</a></div>
+  </div>
+
+  <p class="aside">30수·40수 같은 번수 하나로는 완성된 수건을 판단하기 어렵습니다. 같은 실이라도 밀도, 직조, 염색, 마감에서 결과가 갈립니다.</p>
+  <p class="honest">대나무에서 유래한 비스코스라는 이유만으로<br>천연 항균성을 주장하지 않습니다.</p>
+</section>
+
+<!-- ═══ 06 디테일 ═══ -->
+<section class="bg">
+  <span class="eyebrow">DETAIL</span>
+  <h2 class="h2">접어두었을 때도 보이는,<br>가장자리의 무늬</h2>
+  <p class="sub">언커먼만의 빗금문 가장자리는<br>디자인으로 등록되어 있습니다.</p>
+  <div class="detail-grid">
+    <div class="wide"><img src="img/fold1.jpg" alt="가장자리 빗금문과 라벨"><span class="chk-block">이 사진은 빗금문이 잘 안 보임 → 빗금문 정면 확대 컷으로 교체</span></div>
+    <img src="img/label1.jpg" alt="브랜드 라벨 봉제">
+    <img src="img/label2.jpg" alt="라벨과 가장자리 마감">
+  </div>
+    <dl class="spec">
+    <div><dt>소재</dt><dd>밤부 비스코스 100%<span class="chk">G1</span></dd></div>
+    <div><dt>크기</dt><dd>40 × 80cm</dd></div>
+    <div><dt>무게</dt><dd>장당 220g</dd></div>
+    <div><dt>디자인 등록</dt><dd>제30-1303321호</dd></div>
+  </dl>
+</section>
+
+<!-- ═══ 07 시험 결과 (A안) ═══ -->
+<section id="test">
+  <span class="chk-block"><b>A안 섹션</b> — FITI 항목별 결과 전문 + 진위 확인 + 광고 사용 서면 동의(G2)를 충족한 카드만 남김. 미충족 시 섹션 통째로 삭제(B안). 수치는 리서치 자료 기준이며 원본 성적서로 재대조 필요.</span>
+  <span class="eyebrow">TEST REPORT</span>
+  <h2 class="h2">시험 결과는,<br>시험한 조건과 함께 적었습니다</h2>
+  <p class="sub">숫자만 크게 쓰지 않고,<br>무엇을 어떻게 시험했는지 옆에 둡니다.</p>
+
+  <div class="test-card mt32">
+    <span class="k">항균성 · KS K 0693:2022</span>
+    <h3>항균 가공을 거친 시료를 시험했습니다</h3>
+    <p class="v">99.9% <small>감소 · 황색포도상구균</small></p>
+    <p class="v" style="margin-top:2px">95.0% <small>감소 · 폐렴균</small></p>
+    <p class="meta">시료: UNCOMMON TOWEL-THE SOFT · 시험기관 FITI시험연구원 · 접수번호 <span class="chk">확인</span></p>
+    <p class="lim">반복 세탁 후 유지 여부는 현재 확보한 자료로 확인되지 않았습니다.</p>
+  </div>
+
+  <div class="test-card">
+    <span class="k">알러지성 염료 · KS K 0736:2019</span>
+    <h3>알러지성 염료 22종</h3>
+    <p class="v">검출한계 미만 <small>(20mg/kg)</small></p>
+    <p class="meta">시료 색상 <span class="chk">확인</span> · 접수번호 <span class="chk">확인</span></p>
+  </div>
+
+  <div class="test-card">
+    <span class="k">흡수성 · 바이렉법</span>
+    <h3>물이 천을 따라 올라온 높이</h3>
+    <p class="v">57mm <small>길이 방향</small> · 59mm <small>너비 방향</small></p>
+    <p class="meta">측정 시간 <span class="chk">확인</span> · 접수번호 <span class="chk">확인</span></p>
+  </div>
+
+  <div class="test-card">
+    <span class="k">세탁 견뢰도 · 시험규격 <span class="chk">확인</span></span>
+    <h3>빨았을 때 색이 빠지는 정도</h3>
+    <p class="v">4~5급</p>
+    <p class="meta">3개 색상 시료 <span class="chk">시료 색상명</span> · 접수번호 <span class="chk">확인</span></p>
+    <p class="lim">시험한 색상 시료의 결과이며, 전 색상에 대한 결과가 아닙니다.</p>
+  </div>
+
+  <div class="test-card">
+    <span class="k">세탁 치수변화율 · 시험규격 <span class="chk">확인</span></span>
+    <h3>빨았을 때 크기 변화</h3>
+    <p class="v">길이 −3.0% · 폭 +0.5% <small>1회 세탁 후</small></p>
+    <p class="meta">시료 색상 <span class="chk">확인</span> · 접수번호 <span class="chk">확인</span></p>
+    <p class="lim">시험한 시료의 결과이며, 세탁 조건에 따라 달라질 수 있습니다.</p>
+  </div>
+</section>
+
+<!-- ═══ 08 납품 이력 ═══ -->
+<section class="trust">
+  <span class="eyebrow">TRACK RECORD</span>
+  <p class="lead">언커먼은 관공서·대학·기업·협회 등<br><b>50여 곳</b>에 납품해 왔습니다.</p>
+  <div class="cats"><span>관공서</span><span>대학</span><span>기업</span><span>협회·조합</span></div>
+  <p class="small">납품 이력은 언커먼 수건 전체 기준이며, 이 페이스타월 제품에 한정되지 않습니다.<span class="chk">기관 로고는 동의받은 곳만</span></p>
+</section>
+
+<!-- ═══ 09 컬러 ═══ -->
+<section class="bg" id="colors">
+  <span class="eyebrow">COLOR</span>
+  <h2 class="h2">욕실에 둘 색을,<br>가까이 보고 고르세요</h2>
+  <p class="sub">화면에 따라 실제 색상과 다르게 보일 수 있습니다.</p>
+  <img class="rad mt32" src="img/stack.jpg" alt="여러 색 수건을 쌓아둔 모습"><span class="chk-block">회색·아이보리 수건이 섞여 있음 → 확정 판매 4색만 쌓은 컷으로 교체</span>
+  <div class="colors">
+    <figure><img src="img/c_white.jpg" alt="화이트"><figcaption><span class="dot" style="background:#f6f3ec"></span>화이트</figcaption></figure>
+    <figure><img src="img/c_sky.jpg" alt="스카이블루"><figcaption><span class="dot" style="background:#bcd6ef"></span>스카이블루</figcaption></figure>
+    <figure><img src="img/c_mint.jpg" alt="민트"><figcaption><span class="dot" style="background:#c4ece3"></span>민트</figcaption></figure>
+    <figure><img src="img/c_lavender.jpg" alt="라벤더"><figcaption><span class="dot" style="background:#b9a3e6"></span>라벤더</figcaption></figure>
+  </div>
+  <span class="chk-block">G4 — 판매 컬러·색상명 확정 (제안서 4색 vs 9월 촬영 컬러). 사진은 9월 테스트 촬영 기준</span>
+</section>
+
+<!-- ═══ 10 관리 + 교환 ═══ -->
+<section id="care">
+  <span class="eyebrow">CARE</span>
+  <h2 class="h2">받으신 날부터,<br>이렇게 써 주세요</h2>
+  <div class="steps">
+    <div class="step"><div><b>첫 세탁은 단독으로</b><p>처음 한두 번은 다른 빨래와 나눠 세탁해 주세요.</p></div></div>
+    <div class="step"><div><b>미지근한 물, 중성세제</b><p>30~40℃ 물에 중성세제로 세탁해 주세요.</p></div></div>
+    <div class="step"><div><b>섬유유연제는 넣지 않기</b><p>유연제가 루프에 남으면 흡수가 줄어들 수 있습니다.</p></div></div>
+    <div class="step"><div><b>그늘에서 펴서 말리기</b><p>건조기는 저온으로 짧게, 가능하면 펴서 말려 주세요.</p></div></div>
+  </div>
+  <div class="care-icons">
+    <div><strong>30~40℃</strong>미온수</div>
+    <div><strong>✕</strong>유연제</div>
+    <div><strong>✕</strong>표백제</div>
+    <div><strong>저온</strong>건조</div>
+  </div>
+  <span class="chk-block">G5 — 위 세탁법은 일반 밤부 수건 기준 초안. 제조사 최종 취급표시·동봉 가이드와 반드시 일치시키기</span>
+  <div class="promise">
+    <div>세탁 가이드를 함께 보내드립니다</div>
+    <div>초기 불량은 무상으로 교환해 드립니다</div>
+    <div>문의는 언커먼이 직접 답합니다</div>
+  </div>
+  <p class="small mt16">교환·반품 기준은 페이지 맨 아래 거래 조건에서 확인하세요.</p>
+</section>
+
+<!-- ═══ 11 브랜드 맥락 / 선물 ═══ -->
+<section class="bg gift">
+  <span class="eyebrow">OUR STORY</span>
+  <h2 class="h2">소중한 날을 위해 시작한 수건을,<br>매일의 자리로</h2>
+  <div class="pair">
+    <img src="img/bts_bag1.jpg" alt="민트색 쇼핑백">
+    <img src="img/bts_bag2.jpg" alt="욕실에 놓인 민트색 쇼핑백">
+  </div>
+  <p class="body">시작은 소중한 사람과 소중한 날을 위한<br>신부타올이었습니다.<br><br>축복을 담고 싶었던 그 마음을<br>매일 쓰는 한 장에 이어갑니다.</p>
+  <span class="chk-block">G5 — 쇼핑백·박스 포함 여부 확인 전에는 '선물 포장' 문구 넣지 않음</span>
+</section>
+
+<!-- ═══ 12 OFFER ═══ -->
+<section id="offer">
+  <span class="eyebrow">OFFER</span>
+  <h2 class="h2">집에 남길 수건과<br>바꿀 수건을 세어보세요</h2>
+  <p class="sub">필요한 장수와 총금액을 함께 보고 고르세요.<br>컬러는 구성 안에서 자유롭게 나눠 담을 수 있습니다.<span class="chk">G4 조합 방식</span></p>
+  <div class="offer-list">
+    <label class="opt"><input type="radio" name="set" value="8" checked>
+      <div class="row"><span class="qty">8장</span><span><span class="was" style="display:block">136,000원</span><span class="price">102,000원</span></span></div>
+      <p class="per">25% 할인 · 장당 12,750원</p></label>
+    <label class="opt"><input type="radio" name="set" value="12">
+      <div class="row"><span class="qty">12장</span><span><span class="was" style="display:block">204,000원</span><span class="price">146,880원</span></span></div>
+      <p class="per">28% 할인 · 장당 12,240원</p></label>
+    <label class="opt"><input type="radio" name="set" value="20">
+      <div class="row"><span class="qty">20장<span class="badge">최대 할인</span></span><span><span class="was" style="display:block">340,000원</span><span class="price">238,000원</span></span></div>
+      <p class="per">30% 할인 · 장당 11,900원</p></label>
+  </div>
+  <p class="small mt16">부가세 포함 · 배송비 <span class="chk">G5</span> 무료 · 공구 기간 <span class="chk">확인</span> 2026.00.00 ~ 00.00</p>
+  <div class="promise">
+    <div>공구 기간에는 이 가격보다 싸게 다른 곳에서 팔지 않습니다</div>
+    <div>초기 불량 무상 교환</div>
+    <div>세탁 가이드 동봉</div>
+  </div>
+  <button class="btn btn-main mt24" type="button" onclick="openSheet()">내 수건 구성 고르기</button>
+  <a class="btn btn-line mt8" href="#" onclick="return false">구매 전에 물어보기<span class="chk">채널톡/카카오 링크</span></a>
+</section>
+
+<!-- ═══ 13 FAQ + 고시 ═══ -->
+<section class="bg">
+  <span class="eyebrow">FAQ</span>
+  <h2 class="h2">자주 묻는 질문</h2>
+  <div class="mt32">
+    <details><summary>두꺼우면 늦게 마르지 않나요?</summary><div class="a">현재 확보한 자료로는 특정 건조 시간을 안내해 드리기 어렵습니다. 사용 후에는 접어두지 말고 펴서 걸어 주시면 더 빨리 마릅니다.</div></details>
+    <details><summary>빨아도 항균이 유지되나요?</summary><div class="a">반복 세탁 후 항균 유지 여부는 현재 확보한 자료로 확인되지 않았습니다. 확인되는 대로 이 자리에 업데이트하겠습니다.</div></details>
+    <details><summary>첫 세탁 때 물이 빠지나요?</summary><div class="a">첫 세탁은 단독 세탁을 권장합니다.</div></details>
+    <details><summary>한 장만 살 수 있나요?</summary><div class="a">이번 공구 구성은 8장·12장·20장입니다. 컬러는 구성 안에서 자유롭게 나눠 담을 수 있습니다.<span class="chk">단품 판매 여부</span></div></details>
+    <details><summary>아이도 함께 쓸 수 있나요?</summary><div class="a">가족 모두 페이스타월로 쓰실 수 있습니다. 피부가 예민하다면 첫 세탁 후 사용해 주세요.<span class="chk">G3 — OEKO-TEX 갱신 전 인증 언급 금지</span></div></details>
+    <details><summary>배송은 언제 시작되나요?</summary><div class="a">공구 마감 후 순차 발송합니다. <span class="chk">G5 발송 일정</span></div></details>
+  </div>
+
+  <h3 style="font-size:16px;font-weight:800;margin-top:48px">상품정보 제공고시</h3>
+  <table class="notice">
+    <tr><th>제품 소재</th><td>비스코스 레이온(대나무 유래) 100% <span class="chk">G1</span></td></tr>
+    <tr><th>색상</th><td>화이트 / 스카이블루 / 민트 / 라벤더 <span class="chk">G4</span></td></tr>
+    <tr><th>치수·무게</th><td>40 × 80cm / 장당 220g</td></tr>
+    <tr><th>제조자(수입자)</th><td><span class="chk">확인</span></td></tr>
+    <tr><th>제조국</th><td>대한민국 <span class="chk">확인</span></td></tr>
+    <tr><th>세탁방법 및 취급 시 주의사항</th><td>30~40℃ 중성세제 세탁, 유연제·표백제 사용 금지, 저온 건조 <span class="chk">G5</span></td></tr>
+    <tr><th>제조연월</th><td><span class="chk">확인</span></td></tr>
+    <tr><th>품질보증기준</th><td>관련 법 및 소비자분쟁해결기준에 따름</td></tr>
+    <tr><th>A/S 책임자·연락처</th><td>언커먼 고객센터 <span class="chk">연락처</span></td></tr>
+  </table>
+
+  <h3 style="font-size:16px;font-weight:800;margin-top:36px">배송·교환·반품</h3>
+  <table class="notice">
+    <tr><th>배송</th><td>공구 마감 후 순차 발송 <span class="chk">G5</span></td></tr>
+    <tr><th>교환·반품</th><td>받으신 날부터 7일 이내 신청. 사용·세탁한 상품은 교환·반품이 어렵습니다. <span class="chk">G5 반품 기준</span></td></tr>
+    <tr><th>불량</th><td>초기 불량은 무상 교환 <span class="chk">배송비 부담 주체</span></td></tr>
+    <tr><th>판매자</th><td><span class="chk">상호·대표·사업자번호·통신판매업 신고번호</span></td></tr>
+  </table>
+</section>
+
+</div>
+
+<!-- 고정 하단 구매바 -->
+<div class="bar">
+  <div class="p"><small>8장 구성부터</small><b>102,000원</b></div>
+  <button class="btn btn-main" type="button" onclick="openSheet()">내 수건 구성 고르기</button>
+</div>
+
+<!-- 옵션 시트 -->
+<div class="dim" onclick="closeSheet()"></div>
+<div class="sheet" role="dialog" aria-label="구성 고르기">
+  <h4>① 구성</h4>
+  <div class="seg" id="seg">
+    <button type="button" data-n="8" data-p="102000" class="on">8장<small>102,000원</small></button>
+    <button type="button" data-n="12" data-p="146880">12장<small>146,880원</small></button>
+    <button type="button" data-n="20" data-p="238000">20장<small>238,000원</small></button>
+  </div>
+  <h4>② 컬러 나눠 담기 <span class="left" id="left"></span></h4>
+  <div id="crows"></div>
+  <div class="sum"><span id="perTxt" class="small"></span><b id="total"></b></div>
+  <button class="btn btn-main" type="button" id="buy" disabled style="opacity:.4">구매하기</button>
+  <p class="small mt8" style="text-align:center">결제 연결은 판매 채널 확정 후 연결 <span class="chk">링크</span></p>
+</div>
+
+<script>
+(function(){
+  var colors=[['화이트','#f6f3ec'],['스카이블루','#bcd6ef'],['민트','#c4ece3'],['라벤더','#b9a3e6']];
+  var n=8,p=102000,cnt=[0,0,0,0];
+  var crows=document.getElementById('crows');
+  colors.forEach(function(c,i){
+    var r=document.createElement('div');r.className='crow';
+    r.innerHTML='<span class="l"><span class="dot" style="background:'+c[1]+'"></span>'+c[0]+'</span><span class="stepper"><button type="button" data-i="'+i+'" data-d="-1">−</button><span id="c'+i+'">0</span><button type="button" data-i="'+i+'" data-d="1">+</button></span>';
+    crows.appendChild(r);
+  });
+  crows.addEventListener('click',function(e){
+    var b=e.target.closest('button');if(!b)return;
+    var i=+b.dataset.i,d=+b.dataset.d,sum=cnt.reduce(function(a,b){return a+b},0);
+    if(d>0&&sum>=n)return; if(d<0&&cnt[i]===0)return;
+    cnt[i]+=d;render();
+  });
+  document.getElementById('seg').addEventListener('click',function(e){
+    var b=e.target.closest('button');if(!b)return;
+    [].forEach.call(this.children,function(x){x.classList.remove('on')});b.classList.add('on');
+    n=+b.dataset.n;p=+b.dataset.p;
+    while(cnt.reduce(function(a,b){return a+b},0)>n){for(var i=3;i>=0;i--){if(cnt[i]>0){cnt[i]--;break}}}
+    render();
+  });
+  document.querySelectorAll('input[name=set]').forEach(function(r){r.addEventListener('change',function(){
+    var b=document.querySelector('#seg button[data-n="'+r.value+'"]');if(b)b.click();
+  })});
+  function won(v){return v.toLocaleString('ko-KR')+'원'}
+  function render(){
+    cnt.forEach(function(v,i){document.getElementById('c'+i).textContent=v});
+    var sum=cnt.reduce(function(a,b){return a+b},0),left=n-sum,el=document.getElementById('left');
+    el.textContent=left>0?left+'장 더 담아주세요':'다 담았어요';el.className='left'+(left>0?'':' ok');
+    document.getElementById('total').textContent=won(p);
+    document.getElementById('perTxt').textContent=n+'장 · 장당 '+won(Math.round(p/n));
+    var buy=document.getElementById('buy');buy.disabled=left>0;buy.style.opacity=left>0?.4:1;
+  }
+  window.openSheet=function(){
+    var chosen=document.querySelector('input[name=set]:checked');
+    if(chosen){var b=document.querySelector('#seg button[data-n="'+chosen.value+'"]');if(b&&!b.classList.contains('on'))b.click();}
+    document.body.classList.add('open');
+  };
+  window.closeSheet=function(){document.body.classList.remove('open')};
+  render();
+})();
+</script>
+</body>
+</html>
