@@ -3,537 +3,2205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>언커먼 타올 페이스타월</title>
+<title>언커먼 타올 페이스타월 | THE SOFT</title>
 <meta name="robots" content="noindex,nofollow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="언커먼 타올 페이스타월">
-<meta property="og:description" content="세안 끝, 부드러운 한 장으로.">
+<meta property="og:description" content="세안 끝, 매일 얼굴에 닿는 한 장을 도톰하고 부드럽게">
 <meta property="og:url" content="https://nofaildesignoffice.github.io/uncommon-detail-y6l8/">
 <meta property="og:image" content="https://nofaildesignoffice.github.io/uncommon-detail-y6l8/img/og.jpg">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css">
 <!--
-  언커먼 타올 모바일 상세페이지 초안 v0.1 (2026-10-23)
-  기획: 07_상세페이지_기획안_v2.md
-  노란 [확인] 표시 = 제작 메모 (공개 전 삭제). 우측 상단 버튼으로 숨겨서 실제 화면처럼 볼 수 있음.
-  시험 결과 섹션(#test)은 A안 — FITI 결과 전문·광고 사용 동의(G2) 확보 전에는 통째로 삭제.
+  언커먼 타올 페이스타월 모바일 상세페이지 v1 (2026-10-24)
+  스피큘 상세페이지의 섹션 구성·순서·UX를 그대로 사용하고 내용만 언커먼 타올로 교체.
+  노란 표시 = 제작 메모(공개 전 삭제). 우측 상단 버튼으로 숨김 가능.
 -->
 <style>
 :root{
-  --bg:#f7f6f3; --white:#fff; --ink:#1a1a1a; --ink2:#363636; --muted:#8a8a8a; --line:#e8e8e8;
-  --point:#0ABAB5; --point-deep:#078a86; --point-soft:rgba(10,186,181,.08); --dark:#1c1c1a;
-  --chk:#ffe55c;
-  --font:'Pretendard Variable','Pretendard','Apple SD Gothic Neo',-apple-system,system-ui,'Noto Sans KR',sans-serif;
+  --navy:#12284D; --brand:#0055A0; --brand2:#438BC4; --sky:#8CC1E9; --cream:#FFF8E7;
+  --brand-deep:#12284D; --brand-ink:#12284D;
+  --text-black:#12284D; --text-dark:#33465F; --text-gray:#6A7789; --text-light:#9AA6B4;
+  --line:#DCE4EE; --line-soft:#EAEFF5;
+  --bg:#FFFFFF; --bg-card:#fff; --bg-soft:#EAF1F8; --bg-tint:#FFF8E7; --bg-dark:#12284D;
+  --ph-bg:#DCEAF4; --ph-text:#5B7A93; --bar-before:#C9CFD6;
+  --radius:16px; --radius-sm:12px; --pad-section:76px 20px 52px;
+  --font-sans:'Pretendard Variable','Pretendard','Apple SD Gothic Neo',-apple-system,BlinkMacSystemFont,system-ui,'Segoe UI',Roboto,'Helvetica Neue','Noto Sans KR',sans-serif;
 }
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth}
-body{font-family:var(--font);color:var(--ink);background:#e9e8e4;line-height:1.7;word-break:keep-all;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
-.page{max-width:480px;margin:0 auto;background:var(--white);padding-bottom:84px;box-shadow:0 0 30px rgba(0,0,0,.08);overflow-x:hidden}
-img{display:block;width:100%;height:auto}
-section{padding:72px 20px 56px}
-.bg{background:var(--bg)}
-.eyebrow{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--point-deep);text-align:center;margin-bottom:12px}
-.h2{font-size:26px;font-weight:800;line-height:1.38;text-align:center;letter-spacing:-.035em}
-.h2 em{font-style:normal;color:var(--point-deep)}
-.sub{font-size:14.5px;color:var(--ink2);text-align:center;margin-top:14px}
-.small{font-size:12px;color:var(--muted)}
-.mt8{margin-top:8px}.mt16{margin-top:16px}.mt24{margin-top:24px}.mt32{margin-top:32px}.mt40{margin-top:40px}
-.rad{border-radius:14px;overflow:hidden}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;font-family:var(--font-sans)}
+html,body{width:100%;overflow-x:hidden}
+body{font-family:var(--font-sans);font-optical-sizing:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-feature-settings:'ss01','tnum';
+  color:var(--text-black);background:var(--bg);line-height:1.65;word-break:keep-all;letter-spacing:-.01em;
+  max-width:480px;margin:0 auto;box-shadow:0 0 30px rgba(11,94,142,.12)}
+section{padding:var(--pad-section);background:var(--bg-card)}
+section:nth-of-type(even){background:var(--bg-tint)}
+.section-title{font-size:34px;font-weight:800;text-align:center;line-height:1.3;margin-bottom:10px;letter-spacing:-.03em;word-break:keep-all}
+.section-title strong{color:var(--brand)}
+.section-subtitle{font-size:14px;color:var(--text-gray);text-align:center;margin-bottom:28px}
+.block-title{font-size:16px;font-weight:800;margin:28px 0 14px}
+.divider{width:44px;height:3px;background:var(--brand);margin:14px auto 28px;border-radius:2px}
+strong{font-weight:700}
+.ph{background:var(--ph-bg);color:var(--ph-text);display:flex;align-items:center;justify-content:center;
+  text-align:center;font-size:13px;border-radius:var(--radius-sm);border:1px dashed #A9D3E8;padding:12px}
+.ph-wide{height:180px}
+.ph-square{aspect-ratio:1/1}
+.ph-icon{width:44px;height:44px;flex:0 0 44px;font-size:11px;border-radius:50%}
+.card{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(24,169,227,.07)}
+.cert{background:#fff;border:1.5px dashed #A9D3E8;border-radius:var(--radius-sm);min-height:124px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  gap:4px;padding:14px;font-size:12.5px;font-weight:700;color:var(--brand-ink)}
+.cert span{font-size:11px;font-weight:400;color:var(--text-light)}
+.cert::before{content:"CERT";font-size:10px;letter-spacing:.1em;color:var(--brand);border:1px solid var(--line);border-radius:4px;padding:1px 6px;margin-bottom:4px}
+.dark{background:var(--navy);color:#fff;border-radius:var(--radius);padding:22px;box-shadow:0 12px 26px rgba(14,124,184,.22)}
+.dark .section-subtitle,.dark p{color:rgba(255,255,255,.86)}
+.tag{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--brand);
+  border:1px solid var(--brand);border-radius:999px;padding:5px 12px;margin:2px 3px}
+.note{font-size:11px;color:var(--text-light);margin-top:6px}
+.btn{display:block;width:100%;text-align:center;padding:16px;border-radius:999px;
+  font-size:16px;font-weight:800;border:none;cursor:pointer;text-decoration:none}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px rgba(14,124,184,.28)}
+.btn-secondary{background:#fff;color:var(--brand-deep);border:1.5px solid var(--brand)}
+ul{list-style:none}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+/* 성분 원형 교차 */
+.ing-row{display:flex;gap:16px;align-items:center;padding:18px 0;border:none}
+.ing-img{width:96px;height:96px;flex:0 0 96px;border-radius:50%;font-size:10px;
+  background:var(--ph-bg) center / cover no-repeat;overflow:hidden}
+.ing-txt h3{font-size:15.5px;margin-bottom:5px}
+.ing-txt p{font-size:13px;color:var(--text-gray);line-height:1.65}
+/* 임상 지표 바차트 */
+/* 임상 TEST 블록 (그래프 + 전/후 사진) */
+.test{padding:40px 0 8px;border-top:1px solid var(--line-soft);text-align:center}
+.section-subtitle + .test{border-top:none;padding-top:14px}
+.test-tag{display:inline-block;background:var(--brand);color:#fff;font-size:14px;font-weight:700;letter-spacing:.02em;padding:4px 12px}
+.test-title{margin-top:10px;font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.3}
+.t-chart{position:relative;margin:30px 0 0 34px;height:230px;border-left:1.5px solid #000;border-bottom:2px solid #000}
+.t-ylab{position:absolute;left:-34px;top:50%;transform:translate(-50%,-50%) rotate(-90deg);transform-origin:center;margin-left:10px;font-size:11px;color:var(--text-light);white-space:nowrap}
+.t-chart .grid{position:absolute;left:0;right:0;border-top:1px dashed var(--line)}
+.t-bar{position:absolute;bottom:0;width:22%}
+.t-bar.before{left:22%;background:var(--bar-before)}
+.t-bar.after{left:58%;background:linear-gradient(to bottom,var(--brand) 0%,rgba(0,85,160,.55) 45%,rgba(0,85,160,0) 100%)}
+.t-val{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);margin-bottom:6px;font-size:15px;color:var(--text-dark);white-space:nowrap}
+.t-arrow{position:absolute;left:22%;width:60%;height:46px;background:var(--brand);color:#fff;
+  clip-path:polygon(0 22%,86% 22%,86% 0,100% 50%,86% 100%,86% 78%,0 78%);
+  display:flex;align-items:center;justify-content:center;padding-right:12%;font-size:13px;font-weight:600;gap:2px}
+.t-arrow b{font-size:22px;font-weight:800;letter-spacing:-.02em}
+.t-arrow i{font-style:normal;font-size:12px;font-weight:700;margin-right:3px}
+.t-x{display:flex;margin-left:34px;font-size:15px;padding-top:12px}
+.t-x span{position:relative;width:22%;text-align:center;white-space:nowrap}
+.t-x span:first-child{margin-left:22%;color:var(--text-gray)}
+.t-x span:last-child{margin-left:14%;font-weight:800;color:var(--text-black)}
+.t-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
+.t-photo{display:flex;flex-direction:column}
+.t-photo .ph{position:relative;aspect-ratio:1/1;border-radius:0;font-size:11px;overflow:hidden}
+.t-photo .ph::after{content:"";position:absolute;width:62%;height:62%;left:34%;top:14%;border:3px solid #fff;border-radius:50%}
+.t-photo figcaption{padding:12px 0;font-size:15px;color:#fff;background:#666}
+.t-photo.after{outline:3px solid var(--brand);outline-offset:-3px}
+.t-photo.after figcaption{background:var(--brand);font-weight:700}
+.t-foot{margin-top:10px;text-align:right;font-size:11px;color:var(--text-gray)}
+/* ===== 레퍼런스 UX 컴포넌트 ===== */
+.point-wrap{text-align:center;margin-bottom:16px}
+.point{display:inline-block;border:1.5px solid var(--brand);color:var(--brand);font-weight:800;font-size:12px;letter-spacing:.08em;padding:6px 17px;border-radius:999px}
+.eyebrow{font-size:12.5px;color:var(--text-gray);text-align:center;margin-bottom:8px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.pill{background:var(--brand);color:#fff;font-size:12.5px;font-weight:700;padding:8px 15px;border-radius:999px}
+.pill.ghost{background:rgba(255,255,255,.92);color:var(--brand-deep);box-shadow:0 3px 10px rgba(14,124,184,.12)}
+/* 히어로 */
+.hero-inner{position:relative;min-height:820px;display:flex;flex-direction:column;justify-content:space-between;text-align:center;
+  padding:34px 20px 38px;color:#fff;background:#3E6690 url('img/hero.jpg') center top / cover no-repeat}
+/* 상단 검은색 오버레이 — 서브카피 지점에서 완전 투명 */
+.hero-inner::before{content:"";position:absolute;left:0;right:0;top:0;height:28%;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(0,0,0,.8) 0%,rgba(0,0,0,.66) 42%,
+    rgba(0,0,0,.34) 76%,rgba(0,0,0,0) 100%)}
+/* 하단 인증 아이콘 가독성용 검은 그라디언트 */
+.hero-inner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:32%;pointer-events:none;
+  background:linear-gradient(to top,rgba(0,0,0,.62) 0%,rgba(0,0,0,.42) 38%,
+    rgba(0,0,0,.18) 70%,rgba(0,0,0,0) 100%)}
+.hero-inner > *{position:relative;z-index:1}
+.hero-copy{text-shadow:0 2px 14px rgba(18,40,77,.28)}
+.hero-title{font-size:34px;font-weight:800;line-height:1.3;letter-spacing:-.03em}
+.hero .hero-sub{margin-top:12px;font-size:17px;font-weight:500;line-height:1.5;letter-spacing:-.02em}
+.hero-certs{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.hero-certs li{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:11px;line-height:1.35;color:rgba(255,255,255,.92)}
+.hero-certs li + li{border-left:1px solid rgba(255,255,255,.45)}
+/* 아이콘: Lucide (ISC License) · 흰색 라인 */
+.hero-cert-ic{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;color:#fff}
+.hero-cert-ic svg{width:18px;height:18px}
+/* 원인 카드: 번호 → 제목 → 이미지(우하단 수치) → 본문 */
+section.cause-sec{background:#fff}
+.causes{margin:4px 0 30px}
+.cause-card{margin-bottom:52px;text-align:center}
+.cause-no{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;
+  border:1.3px solid #111;font-size:17px;font-weight:700;color:#111}
+.cause-title{margin-top:20px;font-size:23px;font-weight:800;color:#111;line-height:1.45;letter-spacing:-.03em}
+.cause-img{position:relative;aspect-ratio:426/240;margin-top:22px;background:#DEDEDE center / cover no-repeat}
+.cause-body{margin-top:18px;text-align:left;font-size:15.5px;color:#222;line-height:1.7;letter-spacing:-.02em}
+/* 히어로 하단 이어지는 제품 섹션 */
+.sub-inner{position:relative;min-height:700px;text-align:center;padding:78px 20px 38px;color:#fff;
+  background:#0E4C5C url('img/stack.jpg') center top / cover no-repeat}
+/* 타이틀 구간까지 딥틸 그라디언트 오버레이 (배경 사진 색감에 맞춤) */
+.sub-inner::before{content:"";position:absolute;left:0;right:0;top:0;height:40%;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(8,66,82,.56) 0%,rgba(8,66,82,.46) 20%,rgba(8,66,82,.32) 42%,
+    rgba(8,66,82,.18) 62%,rgba(8,66,82,.07) 82%,rgba(8,66,82,0) 100%)}
+.sub-inner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:20%;pointer-events:none;
+  background:linear-gradient(to top,#F2F3F5 0%,rgba(242,243,245,.92) 11%,rgba(242,243,245,.74) 26%,
+    rgba(242,243,245,.5) 44%,rgba(242,243,245,.27) 62%,rgba(242,243,245,.1) 80%,
+    rgba(242,243,245,.02) 92%,rgba(242,243,245,0) 100%)}
+.sub-inner > *{position:relative;z-index:1}
+.sub-eyebrow{font-size:17px;font-weight:400;line-height:1.7;letter-spacing:-.02em;color:#fff;
+  text-shadow:0 2px 16px rgba(0,26,36,.55)}
+.sub-eyebrow strong{font-weight:800}
+.sub-title{margin-top:16px;font-size:38px;font-weight:800;line-height:1.22;letter-spacing:-.02em;color:#fff;
+  text-shadow:0 3px 20px rgba(0,26,36,.55)}
+/* CLINICAL PROOF */
+section.clinical{background:#F2F3F5;padding:46px 20px 46px}
+.cl-title{text-align:center;font-size:30px;font-weight:800;color:#111;letter-spacing:-.03em}
+.cl-sub{text-align:center;margin-top:10px;font-size:15px;color:#666}
+.cl-test{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:21px;margin-top:72px}
+.cl-test>*{min-width:0}
+.cl-photos{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.cl-photo{position:relative;aspect-ratio:1/1;background:#DEDEDE center / cover no-repeat}
+.cl-tag{position:absolute;left:8px;bottom:8px;padding:4px 9px;border-radius:4px;
+  background:rgba(17,17,17,.62);color:#fff;font-size:11px;font-weight:700;letter-spacing:-.02em}
+.cl-name{font-size:22px;font-weight:800;color:#111;letter-spacing:-.03em}
+.cl-delta{margin-top:10px;font-size:17px;font-weight:700;color:#111}
+.cl-delta b{font-size:34px;font-weight:800;letter-spacing:-.03em}
+.cl-result{display:flex;flex-direction:column}
+.cl-chart{position:relative;flex:1;min-height:150px;margin-top:22px;border-bottom:3px solid #111}
+.cl-chart .grid{position:absolute;left:0;right:0;border-top:1px solid #fff}
+.cl-chart .cl-bar{position:absolute;bottom:0;width:40%;border-radius:8px 8px 0 0;z-index:1}
+.cl-chart .cl-bar.before{left:0;
+  background:linear-gradient(170deg,#A7AEBB 0%,#BAC1CC 30%,#D2D7DF 66%,#E7EAEF 100%)}
+.cl-chart .cl-bar.after{right:0;
+  background:linear-gradient(170deg,#8CC1E9 0%,#4E8BDC 26%,#2F62C2 58%,#1E3A7A 100%);
+  box-shadow:0 8px 18px -8px rgba(31,74,160,.55)}
+.cl-chart .cl-bar::after{content:"";position:absolute;top:-5px;left:50%;transform:translateX(-50%);
+  width:10px;height:10px;border-radius:50%;background:#fff;border:2.5px solid #8A9099;z-index:2}
+.cl-chart .cl-bar.after::after{border-color:#33559B}
+.cl-flow{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:3}
+.cl-flow path{fill:none;stroke:#111;stroke-width:2;stroke-linecap:round;stroke-dasharray:5 5}
+.cl-flow polygon{fill:#111}
+.cl-x{display:flex;justify-content:space-between;margin-top:10px;height:18px;line-height:18px;font-size:12px;color:#666}
+.cl-x span{width:40%;text-align:center}
 
-/* 제작 메모 */
-.chk{display:inline;background:var(--chk);color:#5a4a00;font-size:11px;font-weight:700;padding:1px 6px;border-radius:4px;margin:0 2px;letter-spacing:0;line-height:1.9}
-.chk-block{display:block;background:#fff8c9;border:1.5px dashed #e0c200;color:#5a4a00;font-size:12px;padding:10px 12px;border-radius:10px;margin:14px 0;line-height:1.6}
+/* FOUNDER STORY */
+section.founder{min-height:759px;padding:74px 26px 40px;color:#fff;background:#1B2430 url('img/bts_hand.jpg') center 42% / cover no-repeat}
+.fd-title{font-size:27px;font-weight:800;line-height:1.4;letter-spacing:-.03em;text-shadow:0 2px 12px rgba(0,0,0,.45)}
+.fd-body{margin-top:26px;font-size:15px;font-weight:500;line-height:1.75;color:rgba(255,255,255,.95);text-shadow:0 1px 10px rgba(0,0,0,.45)}
+.fd-sign{margin-top:34px;font-size:15px;font-weight:500;color:rgba(255,255,255,.95);text-shadow:0 1px 10px rgba(0,0,0,.45)}
+
+/* GLOBAL REVIEWS */
+section.reviews{padding:0 18px 46px;
+  background:linear-gradient(to bottom,#F2F3F5 0%,#F2F3F5 42%,#F7F8F9 72%,#FFFFFF 100%)}
+.rv-top{height:600px;margin:0 -18px 12px;padding:30px 18px 0;text-align:center;
+  background:linear-gradient(to bottom,rgba(242,243,245,0) 0%,rgba(242,243,245,0) 76%,rgba(242,243,245,.6) 91%,rgba(242,243,245,1) 100%),
+    url('img/roll2.jpg') center top / cover no-repeat;
+  -webkit-mask-image:linear-gradient(to bottom,#000 84%,rgba(0,0,0,.5) 94%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 84%,rgba(0,0,0,.5) 94%,transparent 100%)}
+.rv-eyebrow{font-size:15px;font-weight:600;letter-spacing:.06em;color:#fff;
+  text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.rv-title{margin-top:12px;font-size:29px;font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.35;
+  text-shadow:0 3px 16px rgba(0,0,0,.38)}
+.rv-title strong{color:#fff}
+.rv{margin-bottom:34px}
+.rv-img{aspect-ratio:482/279;background:#C6CBD4 center / cover no-repeat}
+.rv-stars{margin-top:14px;font-size:13px;letter-spacing:3px;color:#1B3C6E}
+.rv-who{margin-top:8px;font-size:13.5px;color:#8A8F96}
+.rv-text{margin-top:10px;font-size:15.5px;color:#222;line-height:1.55;letter-spacing:-.02em}
+/* 피부 고민 (Point 01) */
+section.worry{padding:54px 20px 60px;background:linear-gradient(to bottom,#fff 0%,#EAF2FB 100%)}
+.wr-title{text-align:center;font-size:30px;font-weight:800;color:#111;line-height:1.35;letter-spacing:-.03em}
+.wr-title strong{color:var(--brand)}
+.wr-circle{width:180px;height:180px;margin:34px auto 40px;border-radius:50%;background:url('img/loop.jpg') center / cover no-repeat}
+.wr-chat{display:flex;flex-direction:column;gap:18px}
+.wb{max-width:86%;padding:16px 20px;border-radius:20px;font-size:14.5px;font-weight:500;line-height:1.6;
+  letter-spacing:-.02em;text-align:left;word-break:keep-all;
+  background:#fff;color:#1A1A1A;box-shadow:0 4px 14px rgba(24,60,110,.08)}
+.wb.me{align-self:flex-end;background:var(--brand);color:#fff;font-weight:600;box-shadow:0 6px 16px rgba(0,85,160,.25)}
+
+/* 네이비 카피 밴드 */
+.copy-band{background:var(--navy);padding:44px 20px;text-align:center}
+.copy-band p{font-size:22px;font-weight:800;line-height:1.55;color:#fff;letter-spacing:-.03em}
+.full-img{font-size:0;line-height:0}
+.full-img img{display:block;width:100%;height:auto}
+/* 다음 섹션 배경색으로 자연스럽게 연결되는 하단 페이드 */
+.full-img.fade-btm,.full-img.fade-btm-gray{position:relative}
+.full-img.fade-btm-gray{background:linear-gradient(to bottom,#FFFFFF 0%,#F8F9FA 45%,#F2F3F5 100%)}
+.full-img.fade-btm-gray::after{content:"";position:absolute;left:0;right:0;bottom:0;height:30%;pointer-events:none;
+  background:linear-gradient(to top,#F2F3F5 0%,rgba(242,243,245,.9) 26%,
+    rgba(242,243,245,.45) 62%,rgba(242,243,245,0) 100%)}
+.full-img.fade-btm::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;pointer-events:none;
+  background:linear-gradient(to top,#fff 0%,rgba(255,255,255,.92) 22%,rgba(255,255,255,.5) 58%,rgba(255,255,255,0) 100%)}
+/* 결론 네이비 섹션 */
+section.conclusion{background:var(--navy);padding:52px 20px 56px;color:#fff}
+.cc-lead{font-size:22px;font-weight:400;color:#fff;text-align:center;line-height:1.55;letter-spacing:-.03em}
+.cc-lead strong{font-weight:800}
+.cc-img{aspect-ratio:848/542;margin-top:28px;background:rgba(255,255,255,.14) center / cover no-repeat}
+.cc-next{margin-top:30px;font-size:22px;font-weight:400;color:#fff;text-align:center;line-height:1.5;letter-spacing:-.03em}
+.cc-next strong{font-weight:800}
+section.spic-sec{position:relative;overflow:hidden;background:#000B26;padding:228px 20px 52px}
+/* 배경 영상(top 정렬·가로 100%) + 하단 #000B26 그라디언트 오버레이 */
+.sp-bg{position:absolute;left:0;top:0;width:100%;height:100%;z-index:0;pointer-events:none;overflow:hidden}
+.sp-bg video{position:absolute;left:0;top:0;width:100%;height:auto;display:block;
+  -webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 80%,transparent 100%)}
+.sp-bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(0,11,38,0) 50%,rgba(0,11,38,1) 100%)}
+section.spic-sec > *:not(.sp-bg){position:relative;z-index:1}
+section.spic-sec .section-title{color:#fff;text-shadow:0 2px 14px rgba(0,20,40,.5)}
+section.spic-sec .section-title strong{color:#fff}
+section.spic-sec > p{color:rgba(255,255,255,.92)!important;text-shadow:0 1px 10px rgba(0,20,40,.45)}
+section.spic-sec > p strong{color:#fff!important}
+section.spic-sec .sp-label{color:rgba(255,255,255,.75)}
+section.spic-sec .sp-name{color:#fff}
+section.spic-sec .sp-body{color:rgba(255,255,255,.92)}
+section.spic-sec .sp-body em{color:#fff;border-bottom-color:rgba(255,255,255,.8)}
+section.spic-sec .sp-ppm{color:rgba(255,255,255,.75)}
+section.spic-sec .sp-ppm b{color:#fff}
+section.spic-sec .sp-foot{color:rgba(255,255,255,.6)}
+section.spic-sec .note{color:rgba(255,255,255,.6)}
+section.spic-sec .sp-tech-txt{color:#fff}
+.cmp-title{font-size:30px;line-height:1.35}
+/* 성분 상세 */
+.ing-cards{display:grid;grid-template-columns:1fr;gap:18px;margin-top:34px}
+.ing-item{background:rgba(255,255,255,.3);border:1px solid rgba(18,40,77,.09);border-radius:18px;
+  padding:22px 18px;margin-top:0}
+.ing-head{display:flex;gap:16px;align-items:flex-start}
+.ing-img{width:118px;height:118px;flex:0 0 118px;border-radius:50%;
+  background:var(--ph-bg) center / cover no-repeat;overflow:hidden}
+.ing-txt{flex:1;min-width:0}
+.ing-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;color:#B9C0C8}
+.ing-txt h3{margin-top:2px;font-size:17px;font-weight:800;color:#111;letter-spacing:-.03em}
+.ing-body{margin-top:8px;font-size:13px;color:#555;line-height:1.7;letter-spacing:-.02em;word-break:keep-all}
+.ing-body em{font-style:normal;font-weight:700;color:#222;border-bottom:1.2px solid #222}
+.ing-sub{display:block;margin-top:6px;font-size:11.5px;color:#8A8F96;border:none}
+.ing-list{margin-top:14px;padding:14px 16px;background:none;border:1px solid rgba(18,40,77,.16);border-radius:8px;
+  font-size:12px;color:#555;line-height:1.75;letter-spacing:-.02em;word-break:keep-all}
+.ing-list b{color:#111;font-weight:800}
+.ing-list ul{list-style:none}
+.ing-list li{position:relative;padding-left:10px}
+.ing-list li::before{content:"·";position:absolute;left:0}
+.ing-src{display:block;margin-top:4px;font-size:10.5px;color:#9AA1A8}
+/* 핵심 성분 원형 다이어그램 */
+.ing-orbit{position:absolute;inset:0;z-index:1;animation:ing-spin 52s linear infinite;transform-origin:50% 45%}
+.ing-node-in{position:relative;width:100%;
+  animation:ing-spin-rev 52s linear infinite;transform-origin:50% 50%}
+@keyframes ing-spin{to{transform:rotate(360deg)}}
+@keyframes ing-spin-rev{to{transform:rotate(-360deg)}}
+/* 제품 뒤에서 퍼져 나가는 원형 파동 */
+section.ing-sec{position:relative;overflow:hidden}
+section.ing-sec .section-title{color:#111}
+section.ing-sec > .section-title,section.ing-sec > .section-subtitle{position:relative;z-index:3}
+section.ing-sec > *{position:relative;z-index:1}
+.ing-waves{position:absolute;left:50%;top:50%;width:0;height:0;
+  z-index:0;pointer-events:none;overflow:visible}
+/* 물방울이 떨어진 자리 — 낙하 지점의 짧은 임팩트 */
+.ing-waves::before{content:"";position:absolute;left:0;top:0;width:86px;height:86px;
+  transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle, rgba(0,85,160,.1) 0%, rgba(0,85,160,0) 70%);
+  animation:ing-drop 1.2s ease-out infinite}
+@keyframes ing-drop{
+  0%{transform:translate(-50%,-50%) scale(.28);opacity:.9}
+  100%{transform:translate(-50%,-50%) scale(1.45);opacity:0}
+}
+.ing-waves span{position:absolute;left:0;top:0;width:18px;aspect-ratio:1/1;
+  transform:translate(-50%,-50%) scaleY(.96);border-radius:50%;
+  border:1.5px solid rgba(0,85,160,.2);
+  filter:blur(3px);animation:ing-wave 12s cubic-bezier(.24,.6,.42,1) infinite;opacity:0}
+/* 물결의 뒷자락 — 한 겹 더 얇은 링 */
+.ing-waves span::after{content:"";position:absolute;inset:11%;border-radius:50%;
+  border:1px solid rgba(0,85,160,.09)}
+/* 간격·크기를 살짝 흐트러뜨려 기계적인 반복을 줄임 */
+.ing-waves span:nth-child(2){animation-delay:1.15s}
+.ing-waves span:nth-child(3){animation-delay:2.42s;--k:.93}
+.ing-waves span:nth-child(4){animation-delay:3.54s}
+.ing-waves span:nth-child(5){animation-delay:4.82s;--k:1.05}
+.ing-waves span:nth-child(6){animation-delay:5.94s}
+.ing-waves span:nth-child(7){animation-delay:7.2s;--k:.95}
+.ing-waves span:nth-child(8){animation-delay:8.36s}
+.ing-waves span:nth-child(9){animation-delay:9.62s;--k:1.04}
+.ing-waves span:nth-child(10){animation-delay:10.78s}
+/* 퍼질수록 두꺼워지고 옅어지며, 끝에서 부드럽게 감속 */
+@keyframes ing-wave{
+  0%{width:18px;border-width:1.5px;filter:blur(3px);opacity:0}
+  6%{opacity:.9}
+  50%{border-width:9px;filter:blur(9px);opacity:.62}
+  80%{border-width:16px;filter:blur(14px);opacity:.32}
+  100%{width:calc(var(--wave-size,480px) * var(--k,1));border-width:24px;filter:blur(20px);opacity:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .ing-orbit,.ing-node-in,.ing-waves span,.ing-waves::before{animation:none}
+  .ing-waves{display:none}
+}
+
+.ing-stage{position:relative;aspect-ratio:1833/2600;margin:-40px 0 10px}
+.ing-product{position:absolute;left:50%;top:-8%;width:73%;transform:translateX(-50%);z-index:3}
+.ing-node{position:absolute;width:17.2%;transform:translate(-50%,-50%);text-align:center}
+/* 섹션 상단 그라디언트 오버레이 (제품 이미지 위) */
+.ing-top-fade{position:absolute;left:0;right:0;top:-40px;height:30%;z-index:4;pointer-events:none;
+  background:linear-gradient(to bottom,#fff 0%,rgba(255,255,255,.92) 34%,
+    rgba(255,255,255,.55) 68%,rgba(255,255,255,0) 100%)}
+.ing-dot{width:100%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;
+  background:#E6E8EA center / cover no-repeat}
+.ing-node p{position:absolute;left:50%;top:calc(100% + 8px);transform:translateX(-50%);
+  font-size:11px;font-weight:600;color:#44505F;line-height:1.35;
+  letter-spacing:-.03em;white-space:nowrap}
+section.sponge-sec{position:relative;color:#fff;
+  background:linear-gradient(to bottom,var(--navy) 0%,rgba(18,40,77,.92) 6%,rgba(18,40,77,.55) 16%,rgba(18,40,77,0) 30%),
+    linear-gradient(to top,#12284D 0%,rgba(18,40,77,.9) 10%,rgba(18,40,77,.45) 26%,rgba(18,40,77,0) 52%),
+    linear-gradient(rgba(8,40,60,.35),rgba(8,40,60,.55)),
+    url('img/c_mint.jpg') center / cover no-repeat}
+section.sponge-sec .section-title{color:#fff;text-shadow:0 2px 14px rgba(0,20,35,.45)}
+.sg-lead{display:block;font-size:17px;font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+.sg-big{display:block;margin-top:8px;font-size:38px;font-weight:800;letter-spacing:.04em;line-height:1.2}
+.sponge-zoom{position:absolute;left:-13%;top:46%;width:44%;z-index:2}
+.sponge-img{position:relative;width:280px;height:250px;margin:16px auto 24px;
+  background:url('img/roll3.jpg') center / contain no-repeat;
+  filter:drop-shadow(0 12px 26px rgba(0,25,45,.35))}
+/* SPICULE-X 특허 + 4가지 특징 (반투명 글래스 카드) */
+.spx-box{margin:18px 0 20px;padding:26px 20px 22px;border-radius:16px;text-align:center;
+  background:rgba(255,255,255,.35);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.6);box-shadow:0 10px 30px rgba(18,40,77,.10);color:var(--text-black)}
+.spx-label{font-size:13px;color:rgba(255,255,255,.85)}
+.spx-name{margin-top:2px;font-size:26px;font-weight:800;letter-spacing:.06em;color:#fff}
+.spx-desc{margin-top:14px;font-size:14px;color:#fff;line-height:1.8}
+.spx-desc strong{color:#fff;font-weight:800}
+.spx-note{margin-top:10px;font-size:11px;color:rgba(255,255,255,.8);line-height:1.5}
+.spx-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:22px}
+.spx-cell{padding:4px 4px;background:none;border:none;border-left:1px solid rgba(255,255,255,.35)}
+.spx-cell:first-child{border-left:none}
+.spx-ic{display:flex;align-items:center;justify-content:center;width:30px;height:30px;margin:0 auto 8px;
+  border-radius:50%;border:1px solid rgba(255,255,255,.5);color:#fff}
+.spx-ic svg{width:16px;height:16px}
+.spx-cell h3{font-size:13.5px;font-weight:800;color:#fff;letter-spacing:-.03em;word-break:keep-all}
+.spx-cell p{margin-top:4px;font-size:11px;font-weight:600;color:rgba(255,255,255,.85);word-break:keep-all;line-height:1.35}
+/* HOW TO USE */
+section.htu-sec{background:#fff}
+.htu-card{background:#fff;border-radius:0;padding:0;margin-top:10px}
+.htu-step{display:grid;grid-template-columns:132px 1fr;gap:16px;align-items:center;padding:18px 0}
+.htu-step + .htu-step{border-top:1px solid var(--line-soft)}
+.htu-img{aspect-ratio:1/1;border-radius:12px;background:#DEDEDE center / cover no-repeat;overflow:hidden}
+.htu-badge{display:inline-block;background:#fff;color:#111;border:1px solid #111;border-radius:999px;
+  padding:5px 17px;font-size:12.5px;font-weight:700;letter-spacing:.06em}
+.htu-title{margin-top:10px;font-size:17px;font-weight:800;color:#111;letter-spacing:-.02em}
+.htu-body{margin-top:6px;font-size:13px;color:#666;line-height:1.6;letter-spacing:-.02em;word-break:keep-all}
+section.qna{background:#F2F3F5}
+/* 히어로 · 두번째 섹션 순차 등장 */
+.hero .hero-title{transition-delay:.12s}
+.hero .hero-sub{transition-delay:.3s}
+.hero-certs li{transition-delay:.46s}
+.hero-certs li:nth-child(2){transition-delay:.56s}
+.hero-certs li:nth-child(3){transition-delay:.66s}
+.hero-certs li:nth-child(4){transition-delay:.76s}
+.hero-sub .sub-eyebrow{transition-delay:.06s}
+.hero-sub .sub-title{transition-delay:.2s}
+/* 한 앰플, 5가지 케어 */
+.five-sec{background:#EDEFF1}
+.fb-stage{position:relative;aspect-ratio:848/1894;
+  background:url('img/hero.jpg') center top / cover no-repeat}
+.fb-head{position:absolute;left:0;right:0;top:10%;z-index:4;text-align:center;padding:0 20px}
+.fb-lead{font-size:17px;font-weight:400;line-height:1.7;letter-spacing:-.02em;color:#1A1A1A}
+.fb-title{margin-top:16px;font-size:30px;font-weight:800;color:#111;line-height:1.3;letter-spacing:-.03em}
+.fb-title strong{font-weight:800}
+.fb-sub{margin-top:10px;font-size:13px;font-weight:600;letter-spacing:.1em;color:#4A5563}
+.fb-stage::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to right,rgba(0,0,0,.38) 0%,rgba(0,0,0,.2) 34%,rgba(0,0,0,0) 62%)}
+.fb-lines{position:absolute;inset:0;width:100%;height:100%;z-index:2}
+.fb-dot{position:absolute;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;border-radius:50%;
+  background:#fff;box-shadow:0 0 8px rgba(0,0,0,.28);z-index:3;
+  opacity:0;transform:scale(.2);
+  transition:opacity .22s ease calc(var(--i,0)*.34s),transform .36s cubic-bezier(.34,1.56,.64,1) calc(var(--i,0)*.34s)}
+.fb-stage.play .fb-dot{opacity:1;transform:scale(1)}
+.fb-seg{fill:none;stroke:rgba(255,255,255,.85);stroke-width:1;stroke-linejoin:round;
+  stroke-dasharray:1;stroke-dashoffset:1;
+  transition:stroke-dashoffset .3s ease calc(var(--i,0)*.34s + .16s)}
+.fb-stage.play .fb-seg{stroke-dashoffset:0}
+.fb-item{position:absolute;left:0;transform:translateY(-50%) translateX(-14px);padding-right:12px;z-index:3;
+  display:flex;align-items:center;justify-content:flex-end;gap:10px;text-align:right;opacity:0;
+  transition:opacity .34s ease calc(var(--i,0)*.34s + .08s),
+             transform .42s cubic-bezier(.22,1,.36,1) calc(var(--i,0)*.34s + .08s)}
+.fb-stage.play .fb-item{opacity:1;transform:translateY(-50%) translateX(0)}
+.fb-item.fb-stack{flex-direction:column;align-items:flex-end;gap:2px}
+.fb-desc{font-size:11.5px;font-weight:600;color:#fff;line-height:1.4;letter-spacing:-.02em;
+  text-shadow:0 1px 6px rgba(0,0,0,.45)}
+.fb-word{font-size:22px;font-weight:800;color:#fff;letter-spacing:-.02em;
+  text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.fb-item.fb-stack .fb-word{order:-1}
+@media (prefers-reduced-motion:reduce){
+  .fb-dot,.fb-item,.fb-seg{transition:none}
+  .fb-dot{opacity:1;transform:scale(1)}
+  .fb-item{opacity:1;transform:translateY(-50%)}
+  .fb-seg{stroke-dashoffset:0}
+}
+section.guarantee{position:relative;padding-top:76px;padding-bottom:76px;
+  background:url('img/bts_bag1.jpg') center / cover no-repeat}
+section.guarantee::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.62)}
+section.guarantee > *{position:relative;z-index:1}
+section.guarantee .eyebrow{color:rgba(255,255,255,.72)}
+section.guarantee .section-title,section.guarantee .section-title strong{color:#fff}
+section.guarantee .gt-body{color:rgba(255,255,255,.92)}
+section.guarantee .gt-body strong{color:#fff}
+section.guarantee .note{color:rgba(255,255,255,.65)}
+.gt-badge{width:92px;height:92px;margin:26px auto 4px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:40px;line-height:1;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);
+  box-shadow:0 10px 26px rgba(0,0,0,.18)}
+.gt-body{margin-top:16px;text-align:center;font-size:14px;color:var(--text-dark);
+  line-height:1.85;letter-spacing:-.02em;word-break:keep-all}
+.gt-body strong{font-weight:800;color:var(--brand-deep)}
+/* 흡수율 섹션 상단 이미지 — 섹션 배경색으로 연결 */
+.abs-top{aspect-ratio:4/5;
+  background:linear-gradient(to bottom,rgba(244,246,248,0) 72%,rgba(244,246,248,.1) 79%,
+      rgba(244,246,248,.3) 86%,rgba(244,246,248,.58) 92%,rgba(244,246,248,.86) 97%,#F4F6F8 100%),
+    url('img/c_white.jpg') center 30% / cover no-repeat}
+/* 인체적용시험 — 유효성분 흡수율 */
+.abs-sec{position:relative;padding:76px 20px 66px;text-align:center;
+  background:linear-gradient(to bottom,#F4F6F8 0%,#FAFBFC 46%,#FFFFFF 100%)}
+.abs-eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;color:#8A94A2;margin-bottom:12px}
+.abs-lead{margin-top:18px;font-size:15px;line-height:1.9;color:#333;letter-spacing:-.02em;word-break:keep-all}
+.abs-hl{font-weight:800;color:var(--brand-deep)}
+.abs-ring{position:relative;width:196px;margin:34px auto 0}
+.abs-ring.sm{width:136px;margin:0}
+.abs-ring svg{width:100%;height:auto;transform:rotate(-90deg)}
+.abs-ring circle{fill:none;stroke-width:11;stroke-linecap:round}
+.abs-ring .trk{stroke:#E3E8EE}
+.abs-ring .bar{stroke:url(#absGrad);stroke:var(--brand);
+  stroke-dasharray:327;stroke-dashoffset:327;
+  transition:stroke-dashoffset 1.5s cubic-bezier(.22,1,.36,1) .1s}
+.abs-sec.play .abs-ring .bar{stroke-dashoffset:var(--off)}
+.abs-ring-txt{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:2px}
+.abs-ring-txt .lbl{font-size:13.5px;font-weight:700;color:#4A5563;letter-spacing:-.03em}
+.abs-ring.sm .abs-ring-txt .lbl{font-size:12px}
+.abs-ring-txt .num{font-size:34px;font-weight:800;color:var(--brand);letter-spacing:-.04em;line-height:1.1}
+.abs-ring.sm .abs-ring-txt .num{font-size:25px}
+.abs-ring-txt .sfx{font-size:12.5px;font-weight:600;color:#4A5563}
+.abs-rows{margin-top:30px;display:flex;flex-direction:column;gap:10px}
+.abs-row{display:flex;align-items:center;gap:10px;padding:15px 18px;border-radius:12px;
+  background:#fff;border:1px solid var(--line-soft);box-shadow:0 4px 14px rgba(24,60,110,.05)}
+.abs-row strong{font-size:14.5px;font-weight:800;color:#111;letter-spacing:-.03em;white-space:nowrap}
+.abs-row i{flex:1;height:1px;border-top:1.6px dotted #C8D0DA}
+.abs-row b{font-size:21px;font-weight:800;color:#111;letter-spacing:-.03em;white-space:nowrap}
+.abs-caption{margin-top:12px;font-size:11.5px;color:var(--text-light);letter-spacing:-.02em;word-break:keep-all}
+.abs-duo{margin-top:30px;display:flex;align-items:center;justify-content:center;gap:6px}
+.abs-duo-mid{font-size:13px;font-weight:700;color:#4A5563;letter-spacing:-.02em}
+.abs-card{margin-top:24px;padding:20px 18px;border-radius:16px;background:#fff;
+  border:1px solid var(--line-soft);box-shadow:0 8px 22px rgba(24,60,110,.06);text-align:left}
+.abs-card-title{font-size:16px;font-weight:800;color:#111;letter-spacing:-.03em}
+.abs-card-sub{margin-top:2px;font-size:10.5px;font-weight:600;letter-spacing:.1em;color:#A9B2BD}
+.abs-tbl{width:100%;margin-top:14px;border-collapse:separate;border-spacing:0;font-size:12.5px}
+.abs-tbl th{padding:9px 4px;font-size:11.5px;font-weight:700;color:#8A94A2;text-align:center;
+  border-bottom:1.5px solid var(--line)}
+.abs-tbl td{padding:12px 4px;text-align:center;font-weight:700;color:var(--brand-deep);
+  border-bottom:1px dotted #DCE2E9;letter-spacing:-.02em}
+.abs-tbl tr:last-child td{border-bottom:0}
+.abs-tbl th:first-child,.abs-tbl td.nm{text-align:left;padding-left:2px;color:#111;font-weight:800}
+.abs-idx-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.abs-idx-x{font-size:15px;font-weight:700;color:#111;letter-spacing:-.03em;white-space:nowrap}
+.abs-idx-x b{font-size:26px;font-weight:800;color:var(--brand)}
+.abs-chart{display:flex;align-items:flex-end;justify-content:center;gap:34px;height:180px;margin-top:44px;
+  border-bottom:2.5px solid #111}
+.abs-col{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  height:100%;width:38%}
+.abs-col .val{position:absolute;left:50%;transform:translateX(-50%);z-index:2;
+  padding:4px 12px;border-radius:999px;font-size:13px;font-weight:800;color:#fff;letter-spacing:-.02em}
+.abs-col .val.base{bottom:calc(9% + 8px);background:#9AA1A8}
+.abs-col .val.dia{bottom:calc(100% + 8px);background:#111}
+.abs-bar{width:100%;border-radius:8px 8px 0 0;transform:scaleY(0);transform-origin:bottom;
+  transition:transform 1.15s cubic-bezier(.22,1,.36,1) .15s;height:var(--h)}
+.abs-bar.base{background:linear-gradient(to top,#AEB5C1 0%,#CBD1DA 60%,#E0E4EA 100%)}
+.abs-bar.dia{background:linear-gradient(to top,#1E3A7A 0%,#2F62C2 34%,#4E9BE8 70%,#8CC1E9 100%);
+  box-shadow:0 10px 24px -10px rgba(31,74,160,.5)}
+.abs-chart.play .abs-bar{transform:scaleY(1)}
+.abs-x{display:flex;justify-content:center;gap:34px;margin-top:10px}
+.abs-x p{width:38%;text-align:center;font-size:12px;font-weight:700;color:#4A5563;
+  line-height:1.4;letter-spacing:-.03em}
+.abs-boost-lead{font-size:15.5px;color:#333}
+.abs-boost-lead strong{font-weight:800;color:var(--brand-deep)}
+.abs-flow{margin-top:26px;display:flex;align-items:flex-start;justify-content:center;gap:14px}
+.abs-flow .abs-flow-step,.abs-flow .abs-flow-arrow{opacity:0;transform:translateY(14px);
+  transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+.abs-flow.play .abs-flow-step,.abs-flow.play .abs-flow-arrow{opacity:1;transform:none}
+.abs-flow.play .abs-flow-arrow{transition-delay:.42s}
+.abs-flow.play .abs-flow-step:last-of-type{transition-delay:.62s}
+@media (prefers-reduced-motion:reduce){
+  .abs-flow .abs-flow-step,.abs-flow .abs-flow-arrow{opacity:1;transform:none;transition:none}
+}
+.abs-flow-step{display:flex;flex-direction:column;align-items:center;gap:10px;width:38%}
+.abs-flow-img{width:100%;aspect-ratio:1/1;border-radius:50%;background:#EDEFF1 center / cover no-repeat;
+  box-shadow:0 8px 20px rgba(24,60,110,.14)}
+.abs-flow-cap{display:flex;flex-direction:column;gap:3px;font-size:10.5px;font-weight:700;
+  letter-spacing:.08em;color:#A9B2BD;text-align:center}
+.abs-flow-cap b{font-size:14px;font-weight:800;letter-spacing:-.03em;color:#111}
+.abs-flow-arrow{margin-top:17%;font-size:20px;color:var(--brand);font-weight:800}
+.abs-sum{margin-top:28px;padding:22px 18px;border-radius:16px;background:var(--navy);color:#fff}
+.abs-sum p{font-size:16px;font-weight:600;line-height:1.7;letter-spacing:-.03em;word-break:keep-all}
+.abs-sum strong{font-weight:800;color:var(--sky)}
+.abs-sum-sub{margin-top:10px;font-size:12.5px;font-weight:400;color:rgba(255,255,255,.75)}
+.abs-note{margin-top:22px;text-align:center;line-height:1.7}
+@media (prefers-reduced-motion:reduce){
+  .abs-ring .bar{transition:none;stroke-dashoffset:var(--off)}
+  .abs-bar{transition:none;transform:scaleY(1)}
+}
+/* 성분별 가로 막대 비교 */
+.abs-grp-guide{margin-top:10px;font-size:11.5px;color:var(--text-light);letter-spacing:-.02em;word-break:keep-all}
+.abs-grp-guide b{font-weight:800;color:#4A5563}
+.abs-grp{margin-top:18px;padding-top:16px;border-top:1.5px solid var(--line)}
+.abs-grp-name{font-size:15px;font-weight:800;color:#111;letter-spacing:-.03em}
+.abs-metric{margin-top:14px}
+.abs-metric + .abs-metric{margin-top:14px;padding-top:12px;border-top:1px dotted #E1E6EC}
+.mlbl{font-size:12px;font-weight:700;color:#6A7789;letter-spacing:-.02em}
+.hrow{display:flex;align-items:center;gap:8px;margin-top:7px}
+.hrow .who{flex:0 0 54px;font-size:10.5px;font-weight:600;color:#9AA6B4;text-align:right;letter-spacing:-.02em}
+.htrack{flex:1;height:16px;border-radius:8px;background:#F1F3F6;overflow:hidden}
+.hfill{display:block;height:100%;width:var(--w);border-radius:8px;transform:scaleX(0);transform-origin:left;
+  transition:transform 1.05s cubic-bezier(.22,1,.36,1)}
+.hfill.base{background:linear-gradient(90deg,#B7BEC9 0%,#CFD5DE 60%,#DDE2E8 100%)}
+.hfill.dia{background:linear-gradient(90deg,#1E3A7A 0%,#2F62C2 32%,#4E9BE8 68%,#8CC1E9 100%);
+  box-shadow:0 2px 8px -2px rgba(31,74,160,.45)}
+.abs-metric.play .hfill{transform:scaleX(1)}
+.abs-metric .hrow:nth-child(3) .hfill{transition-delay:.18s}
+.hval{flex:0 0 52px;font-size:12.5px;font-weight:800;color:#111;letter-spacing:-.03em;text-align:left}
+.hval.base{color:#9AA6B4;font-weight:700}
+@media (prefers-reduced-motion:reduce){.hfill{transition:none;transform:scaleX(1)}}
+/* 상품정보 제공고시 표 */
+.info-table{margin-top:14px;border-top:1.5px solid var(--line)}
+.info-row{display:flex;gap:12px;padding:11px 2px;border-bottom:1px solid var(--line-soft);
+  font-size:12.5px;line-height:1.6;color:var(--text-dark);letter-spacing:-.02em;word-break:keep-all}
+.info-row strong{flex:0 0 40%;font-weight:700;color:var(--text-black)}
+.info-row span{flex:1;min-width:0;color:var(--text-gray)}
+/* 프로그램 한눈에 비교 — 비교표 디자인 적용 */
+.pg-tbl-wrap{position:relative;margin-top:16px}
+.pg-glow{position:absolute;left:0;right:0;top:34%;height:34%;border-radius:18px;z-index:0;
+  background:radial-gradient(60% 120% at 50% 50%, rgba(140,193,233,.55) 0%, rgba(140,193,233,0) 70%);
+  filter:blur(14px)}
+.pg-tbl{position:relative;z-index:1;width:100%;border-collapse:separate;border-spacing:0;
+  background:#fff;border:1.5px solid #CFD4D9;border-radius:20px;overflow:hidden;font-size:12.5px}
+.pg-tbl th{padding:16px 4px;font-size:12.5px;font-weight:800;color:#6E7378;text-align:center;
+  letter-spacing:-.02em}
+.pg-tbl td{padding:16px 4px;text-align:center;font-weight:700;color:#8C9196;
+  border-top:1px dotted #D9DDE2;letter-spacing:-.02em}
+.pg-tbl th:first-child,.pg-tbl td:first-child{text-align:left;padding-left:16px}
+.pg-tbl td.name{font-weight:800;color:#6E7378}
+.pg-tbl tr.best td{background:#EAF1F8;color:var(--brand);border-top:1.5px solid var(--brand);
+  border-bottom:1.5px solid var(--brand)}
+.pg-tbl tr.best td.name{color:var(--brand-deep);font-weight:800}
+.pg-tbl tr.best td:first-child{border-left:1.5px solid var(--brand)}
+.pg-tbl tr.best td:last-child{border-right:1.5px solid var(--brand)}
+/* 프로그램 카드 — 세로 1열 */
+.pg-card{margin-bottom:12px;text-align:left}
+.pg-best{border:2px solid var(--brand)}
+.pg-img{width:100%;aspect-ratio:1/1;margin:12px 0 14px;border-radius:12px;
+  background:#fff center / cover no-repeat;border:1px solid var(--line-soft)}
+.pg-title{font-size:18px;font-weight:800;color:var(--text-black);letter-spacing:-.02em}
+.pg-meta{margin-top:8px;font-size:14px;color:var(--text-dark)}
+.pg-desc{margin-top:4px;font-size:12.5px;color:var(--text-gray);letter-spacing:-.02em}
+.pg-price{margin-top:12px;font-size:13px;
+  display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.pg-price s{color:var(--text-light)}
+.pg-price strong{font-size:21px;font-weight:800;color:var(--brand-deep)}
+.pg-per{font-size:12px;color:var(--text-gray)}
+/* MoCRA 등록증 이미지 카드 */
+.mocra-card{aspect-ratio:3/4;max-width:280px;margin:26px auto 0;border-radius:14px;overflow:hidden;
+  background-color:#fff;background-position:center top;background-size:cover;background-repeat:no-repeat;
+  border:1px solid rgba(255,255,255,.55);box-shadow:0 12px 30px rgba(0,18,40,.22)}
+/* REAL STORIES */
+section.stories{background:#F2F3F5;padding:0 18px 46px}
+.st-top{aspect-ratio:4/3;margin:0 -18px 10px;
+  background:url('img/bts_bag2.jpg') center 46% / cover no-repeat;
+  -webkit-mask-image:linear-gradient(to bottom,#000 60%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 60%,transparent 100%)}
+section.stories .section-title{text-align:center}
+section.stories .rv{margin-bottom:34px}
+section.evi-sec{background:#F2F3F5}
+/* 문서 카드 슬라이더 */
+.doc-slider{margin:22px -20px 0;--doc-gap:12px}
+.doc-viewport{overflow:hidden;padding:2px 0 6px;cursor:grab}
+.doc-viewport.dragging{cursor:grabbing}
+.doc-track{display:flex;gap:var(--doc-gap);will-change:transform;touch-action:pan-y}
+.doc-slide{flex:0 0 72%;transition:opacity .45s ease,transform .45s ease;opacity:.55}
+.doc-slide.is-active{opacity:1}
+.doc-slider.papers .doc-img{aspect-ratio:3/2}
+.doc-single{max-width:74%;margin:22px auto 0}
+.doc-single .doc-img{aspect-ratio:3/4}
+.doc-img.doc-real{background-color:#fff;background-size:contain;background-position:center;
+  background-repeat:no-repeat;border:1px solid var(--line);color:transparent}
+.doc-img{aspect-ratio:3/4;border-radius:16px;background:var(--ph-bg);border:1px dashed #A9D3E8;
+  color:var(--ph-text);font-size:11px;text-align:center;overflow:hidden;
+  background-position:center;background-size:cover;background-repeat:no-repeat}
+.doc-cap{padding:18px 20px 0;text-align:center;transition:opacity .28s ease}
+.doc-cap.fading{opacity:0}
+.doc-cap-title{font-size:19px;font-weight:800;color:var(--text-black);letter-spacing:-.03em}
+.doc-cap-body{margin-top:8px;font-size:13.5px;color:var(--text-gray);line-height:1.6;
+  letter-spacing:-.02em;word-break:keep-all}
+.doc-cap-body strong{color:var(--brand-deep)}
+.doc-dots{display:flex;justify-content:center;gap:6px;margin-top:14px}
+.doc-dots b{width:6px;height:6px;border-radius:50%;background:#CBD3DE;transition:width .3s ease,background .3s ease}
+.doc-dots b.on{width:18px;background:var(--brand)}
+@media (prefers-reduced-motion:reduce){
+  .doc-slide,.doc-cap,.doc-dots b{transition:none}
+}
+/* 화면 밖 애니메이션 정지 */
+.anim-off .ing-waves span,.anim-off .ing-waves::before,.anim-off .ing-orbit,
+.anim-off .ing-node-in,.anim-off .marquee-track,.anim-off .cmp-glow{animation-play-state:paused}
+/* 애니메이션 이미지(WebP 우선, 미지원 브라우저는 GIF) */
+.anim-cause-1{background-image:url('img/loop.jpg')}
+.anim-cause-2{background-image:url('img/fold2.jpg')}
+.anim-cause-3{background-image:url('img/label2.jpg')}
+.anim-conclusion{background-image:url('img/spread.jpg')}
+@supports (background-image:image-set(url('a.webp') type('image/webp'))){
+  .anim-cause-1{background-image:image-set(url('img/loop.jpg') type('image/webp'),url('img/loop.jpg') type('image/gif'))}
+  .anim-cause-2{background-image:image-set(url('img/fold2.jpg') type('image/webp'),url('img/fold2.jpg') type('image/gif'))}
+  .anim-cause-3{background-image:image-set(url('img/label2.jpg') type('image/webp'),url('img/label2.jpg') type('image/gif'))}
+  .anim-conclusion{background-image:image-set(url('img/spread.jpg') type('image/webp'),url('img/spread.jpg') type('image/gif'))}
+}
+/* 상단 부스터 요약 섹션 */
+.abs-intro{padding:60px 20px 56px;background:#F2F3F5}
+.abs-intro .abs-flow{margin-top:30px}
+.abs-intro .abs-caption{margin-top:14px;text-align:center}
+/* 작동 원리 4단계 */
+.step-sec{background:var(--navy);color:#fff;padding:var(--pad-section)}
+.step-sec .section-title,.step-sec .section-title strong{color:#fff}
+.step-sec .causes{margin-top:34px}
+.step-sec .cause-no{border-color:rgba(255,255,255,.85);color:#fff}
+.step-sec .cause-title{color:#fff}
+.step-sec .cause-body{color:rgba(255,255,255,.82)}
+.step-sec .note{color:rgba(255,255,255,.5)}
+.step-sec .cause-img{background-color:rgba(255,255,255,.08)}
+.step-sec .cause-card:last-of-type{margin-bottom:28px}
+/* 작동 원리 4단계 — 애니메이션 이미지 */
+.anim-step-1{background-image:url('img/loop.jpg')}
+.anim-step-2{background-image:url('img/spread.jpg')}
+.anim-step-3{background-image:url('img/c_mint.jpg')}
+.anim-step-4{background-image:url('img/fold1.jpg')}
+@supports (background-image:image-set(url('a.webp') type('image/webp'))){
+  .anim-step-1{background-image:image-set(url('img/loop.jpg') type('image/webp'),url('img/loop.jpg') type('image/gif'))}
+  .anim-step-2{background-image:image-set(url('img/spread.jpg') type('image/webp'),url('img/spread.jpg') type('image/gif'))}
+  .anim-step-3{background-image:image-set(url('img/c_mint.jpg') type('image/webp'),url('img/c_mint.jpg') type('image/gif'))}
+  .anim-step-4{background-image:image-set(url('img/fold1.jpg') type('image/webp'),url('img/fold1.jpg') type('image/gif'))}
+}
+/* 흐르는 띠 배너 */
+.marquee{overflow:hidden;background:var(--navy);padding:14px 0}
+.marquee-track{display:flex;align-items:center;width:max-content;animation:marquee-run 26s linear infinite}
+.marquee-track span{font-size:15px;font-weight:800;letter-spacing:.06em;color:#fff;white-space:nowrap}
+.marquee-track i{font-style:normal;font-size:9px;color:var(--sky);margin:0 18px}
+@keyframes marquee-run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* 성분 띠배너 — 흰 배경 · 검은 텍스트 · 원형 구분점 */
+.ing-marquee{background:#fff;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.ing-marquee .marquee-track{animation-duration:72s}
+.ing-marquee .marquee-track span{font-size:13px;font-weight:600;color:#111;letter-spacing:-.01em}
+.ing-marquee .marquee-track i{display:inline-block;width:4px;height:4px;border-radius:50%;
+  background:#111;margin:0 14px;font-size:0;vertical-align:middle}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+/* 스피큘 비교표 */
+.cmp-wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0 12px;margin-top:70px}
+.cmp-head{position:absolute;top:-56px;width:112px;height:112px;border-radius:50%;background:#fff;overflow:hidden;
+  display:block;z-index:2}
+.cmp-head.base{left:25%;transform:translateX(-50%);border:1.5px solid #CFD4D9}
+.cmp-head.dia{left:75%;transform:translateX(-50%);border:1.5px solid var(--brand)}
+.cmp-circle{display:block;width:100%;height:100%;border-radius:50%;
+  background:#F2F3F5 center / cover no-repeat}
+.cmp-head.dia .cmp-circle{background-color:#EAF1F8}
+.cmp-note{position:relative;z-index:3;margin-top:34px}
+.cmp-glow{position:absolute;left:calc(50% + 6px);right:0;top:0;bottom:0;border-radius:20px;z-index:0;
+  box-shadow:0 14px 34px rgba(140,193,233,.75), 0 0 0 6px rgba(140,193,233,.18);
+  animation:cmp-pulse 3.4s ease-in-out infinite}
+@keyframes cmp-pulse{
+  0%,100%{box-shadow:0 10px 24px rgba(140,193,233,.42), 0 0 0 3px rgba(140,193,233,.1)}
+  50%{box-shadow:0 18px 46px rgba(140,193,233,.95), 0 0 0 10px rgba(140,193,233,.26)}
+}
+@media (prefers-reduced-motion:reduce){.cmp-glow{animation:none}}
+.cmp-cell{position:relative;background:#fff;padding:16px 10px;text-align:center;font-size:13.5px;font-weight:700;
+  line-height:1.45;letter-spacing:-.02em;word-break:keep-all}
+.cmp-cell.base{border-left:1.5px solid #CFD4D9;border-right:1.5px solid #CFD4D9;color:#8C9196}
+.cmp-cell.dia{border-left:1.5px solid var(--brand);border-right:1.5px solid var(--brand);color:var(--brand)}
+.cmp-cell.first{padding-top:72px;border-radius:20px 20px 0 0}
+.cmp-cell.base.first{border-top:1.5px solid #CFD4D9}
+.cmp-cell.dia.first{border-top:1.5px solid var(--brand)}
+.cmp-cell.last{padding-bottom:24px;border-radius:0 0 20px 20px}
+.cmp-cell.base.last{border-bottom:1.5px solid #CFD4D9}
+.cmp-cell.dia.last{border-bottom:1.5px solid var(--brand)}
+.cmp-cell.title{font-size:16px;font-weight:800;padding-bottom:18px}
+.cmp-cell.base.title{color:#6E7378}
+.cmp-cell.dia.title{color:var(--brand-deep)}
+.cmp-cell:not(.first)::before{content:"";position:absolute;left:14px;right:14px;top:0;border-top:1px dotted #D9DDE2}
+.cmp-cell.dia:not(.first)::before{border-top-color:rgba(0,85,160,.3)}
+/* 스피큘 구조 도해 — 가운데 스피큘, 좌우 교차 배치 */
+.sp-wrap{position:relative;margin-top:26px;padding:4px 0}
+.sp-figure{position:absolute;left:50%;transform:translateX(-50%);top:0;bottom:0;width:56px;
+  background:url('img/c_white.jpg') center / 100% 100% no-repeat}
+.sp-item{position:relative;width:calc(50% - 44px);margin-bottom:34px}
+.sp-item:last-of-type{margin-bottom:0}
+.sp-item.right{margin-left:auto;text-align:left}
+.sp-item.left{margin-right:auto;text-align:right}
+.sp-lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.sp-item.y{color:#E8C25A}.sp-item.t{color:#63B6C7}.sp-item.v{color:#9B93D6}
+.sp-item.g{color:#9AA1A8}.sp-item.n{color:#67B26A}
+.sp-thumb{position:relative;width:78px;height:78px;border-radius:50%;background:#DEDEDE center / cover no-repeat;
+  border:2px solid currentColor;overflow:hidden}
+.sp-item.left .sp-thumb{margin-left:auto}
+.sp-cap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:10px;font-weight:800;
+  color:#fff;line-height:1.2;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.45)}
+.sp-label{margin-top:12px;font-size:11.5px;color:#666}
+.sp-name{margin-top:2px;font-size:16px;font-weight:800;color:#111;letter-spacing:-.02em;line-height:1.3}
+.sp-ppm{margin-top:6px;font-size:10.5px;color:#777;line-height:1.35}
+.sp-ppm b{font-size:15px;font-weight:800;color:#111}
+.sp-body{margin-top:8px;font-size:12.5px;color:#333;line-height:1.7;letter-spacing:-.02em;word-break:keep-all;text-align:left}
+.sp-body em{font-style:normal;font-weight:700;color:#111;border-bottom:1.2px solid #111}
+/* 스피큘 끝 → 가운데 초고압 인퓨전 블록으로 내려오는 초록 선 */
+.sp-tech{position:relative;width:100%;max-width:300px;margin:72px auto 0;text-align:center;color:#67B26A}
+.sp-tech::before{content:"";position:absolute;left:50%;top:-64px;height:64px;border-left:1.5px solid #67B26A}
+.sp-tech::after{content:"";position:absolute;left:50%;top:-64px;transform:translate(-50%,-50%);
+  width:9px;height:9px;border-radius:50%;background:#67B26A;border:1.5px solid #fff}
+.sp-tech-img{margin:0 auto;font-size:9px}
+.sp-tech-txt{margin-top:12px;color:#111;text-align:center}
+.sp-foot{margin-top:8px;font-size:10px;color:#999;line-height:1.4}
+/* ===== 등장 애니메이션 ===== */
+.rv-up{opacity:0;transform:translateY(26px);filter:blur(7px);
+  transition:opacity .75s ease,transform .75s cubic-bezier(.22,1,.36,1),filter .75s ease}
+.rv-down{opacity:0;transform:translateY(-22px);filter:blur(6px);
+  transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1),filter .7s ease}
+.rv-fade{opacity:0;transition:opacity .9s ease}
+.rv-up.shown,.rv-down.shown{opacity:1;transform:none;filter:none}
+.rv-fade.shown{opacity:1}
+/* 채팅 말풍선: 하나씩 */
+.wr-chat .wb{opacity:0;transform:translateY(16px) scale(.97);
+  transition:opacity .5s ease,transform .5s cubic-bezier(.22,1,.36,1)}
+.wr-chat .wb.shown{opacity:1;transform:none}
+/* 스피큘 도해: 원형 썸네일은 좌우에서 슬라이드 */
+.sp-item .sp-thumb{opacity:0;transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1)}
+.sp-item.right .sp-thumb{transform:translateX(-30px)}
+.sp-item.left .sp-thumb{transform:translateX(30px)}
+.sp-item.shown .sp-thumb{opacity:1;transform:none}
+.sp-item .sp-label,.sp-item .sp-name,.sp-item .sp-ppm,.sp-item .sp-body{
+  opacity:0;transform:translateY(-16px);filter:blur(5px);
+  transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1),filter .6s ease}
+.sp-item.shown .sp-label{transition-delay:.15s}
+.sp-item.shown .sp-name{transition-delay:.23s}
+.sp-item.shown .sp-ppm{transition-delay:.3s}
+.sp-item.shown .sp-body{transition-delay:.36s}
+.sp-item.shown .sp-label,.sp-item.shown .sp-name,.sp-item.shown .sp-ppm,.sp-item.shown .sp-body{
+  opacity:1;transform:none;filter:none}
+/* 임상 그래프: 막대가 자라고 화살표가 뒤따라 등장 */
+.cl-chart .cl-bar{transform:scaleY(0);transform-origin:bottom;
+  transition:transform 1.05s cubic-bezier(.22,1,.36,1)}
+.cl-chart .cl-bar.after{transition-delay:.28s}
+.cl-chart.shown .cl-bar{transform:scaleY(1)}
+.cl-flow{opacity:0;transition:opacity .35s ease}
+.cl-chart.playing .cl-flow{opacity:1}
+@media (prefers-reduced-motion:reduce){
+  .rv-up,.rv-down,.rv-fade,.wr-chat .wb,.sp-item .sp-thumb,.sp-item .sp-label,.sp-item .sp-name,
+  .sp-item .sp-ppm,.sp-item .sp-body,.cl-chart .cl-bar,.cl-flow{
+    opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+}
+/* 딥블루 웨이브 밴드 */
+.band{padding:0}
+.band .inner{background:var(--navy);color:#fff;text-align:center;padding:36px 18px;position:relative;overflow:hidden}
+.band .en{font-size:11.5px;letter-spacing:.26em;opacity:.85}
+.band .en-big{font-family:var(--font-sans);font-size:21px;font-weight:600;letter-spacing:.12em;margin-top:8px;line-height:1.4}
+.band svg{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:24px;opacity:.4}
+/* 챗버블 */
+.chat{display:flex;flex-direction:column;gap:14px;margin-top:6px}
+.bubble{display:flex;align-items:flex-end;gap:9px;max-width:88%}
+.bubble .av{width:40px;height:40px;border-radius:50%;flex:0 0 40px;background:var(--sky);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--ph-text);border:1px dashed #A9D3E8;text-align:center;line-height:1.05}
+.bubble .msg{background:#fff;border:1px solid var(--line);border-radius:18px;border-bottom-left-radius:5px;padding:12px 16px;font-size:14px;font-weight:600;color:var(--text-black);box-shadow:0 4px 12px rgba(24,169,227,.08)}
+.bubble.me{align-self:flex-end;flex-direction:row-reverse}
+.bubble.me .msg{background:var(--brand);color:#fff;border-color:var(--brand);border-bottom-left-radius:18px;border-bottom-right-radius:5px}
+.bubble.me .av{background:var(--brand2)}
+/* STEP 원형 */
+.steps{display:flex;flex-direction:column}
+.step{text-align:center;padding:14px 0}
+.step+.step{border-top:1px dashed var(--line)}
+.stepno{display:inline-block;background:var(--brand-ink);color:#fff;font-size:12px;font-weight:800;letter-spacing:.08em;padding:6px 18px;border-radius:999px}
+.step .circ{width:134px;height:134px;border-radius:50%;background:var(--sky);margin:16px auto 14px;display:flex;align-items:center;justify-content:center;color:var(--ph-text);font-size:12px;border:1px dashed #A9D3E8;text-align:center;padding:10px}
+.step h4{font-size:17px;font-weight:800}
+.step .sd{font-size:13px;color:var(--text-gray);margin-top:6px;line-height:1.6}
+/* 리뷰카드 */
+.rev{display:flex;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 6px 18px rgba(24,169,227,.07)}
+.rev .rimg{width:104px;height:104px;flex:0 0 104px;border-radius:12px;background:var(--ph-bg);border:1px dashed #A9D3E8;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--ph-text);text-align:center;padding:6px}
+.rev .rbody{min-width:0;flex:1}
+.rev .stars{color:var(--brand);letter-spacing:2px;font-size:13px}
+.rev .who{font-size:11px;color:var(--text-light);margin-top:2px}
+.rev .rbody p{font-size:13.5px;margin-top:6px;line-height:1.6}
+.rev-emph{color:var(--brand-deep);font-weight:800}
+/* 경고 콜아웃 */
+.alert{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-top:16px}
+.alert-title{display:flex;align-items:center;gap:6px;font-size:16px;font-weight:700;color:var(--brand-deep)}
+.alert-title .ic{font-size:16px;line-height:1}
+.alert p{font-size:13.5px;color:var(--text-dark);line-height:1.55}
+/* 디바이스 % 배지 */
+.pnum{position:relative}
+.pnum .badge{position:absolute;left:12px;top:12px;background:var(--brand);color:#fff;font-weight:800;font-size:18px;padding:8px 14px;border-radius:999px;box-shadow:0 6px 16px rgba(14,124,184,.3)}
+.pnum .badge.pre{background:#fff;color:var(--brand-deep);border:1px solid var(--line)}
+/* 증감 화살표 */
+/* WHY 헤딩 버블 배경 */
+
+/* ===== 언커먼 타올 오버라이드 ===== */
+:root{
+  --navy:#173634; --brand:#0A9E9A; --brand2:#0ABAB5; --sky:#9FE3E0; --cream:#F7F6F3;
+  --brand-deep:#0B6F6C; --brand-ink:#173634;
+  --text-black:#1a1a1a; --text-dark:#363636; --text-gray:#6f6f6f; --text-light:#9a9a9a;
+  --line:#E3E8E7; --line-soft:#EEF2F1; --bg-tint:#F7F6F3; --bg-soft:#EEF6F5; --bg-dark:#173634;
+}
+section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)),url('img/bts_hand.jpg') center 42% / cover no-repeat}
+.hero-inner{background-position:center 60%}
+.sponge-img{width:240px;height:240px;border-radius:50%;background-size:cover;overflow:visible}
+.sponge-zoom{border-radius:50%;aspect-ratio:1/1;object-fit:cover;border:3px solid #fff}
+.sp-figure{width:46px;border-radius:23px;background:repeating-linear-gradient(135deg,#ffffff 0 6px,#cfeeed 6px 9px);box-shadow:inset 0 0 0 1px #bfe3e1}
+.ing-product{object-fit:cover;border-radius:50%;aspect-ratio:1/1}
+.chk{display:inline;background:#ffe55c;color:#5a4a00;font-size:11px;font-weight:700;padding:1px 6px;border-radius:4px;margin:0 2px;letter-spacing:0;line-height:1.9;text-shadow:none}
+.chk-block{display:block;background:#fff8c9;border:1.5px dashed #e0c200;color:#5a4a00;font-size:12px;font-weight:500;padding:10px 12px;border-radius:10px;margin:14px 0;line-height:1.6;text-align:left;text-shadow:none}
 .memo-off .chk,.memo-off .chk-block{display:none!important}
-.memo-toggle{position:fixed;top:12px;right:12px;z-index:60;background:#222;color:#fff;border:0;border-radius:999px;font:700 12px var(--font);padding:8px 12px;cursor:pointer;opacity:.85}
-.ph{background:repeating-linear-gradient(45deg,#f1f1ef 0 10px,#e9e9e6 10px 20px);color:#777;font-size:13px;text-align:center;display:flex;align-items:center;justify-content:center;padding:16px;border-radius:14px}
-
-/* 01 Hero */
-.hero{padding:0;position:relative}
-.hero .copy{padding:40px 24px 36px;text-align:center}
-.hero .brand{font-size:12px;font-weight:700;letter-spacing:.24em;color:var(--muted)}
-.hero h1{font-size:34px;font-weight:800;line-height:1.3;letter-spacing:-.04em;margin-top:14px}
-.hero p{font-size:15px;color:var(--ink2);margin-top:12px}
-.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:22px}
-.chips span{font-size:12.5px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--white)}
-
-/* 02 실물 가까이 */
-.swipe{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:28px -20px 0;padding:0 20px 6px;scrollbar-width:none}
-.swipe::-webkit-scrollbar{display:none}
-.swipe figure{flex:0 0 82%;scroll-snap-align:center}
-.swipe img{border-radius:14px;aspect-ratio:4/5;object-fit:cover}
-.swipe figcaption{font-size:13px;color:var(--ink2);margin-top:10px}
-.swipe figcaption b{display:block;font-size:14.5px;color:var(--ink)}
-
-/* 03 질문 카드 */
-.qcards{display:grid;gap:10px;margin-top:28px}
-.qcard{display:flex;justify-content:space-between;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px;text-decoration:none;color:var(--ink);font-weight:700;font-size:15.5px}
-.qcard small{display:block;font-weight:500;font-size:12.5px;color:var(--muted);margin-top:2px}
-.qcard i{font-style:normal;color:var(--point-deep);font-size:18px}
-
-/* 04 브랜드 */
-.story p{font-size:15px;color:var(--ink2);text-align:center;line-height:1.9}
-.story .quote{font-size:19px;font-weight:700;color:var(--ink);line-height:1.6;margin-top:28px}
-
-/* 05 기준 교육 */
-.crit{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:22px 20px;margin-top:14px}
-.crit .n{font-size:12px;font-weight:800;color:var(--point-deep);letter-spacing:.1em}
-.crit h3{font-size:18px;font-weight:800;margin-top:6px}
-.crit p{font-size:14.5px;color:var(--ink2);margin-top:8px}
-.crit .ans{margin-top:14px;padding:14px;background:var(--point-soft);border-radius:10px;font-size:14px}
-.crit .ans b{color:var(--point-deep)}
-.aside{margin-top:20px;border-left:3px solid var(--point);padding:4px 0 4px 14px;font-size:13.5px;color:var(--ink2)}
-.honest{margin-top:24px;text-align:center;font-size:14px;font-weight:700;color:var(--ink)}
-
-/* 06 디테일 */
-.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:28px}
-.detail-grid img{border-radius:12px;aspect-ratio:1/1;object-fit:cover}
-.detail-grid .wide{grid-column:1/-1}
-.detail-grid .wide img{aspect-ratio:3/2}
-.spec{margin-top:24px;border-top:1px solid var(--ink)}
-.spec div{display:flex;justify-content:space-between;padding:13px 2px;border-bottom:1px solid var(--line);font-size:14px}
-.spec dt{color:var(--muted)}
-.spec dd{font-weight:700;text-align:right}
-
-/* 07 시험 결과 */
-.test-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:12px}
-.test-card .k{font-size:12px;font-weight:700;color:var(--muted)}
-.test-card h3{font-size:16.5px;font-weight:800;margin-top:4px}
-.test-card .v{font-size:24px;font-weight:800;color:var(--point-deep);margin-top:10px;letter-spacing:-.03em}
-.test-card .v small{font-size:13px;color:var(--ink2);font-weight:600}
-.test-card .meta{font-size:12px;color:var(--muted);margin-top:10px;line-height:1.6}
-.test-card .lim{font-size:12.5px;color:var(--ink2);margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
-
-/* 08 납품 (보조) */
-.trust{padding:40px 20px;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.trust .lead{font-size:16px;color:var(--ink2);line-height:1.7}
-.trust .lead b{color:var(--ink);font-weight:800}
-.trust .cats{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:16px}
-.trust .cats span{border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:12.5px;color:var(--ink2)}
-.trust .small{margin-top:14px}
-
-/* 09 컬러 */
-.colors{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
-.colors figure img{border-radius:12px;aspect-ratio:1/1;object-fit:cover}
-.colors figcaption{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;margin-top:8px}
-.dot{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
-
-/* 10 관리 */
-.steps{margin-top:28px;counter-reset:s}
-.step{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
-.step::before{counter-increment:s;content:counter(s);flex:0 0 30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
-.step b{display:block;font-size:15.5px}
-.step p{font-size:13.5px;color:var(--ink2);margin-top:2px}
-.care-icons{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px;text-align:center}
-.care-icons div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px 4px;font-size:12px;font-weight:600;color:var(--ink2)}
-.care-icons div strong{display:block;font-size:20px;margin-bottom:4px}
-.promise{display:grid;gap:8px;margin-top:22px}
-.promise div{background:var(--point-soft);border-radius:12px;padding:14px 16px;font-size:14px;font-weight:600}
-.promise div::before{content:"✓ ";color:var(--point-deep);font-weight:800}
-
-/* 11 선물 */
-.gift{text-align:center}
-.gift .pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:28px}
-.gift .pair img{border-radius:12px;aspect-ratio:2/3;object-fit:cover}
-.gift p.body{font-size:15px;color:var(--ink2);margin-top:22px;line-height:1.9}
-
-/* 12 Offer */
-.offer-list{display:grid;gap:12px;margin-top:28px}
-.opt{position:relative;display:block;background:var(--white);border:1.5px solid var(--line);border-radius:16px;padding:20px;cursor:pointer}
-.opt input{position:absolute;opacity:0}
-.opt:has(input:checked){border-color:var(--point);box-shadow:0 0 0 3px var(--point-soft)}
-.opt .row{display:flex;justify-content:space-between;align-items:baseline}
-.opt .qty{font-size:19px;font-weight:800}
-.opt .badge{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:var(--point);border-radius:6px;padding:2px 7px;margin-left:6px;vertical-align:3px}
-.opt .price{font-size:22px;font-weight:800;letter-spacing:-.03em}
-.opt .was{font-size:13px;color:var(--muted);text-decoration:line-through;text-align:right}
-.opt .per{font-size:13px;color:var(--ink2);margin-top:6px}
-.btn{display:block;width:100%;text-align:center;padding:17px;border-radius:14px;font:800 16px var(--font);border:0;cursor:pointer;text-decoration:none}
-.btn-main{background:var(--ink);color:#fff}
-.btn-line{background:var(--white);color:var(--ink);border:1.5px solid var(--ink)}
-
-/* 13 FAQ / 고시 */
-details{border-bottom:1px solid var(--line)}
-summary{list-style:none;cursor:pointer;padding:18px 28px 18px 0;font-weight:700;font-size:15px;position:relative}
-summary::-webkit-details-marker{display:none}
-summary::before{content:"Q. ";color:var(--point-deep)}
-summary::after{content:"+";position:absolute;right:4px;top:15px;font-size:20px;font-weight:400;color:var(--muted)}
-details[open] summary::after{content:"−"}
-details .a{padding:0 0 18px;font-size:14px;color:var(--ink2)}
-.notice{font-size:12.5px;width:100%;border-collapse:collapse;margin-top:16px}
-.notice th,.notice td{border-top:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top}
-.notice th{width:34%;background:var(--bg);font-weight:600;color:var(--ink2)}
-.notice tr:last-child th,.notice tr:last-child td{border-bottom:1px solid var(--line)}
-
-/* 하단 고정 바 + 옵션 시트 */
-.bar{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:480px;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;align-items:center}
-.bar .p{flex:0 0 auto;line-height:1.3}
-.bar .p small{display:block;font-size:11px;color:var(--muted)}
-.bar .p b{font-size:17px;font-weight:800}
-.bar .btn{padding:15px 10px;font-size:15px}
-.dim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:70;opacity:0;pointer-events:none;transition:opacity .25s}
-.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,100%);width:100%;max-width:480px;z-index:80;background:var(--white);border-radius:20px 20px 0 0;padding:22px 20px calc(18px + env(safe-area-inset-bottom));transition:transform .3s ease;max-height:86vh;overflow-y:auto}
-.open .dim{opacity:1;pointer-events:auto}
-.open .sheet{transform:translate(-50%,0)}
-.sheet h4{font-size:15px;font-weight:800;margin:18px 0 10px}
-.sheet h4:first-of-type{margin-top:4px}
-.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.seg button{border:1.5px solid var(--line);background:var(--white);border-radius:12px;padding:12px 4px;font:700 14px var(--font);cursor:pointer;color:var(--ink)}
-.seg button.on{border-color:var(--point);background:var(--point-soft)}
-.seg button small{display:block;font-weight:500;font-size:11.5px;color:var(--muted)}
-.crow{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px;font-weight:600}
-.crow .l{display:flex;align-items:center;gap:8px}
-.stepper{display:flex;align-items:center;gap:12px}
-.stepper button{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--white);font-size:17px;cursor:pointer}
-.stepper span{min-width:18px;text-align:center;font-weight:800}
-.sum{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 12px}
-.sum b{font-size:22px;font-weight:800}
-.left{font-size:12.5px;color:var(--point-deep);font-weight:700}
-.left.ok{color:var(--muted)}
+.memo-toggle{position:fixed;top:12px;right:12px;z-index:999;background:#222;color:#fff;border:0;border-radius:999px;font:700 12px var(--font-sans);padding:8px 12px;cursor:pointer;opacity:.85}
 </style>
-</head>
 <body>
 <button class="memo-toggle" type="button" onclick="document.body.classList.toggle('memo-off');this.textContent=document.body.classList.contains('memo-off')?'제작 메모 보기':'제작 메모 숨기기'">제작 메모 숨기기</button>
-<div class="page">
 
-<!-- ═══ 01 HERO ═══ -->
-<section class="hero">
-  <img src="img/hero.jpg" alt="흰색 언커먼 페이스타월 세 장을 말아 욕실 선반에 올려둔 모습">
-  <div class="copy">
-    <span class="brand">UNCOMMON TOWEL</span>
-    <h1>세안 끝,<br>부드러운 한 장으로.</h1>
-    <p>매일 닿는 감촉부터 욕실에 둘 색까지,<br>직접 고르세요.</p>
-    <div class="chips">
-      <span>밤부 비스코스 100%<span class="chk">G1 최종 혼용률</span></span>
-      <span>40×80cm</span>
-      <span>장당 220g</span>
-      <span>국내 생산<span class="chk">확인</span></span>
+<!-- [1] HERO -->
+<section class="hero" style="padding:0">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1 class="hero-title">관공서·대학 50여 곳이<br>먼저 고른 수건,<br>언커먼 타올</h1>
+      <p class="hero-sub">세안 끝, 매일 얼굴에 닿는 한 장을<br>도톰하고 부드럽게</p>
+    </div>
+    <ul class="hero-certs">
+      <li><span class="hero-cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></span><span>FITI<br>시험 6건*</span></li>
+      <li><span class="hero-cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span><span>디자인<br>등록</span></li>
+      <li><span class="hero-cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></span><span>항균 가공<br>시험 완료</span></li>
+      <li><span class="hero-cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span><span>알러지성 염료<br>22종 불검출</span></li>
+    </ul>
+  </div>
+</section>
+<span class="chk-block" style="margin:10px 16px">히어로 '50여 곳이 먼저 고른' = 언커먼 수건 전체 납품 이력 기준(이 페이스타월 한정 아님) · *FITI 시험 결과는 결과 전문·광고 사용 서면 동의(G2) 확보 후 노출</span>
+
+<!-- [1b] 2번 섹션 — 히어로와 동일 높이 (배경 이미지) -->
+<div class="hero-sub">
+  <div class="sub-inner">
+    <p class="sub-eyebrow"><strong>대나무</strong>에서 온 실로 짠<br><strong>프리미엄</strong> 페이스타월</p>
+    <h2 class="sub-title">UNCOMMON TOWEL<br>THE SOFT</h2>
+  </div>
+</div>
+
+<!-- [1c] 요약 — 세안 + 한 장 -->
+<div class="abs-sec abs-intro">
+  <p class="abs-eyebrow">DAILY · FACE TOWEL</p>
+  <h2 class="section-title">세안 루틴은 그대로,<br><strong>수건만 바꾸세요</strong></h2>
+  <p class="abs-lead">세안 후 물기를 거두는 마지막 한 장.<br>
+    하루에도 몇 번씩 얼굴에 닿는 수건을<br><strong class="abs-hl">40×80cm · 220g</strong>의 도톰한 밤부 한 장으로</p>
+  <div class="abs-flow" aria-hidden="true">
+    <div class="abs-flow-step">
+      <span class="abs-flow-img" style="background-image:url('img/spread.jpg')"></span>
+      <span class="abs-flow-cap">STEP 1<b>세안</b></span>
+    </div>
+    <span class="abs-flow-arrow">+</span>
+    <div class="abs-flow-step">
+      <span class="abs-flow-img" style="background-image:url('img/roll2.jpg')"></span>
+      <span class="abs-flow-cap">STEP 2<b>언커먼 한 장</b></span>
+    </div>
+  </div>
+  <p class="abs-caption">밤부 비스코스(레이온) 100%<span class="chk">G1 최종 혼용률</span> · 40×80cm · 장당 220g</p>
+</div>
+
+<!-- [2] PROOF — 시험 결과 바차트 -->
+<section class="clinical">
+  <h2 class="cl-title">시험으로 확인한 결과</h2>
+  <p class="cl-sub">FITI시험연구원 · UNCOMMON TOWEL-THE SOFT 시료 기준</p>
+  <div class="cl-test">
+    <div class="cl-photos">
+      <div class="cl-photo" style="background-image:url('img/loop.jpg')"><span class="cl-tag">표준 대조포</span></div>
+      <div class="cl-photo" style="background-image:url('img/c_white.jpg')"><span class="cl-tag">언커먼 시료</span></div>
+    </div>
+    <div class="cl-result">
+      <h3 class="cl-name">황색포도상구균</h3>
+      <p class="cl-delta"><b>99.9%</b> 감소</p>
+      <div class="cl-chart">
+        <div class="grid" style="top:24%"></div><div class="grid" style="top:58%"></div>
+        <div class="cl-bar before" style="height:100%"></div>
+        <svg class="cl-flow" aria-hidden="true"></svg>
+        <div class="cl-bar after" style="height:2%"></div>
+      </div>
+      <div class="cl-x"><span>대조포</span><span>언커먼</span></div>
+    </div>
+  </div>
+  <div class="cl-test">
+    <div class="cl-photos">
+      <div class="cl-photo" style="background-image:url('img/edge.jpg')"><span class="cl-tag">표준 대조포</span></div>
+      <div class="cl-photo" style="background-image:url('img/c_mint.jpg')"><span class="cl-tag">언커먼 시료</span></div>
+    </div>
+    <div class="cl-result">
+      <h3 class="cl-name">폐렴균</h3>
+      <p class="cl-delta"><b>95.0%</b> 감소</p>
+      <div class="cl-chart">
+        <div class="grid" style="top:24%"></div><div class="grid" style="top:58%"></div>
+        <div class="cl-bar before" style="height:100%"></div>
+        <svg class="cl-flow" aria-hidden="true"></svg>
+        <div class="cl-bar after" style="height:5%"></div>
+      </div>
+      <div class="cl-x"><span>대조포</span><span>언커먼</span></div>
+    </div>
+  </div>
+  <div class="cl-test">
+    <div class="cl-photos">
+      <div class="cl-photo" style="background-image:url('img/fold2.jpg')"><span class="cl-tag">길이 방향</span></div>
+      <div class="cl-photo" style="background-image:url('img/spread.jpg')"><span class="cl-tag">너비 방향</span></div>
+    </div>
+    <div class="cl-result">
+      <h3 class="cl-name">흡수 높이 (바이렉법)</h3>
+      <p class="cl-delta"><b>59mm</b> 까지</p>
+      <div class="cl-chart">
+        <div class="grid" style="top:24%"></div><div class="grid" style="top:58%"></div>
+        <div class="cl-bar before" style="height:92%"></div>
+        <svg class="cl-flow" aria-hidden="true"></svg>
+        <div class="cl-bar after" style="height:95%"></div>
+      </div>
+      <div class="cl-x"><span>길이 57mm</span><span>너비 59mm</span></div>
+    </div>
+  </div>
+  <div class="cl-test">
+    <div class="cl-photos">
+      <div class="cl-photo" style="background-image:url('img/stack.jpg')"><span class="cl-tag">기준 20mg/kg</span></div>
+      <div class="cl-photo" style="background-image:url('img/label1.jpg')"><span class="cl-tag">언커먼 시료</span></div>
+    </div>
+    <div class="cl-result">
+      <h3 class="cl-name">알러지성 염료 22종</h3>
+      <p class="cl-delta"><b>불검출</b></p>
+      <div class="cl-chart">
+        <div class="grid" style="top:24%"></div><div class="grid" style="top:58%"></div>
+        <div class="cl-bar before" style="height:100%"></div>
+        <svg class="cl-flow" aria-hidden="true"></svg>
+        <div class="cl-bar after" style="height:1%"></div>
+      </div>
+      <div class="cl-x"><span>검출한계</span><span>언커먼</span></div>
+    </div>
+  </div>
+  <p class="note" style="text-align:center;margin-top:18px">[FITI시험연구원 · 2024.03~04] 항균성 KS K 0693:2022(황색포도상구균·폐렴균) · 흡수성 바이렉법 · 알러지성 염료 KS K 0736:2019 검출한계(20mg/kg) 미만<br>항균 결과는 항균 가공을 거친 시료의 결과이며, 반복 세탁 후 유지 여부는 확인되지 않았습니다.</p>
+  <span class="chk-block">G2 — 표지만 확보. 결과 전문 대조·접수번호별 시료 색상 연결·FITI 광고 사용 서면 동의 전에는 섹션 비공개. 사진은 임시(시료 사진 아님)</span>
+</section>
+
+<!-- [6] FOUNDER STORY -->
+<section class="founder">
+  <h2 class="fd-title">소중한 날을 위한<br>수건에서 시작했습니다</h2>
+  <p class="fd-body">처음 만든 수건은 소중한 사람과 소중한 날을 위한<br>'신부타올'이었습니다.<br>축복을 담는 물건이라 아무 실이나 쓸 수 없었죠.</p>
+  <p class="fd-body">그 마음 그대로 원사부터 직조, 염색, 라벨 마감까지<br>다시 살폈고, 이제 매일 얼굴에 닿는<br>페이스타월 한 장에 담았습니다.</p>
+  <p class="fd-sign">언커먼 타올 대표</p>
+</section>
+
+<!-- [7c] REVIEWS -->
+<section class="reviews">
+  <div class="rv-top">
+    <p class="rv-eyebrow">REAL REVIEWS</p>
+    <h2 class="rv-title">써본 사람이 말하는 진짜<br><strong>#언커먼_한장</strong></h2>
+  </div>
+  <div class="rv">
+    <div class="rv-img" style="background-image:url('img/c_white.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">실제 후기 자리 · 사용 기간·세탁 횟수 표기</div>
+    <p class="rv-text">세수하고 얼굴에 대는 순간 감촉이 달라요. 몇 번 빨았는데도 처음 느낌 그대로예요</p>
+  </div>
+  <div class="rv">
+    <div class="rv-img" style="background-image:url('img/c_mint.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">실제 후기 자리 · 사용 기간·세탁 횟수 표기</div>
+    <p class="rv-text">한 장 무게가 있어서 도톰한데, 물기는 한 번에 거둬져요. 욕실 수건을 다 이걸로 바꿨어요</p>
+  </div>
+  <div class="rv">
+    <div class="rv-img" style="background-image:url('img/stack.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">실제 후기 자리 · 사용 기간·세탁 횟수 표기</div>
+    <p class="rv-text">색이 은은해서 욕실 선반에 쌓아두기만 해도 예뻐요. 가장자리 무늬가 고급스러워요</p>
+  </div>
+  <div class="rv">
+    <div class="rv-img" style="background-image:url('img/bts_bag1.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">실제 후기 자리 · 사용 기간·세탁 횟수 표기</div>
+    <p class="rv-text">집들이 선물로 보냈는데 받은 친구가 어디 거냐고 다시 물어봤어요</p>
+  </div>
+  <p class="note" style="text-align:center;margin-top:12px">※ 개인의 사용 경험이며, 사용 환경에 따라 다를 수 있습니다.</p>
+  <span class="chk-block">현재 실제 고객 후기 없음 — 위 문장은 자리 표시용 예시. 공구 1차 실사용 후기(광고 관계 표기 포함)로 반드시 교체</span>
+</section>
+
+<!-- [7d] 리뷰 하단 이미지 -->
+<div class="full-img"><img loading="lazy" decoding="async" src="img/stack.jpg" alt="욕실 선반에 쌓아둔 언커먼 타올"></div>
+
+<!-- [3] PROBLEM — 수건 고민 -->
+<section class="worry">
+  <h2 class="wr-title">하루 세 번 얼굴에 닿는<br>수건의 <strong>흔한 고민</strong></h2>
+  <div class="wr-circle"></div>
+  <div class="wr-chat">
+    <div class="wb ">세수하고 수건으로 닦으면 얼굴이 따끔해요. 박박 문지른 것도 아닌데 볼이 금방 빨개져요.</div>
+    <div class="wb me">새로 산 수건도 몇 번 빨고 나면 뻣뻣해져요. 처음 그 보송한 느낌이 금방 사라져요.</div>
+    <div class="wb ">물기가 한 번에 안 닦이고 겉돌아요. 여러 번 눌러 닦다 보면 오히려 더 신경 쓰여요.</div>
+    <div class="wb me">욕실에 걸어둔 수건에서 꿉꿉한 냄새가 나요. 빨아도 며칠 지나면 또 그래요.</div>
+  </div>
+</section>
+
+<!-- [3b] 카피 밴드 -->
+<div class="copy-band">
+  <p>좋다는 수건을 사도<br>금방 거칠어지고 냄새가 나는<br>이유!</p>
+</div>
+
+<!-- [5b] 원인 -->
+<section class="cause-sec">
+  <div class="causes">
+    <div class="cause-card">
+      <span class="cause-no">1</span>
+      <h3 class="cause-title">젖은 채 오래 걸어두면<br>세균이 빠르게 늘어나요</h3>
+      <div class="cause-img anim-cause-1"></div>
+      <p class="cause-body">미국 애리조나대 Gerba 교수 연구에 따르면 가정 욕실 수건의 90%에서 대장균군이 검출됐어요. 사용 후 수분과 각질이 공급되면 하루 만에 세균 수가 크게 늘고, 이때 나오는 물질이 쉰내의 원인이 됩니다.</p>
+    </div>
+    <div class="cause-card">
+      <span class="cause-no">2</span>
+      <h3 class="cause-title">두껍기만 하고 안 마르면<br>냄새가 섬유에 남아요</h3>
+      <div class="cause-img anim-cause-2"></div>
+      <p class="cause-body">미생물이 자라려면 수분이 오래 머물러야 해요. 흡수만 좋고 잘 마르지 않는 수건은 젖어 있는 시간이 길어지고, 섬유 깊숙이 미생물막이 생기면 일반 세탁으로 잘 지워지지 않습니다.</p>
+    </div>
+    <div class="cause-card">
+      <span class="cause-no">3</span>
+      <h3 class="cause-title">거친 표면은<br>닦을 때마다 마찰을 남겨요</h3>
+      <div class="cause-img anim-cause-3"></div>
+      <p class="cause-body">섬유 촉감 평가(KES-FB) 연구에서 표면 마찰계수가 낮고 매끄러운 직물일수록 피부에 주는 물리적 자극이 적은 것으로 나타났어요. 세안 직후 얼굴은 매일 이 마찰을 만납니다.</p>
+    </div>
+    <p class="note">※ 일반 미생물학·섬유공학 연구 결과이며 특정 제품의 효능이 아닙니다. (출처: Gerba 가정 위생 연구, 수건 건조와 바이오필름 연구, KES-FB 직물 촉감 연구)</p>
+    <span class="chk-block">원인 카드 문헌 3건은 원문 대조 후 출처 상세 표기 · 이미지 3장은 임시(실물 사진)</span>
+  </div>
+</section>
+
+<!-- [5c] 결론 -->
+<section class="conclusion">
+  <p class="cc-lead">매일 빨고, 젖고, 다시 마르는 수건은<br><strong>소재와 짜임</strong>에 따라 <strong>쓰는 느낌이 달라집니다.</strong></p>
+  <div class="cc-img anim-conclusion"></div>
+  <p class="cc-next">그래서 얼굴에 닿는 수건은 가격보다 먼저,<br><strong>무엇으로 어떻게 만들었는지</strong>를 봐야 합니다.</p>
+</section>
+
+<!-- [6-1] 핵심 소재 -->
+<section class="sponge-sec">
+  <h2 class="section-title"><span class="sg-lead">부드러움을 만드는 한 가지,<br>대나무에서 온 실</span><span class="sg-big">BAMBOO VISCOSE</span></h2>
+  <div class="sponge-img"><img class="sponge-zoom" loading="lazy" decoding="async" src="img/edge.jpg" alt="가장자리 확대"></div>
+  <div class="spx-box">
+    <p class="spx-label">밤부 비스코스(레이온) 100%</p>
+    <p class="spx-name">BAMBOO VISCOSE</p>
+    <p class="spx-desc">대나무 펄프를 녹여 다시 뽑아낸 <strong>재생 셀룰로오스 섬유</strong>입니다.<br>매끄러운 실 표면 덕분에 <strong>손에 닿는 감촉이 부드럽고</strong>,<br>한 장 <strong>220g</strong>으로 짜 도톰하게 완성했습니다.</p>
+    <p class="spx-note">※ '천연 대나무'라는 이유만으로 천연 항균성을 주장하지 않습니다 · 항균은 별도 가공 결과입니다</p>
+    <div class="spx-grid">
+      <div class="spx-cell"><span class="spx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></span><h3>부드러운 감촉</h3><p>매끄러운 실 표면</p></div>
+      <div class="spx-cell"><span class="spx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span><h3>물기 흡수</h3><p>세안 후 한 번에</p></div>
+      <div class="spx-cell"><span class="spx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span><h3>도톰한 220g</h3><p>손에 쥐는 두께</p></div>
+      <div class="spx-cell"><span class="spx-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></span><h3>항균 가공</h3><p>시험 완료</p></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ 02 실물 가까이 ═══ -->
-<section class="bg" id="close">
-  <span class="eyebrow">CLOSE UP</span>
-  <h2 class="h2">사진만으로 감촉을<br>다 전할 수는 없습니다.</h2>
-  <p class="sub">그래서 결, 두께, 마감까지<br>가까이 보여드립니다.</p>
-  <span class="chk-block">[신규 촬영] 손으로 접고 펼치는 감촉 영상 + 전체를 펼친 컷을 이 자리 맨 앞에 넣기</span>
-  <div class="swipe">
-    <figure><img src="img/loop.jpg" alt="수건 표면 루프 확대"><figcaption><b>촘촘하게 선 표면 루프</b>얼굴에 먼저 닿는 면입니다.</figcaption></figure>
-    <figure><img src="img/edge.jpg" alt="수건 가장자리 봉제 확대"><figcaption><b>가장자리 봉제</b>가장자리의 마감을 가까이 보여드립니다.</figcaption></figure>
-    <figure><img src="img/fold2.jpg" alt="접힌 수건의 두께감"><figcaption><b>접었을 때의 두께</b>한 장 220g, 손에 쥐면 도톰합니다.<span class="chk">단면 보이게 접은 컷으로 교체</span></figcaption></figure>
-    <figure><img src="img/spread.jpg" alt="펼쳐둔 수건의 결"><figcaption><b>펼쳤을 때의 결</b>빛이 비치는 방향에 따라 결이 보입니다.</figcaption></figure>
+<!-- [5b3] 만들어지는 4단계 -->
+<div class="cause-sec step-sec">
+  <h2 class="section-title">언커먼 한 장이<br><strong>만들어지는 4단계</strong></h2>
+  <div class="causes">
+    <div class="cause-card">
+      <span class="cause-no">1</span>
+      <h3 class="cause-title">얼굴에 닿을 실을<br>먼저 고릅니다</h3>
+      <div class="cause-img anim-step-1"></div>
+      <p class="cause-body">수건의 감촉은 실에서 시작됩니다. 매끄러운 표면의 밤부 비스코스 원사를 골라, 닦는 순간의 촉감부터 설계했습니다.</p>
+    </div>
+    <div class="cause-card">
+      <span class="cause-no">2</span>
+      <h3 class="cause-title">루프를 촘촘하게 세워<br>220g으로 짭니다</h3>
+      <div class="cause-img anim-step-2"></div>
+      <p class="cause-body">같은 40×80cm라도 한 장의 무게는 제품마다 다릅니다. 표면 루프를 촘촘하게 세워 손에 쥐면 도톰한 220g으로 완성했습니다.</p>
+    </div>
+    <div class="cause-card">
+      <span class="cause-no">3</span>
+      <h3 class="cause-title">욕실에 어울리는<br>은은한 색으로 염색합니다</h3>
+      <div class="cause-img anim-step-3"></div>
+      <p class="cause-body">퓨어 화이트부터 아르테 민트까지, 욕실 선반에 쌓아두었을 때 편안한 색을 골랐습니다. 알러지성 염료 22종은 검출한계 미만으로 확인했습니다.</p>
+    </div>
+    <div class="cause-card">
+      <span class="cause-no">4</span>
+      <h3 class="cause-title">빗금문 가장자리와 라벨로<br>마감합니다</h3>
+      <div class="cause-img anim-step-4"></div>
+      <p class="cause-body">디자인으로 등록한 빗금문 가장자리, 비율을 맞춰 단 브랜드 라벨까지. 접어두었을 때도 보이는 곳을 마지막으로 다듬었습니다.</p>
+    </div>
+    <p class="note">※ 공정 이해를 돕기 위한 설명이며, 단계별 사진은 실제 공정 사진으로 교체 예정입니다.</p>
+    <span class="chk-block">공정 순서·원사 선택 기준은 제조사 확인 · 라벨 '수봉제'는 공정 확인 후에만 표기</span>
   </div>
-  <span class="chk-block">[후기 확보 후] 실사용 후기 2~3개 — 사용 기간·세탁 횟수·광고 관계 표기 필수</span>
-</section>
-
-<!-- ═══ 03 PROBLEM ═══ -->
-<section id="question">
-  <span class="eyebrow">QUESTION</span>
-  <h2 class="h2">수건을 고를 때,<br><em>가격 말고</em> 무엇을 보셨나요?</h2>
-  <p class="sub">페이스타월을 바꾸기 전에<br>많이들 궁금해하시는 것부터 답합니다.</p>
-  <div class="qcards">
-    <a class="qcard" href="#close">닦을 때 감촉이 어떤가요?<i>→</i></a>
-    <a class="qcard" href="#criteria">한 장이 얼마나 도톰한가요?<i>→</i></a>
-    <a class="qcard" href="#care">우리 집 세탁 방식에 맞나요?<i>→</i></a>
-    <a class="qcard" href="#offer">몇 장이 필요할까요?<i>→</i></a>
-  </div>
-  <span class="chk-block">실제 CS·DM 원문 질문으로 교체</span>
-</section>
-
-<!-- ═══ 04 브랜드 ═══ -->
-<section class="bg story">
-  <span class="eyebrow">WHY ONE TOWEL</span>
-  <h2 class="h2">그래서<br>페이스타월 하나만 만듭니다</h2>
-  <img class="rad mt32" src="img/roll2.jpg" alt="말아둔 흰 페이스타월">
-  <p class="mt32">세수하고 나서, 화장 지우고 나서,<br>운동 끝나고 땀을 닦을 때.</p>
-  <p class="mt16">하루에도 몇 번씩 얼굴에 닿는 수건이라<br>소재부터 다시 살폈습니다.<br>원사부터 직조, 염색까지 다시 봤습니다.</p>
-  <p class="quote">많이 만드는 수건보다,<br>매일 손이 가는 한 장을.</p>
-  <span class="chk-block">원사·직조 공정 컷이 있으면 위 사진과 교체</span>
-</section>
-
-<!-- ═══ 05 선택 기준 ═══ -->
-<section id="criteria">
-  <span class="eyebrow">HOW TO CHOOSE</span>
-  <h2 class="h2">밤부 수건,<br><em>이 세 가지만</em> 보고 고르세요</h2>
-
-  <div class="crit mt32">
-    <span class="n">CHECK 01</span>
-    <h3>무엇으로 만들었나요?</h3>
-    <p>'천연 대나무'라는 말보다, 어떤 실로 만들었는지 정확히 적혀 있는지 보세요.</p>
-    <div class="ans"><b>언커먼</b> · 대나무 유래 비스코스(레이온) 100%<span class="chk">G1 라벨·고시와 일치</span></div>
-  </div>
-
-  <div class="crit">
-    <span class="n">CHECK 02</span>
-    <h3>크기와 무게는요?</h3>
-    <p>같은 40×80cm라도 한 장의 무게는 제품마다 다릅니다. 지금 쓰는 수건의 무게와 비교해 보세요.</p>
-    <div class="ans"><b>언커먼</b> · 40×80cm, 장당 220g</div>
-    <p class="small mt8">무게가 곧 품질이라는 뜻은 아닙니다. 손에 쥐었을 때의 도톰함을 가늠하는 기준입니다.</p>
-  </div>
-
-  <div class="crit">
-    <span class="n">CHECK 03</span>
-    <h3>우리 집에서 어떻게 관리하나요?</h3>
-    <p>매일 빨아 쓰는 물건입니다. 세탁·건조 방법이 우리 집 방식과 맞는지 먼저 보세요.</p>
-    <div class="ans"><b>언커먼</b> · 세탁 가이드 동봉 · <a href="#care" style="color:inherit">관리 방법 보기 →</a></div>
-  </div>
-
-  <p class="aside">30수·40수 같은 번수 하나로는 완성된 수건을 판단하기 어렵습니다. 같은 실이라도 밀도, 직조, 염색, 마감에서 결과가 갈립니다.</p>
-  <p class="honest">대나무에서 유래한 비스코스라는 이유만으로<br>천연 항균성을 주장하지 않습니다.</p>
-</section>
-
-<!-- ═══ 06 디테일 ═══ -->
-<section class="bg">
-  <span class="eyebrow">DETAIL</span>
-  <h2 class="h2">접어두었을 때도 보이는,<br>가장자리의 무늬</h2>
-  <p class="sub">언커먼만의 빗금문 가장자리는<br>디자인으로 등록되어 있습니다.</p>
-  <div class="detail-grid">
-    <div class="wide"><img src="img/fold1.jpg" alt="가장자리 빗금문과 라벨"><span class="chk-block">이 사진은 빗금문이 잘 안 보임 → 빗금문 정면 확대 컷으로 교체</span></div>
-    <img src="img/label1.jpg" alt="브랜드 라벨 봉제">
-    <img src="img/label2.jpg" alt="라벨과 가장자리 마감">
-  </div>
-    <dl class="spec">
-    <div><dt>소재</dt><dd>밤부 비스코스 100%<span class="chk">G1</span></dd></div>
-    <div><dt>크기</dt><dd>40 × 80cm</dd></div>
-    <div><dt>무게</dt><dd>장당 220g</dd></div>
-    <div><dt>디자인 등록</dt><dd>제30-1303321호</dd></div>
-  </dl>
-</section>
-
-<!-- ═══ 07 시험 결과 (A안) ═══ -->
-<section id="test">
-  <span class="chk-block"><b>A안 섹션</b> — FITI 항목별 결과 전문 + 진위 확인 + 광고 사용 서면 동의(G2)를 충족한 카드만 남김. 미충족 시 섹션 통째로 삭제(B안). 수치는 리서치 자료 기준이며 원본 성적서로 재대조 필요.</span>
-  <span class="eyebrow">TEST REPORT</span>
-  <h2 class="h2">시험 결과는,<br>시험한 조건과 함께 적었습니다</h2>
-  <p class="sub">숫자만 크게 쓰지 않고,<br>무엇을 어떻게 시험했는지 옆에 둡니다.</p>
-
-  <div class="test-card mt32">
-    <span class="k">항균성 · KS K 0693:2022</span>
-    <h3>항균 가공을 거친 시료를 시험했습니다</h3>
-    <p class="v">99.9% <small>감소 · 황색포도상구균</small></p>
-    <p class="v" style="margin-top:2px">95.0% <small>감소 · 폐렴균</small></p>
-    <p class="meta">시료: UNCOMMON TOWEL-THE SOFT · 시험기관 FITI시험연구원 · 접수번호 <span class="chk">확인</span></p>
-    <p class="lim">반복 세탁 후 유지 여부는 현재 확보한 자료로 확인되지 않았습니다.</p>
-  </div>
-
-  <div class="test-card">
-    <span class="k">알러지성 염료 · KS K 0736:2019</span>
-    <h3>알러지성 염료 22종</h3>
-    <p class="v">검출한계 미만 <small>(20mg/kg)</small></p>
-    <p class="meta">시료 색상 <span class="chk">확인</span> · 접수번호 <span class="chk">확인</span></p>
-  </div>
-
-  <div class="test-card">
-    <span class="k">흡수성 · 바이렉법</span>
-    <h3>물이 천을 따라 올라온 높이</h3>
-    <p class="v">57mm <small>길이 방향</small> · 59mm <small>너비 방향</small></p>
-    <p class="meta">측정 시간 <span class="chk">확인</span> · 접수번호 <span class="chk">확인</span></p>
-  </div>
-
-  <div class="test-card">
-    <span class="k">세탁 견뢰도 · 시험규격 <span class="chk">확인</span></span>
-    <h3>빨았을 때 색이 빠지는 정도</h3>
-    <p class="v">4~5급</p>
-    <p class="meta">3개 색상 시료 <span class="chk">시료 색상명</span> · 접수번호 <span class="chk">확인</span></p>
-    <p class="lim">시험한 색상 시료의 결과이며, 전 색상에 대한 결과가 아닙니다.</p>
-  </div>
-
-  <div class="test-card">
-    <span class="k">세탁 치수변화율 · 시험규격 <span class="chk">확인</span></span>
-    <h3>빨았을 때 크기 변화</h3>
-    <p class="v">길이 −3.0% · 폭 +0.5% <small>1회 세탁 후</small></p>
-    <p class="meta">시료 색상 <span class="chk">확인</span> · 접수번호 <span class="chk">확인</span></p>
-    <p class="lim">시험한 시료의 결과이며, 세탁 조건에 따라 달라질 수 있습니다.</p>
-  </div>
-</section>
-
-<!-- ═══ 08 납품 이력 ═══ -->
-<section class="trust">
-  <span class="eyebrow">TRACK RECORD</span>
-  <p class="lead">언커먼은 관공서·대학·기업·협회 등<br><b>50여 곳</b>에 납품해 왔습니다.</p>
-  <div class="cats"><span>관공서</span><span>대학</span><span>기업</span><span>협회·조합</span></div>
-  <p class="small">납품 이력은 언커먼 수건 전체 기준이며, 이 페이스타월 제품에 한정되지 않습니다.<span class="chk">기관 로고는 동의받은 곳만</span></p>
-</section>
-
-<!-- ═══ 09 컬러 ═══ -->
-<section class="bg" id="colors">
-  <span class="eyebrow">COLOR</span>
-  <h2 class="h2">욕실에 둘 색을,<br>가까이 보고 고르세요</h2>
-  <p class="sub">화면에 따라 실제 색상과 다르게 보일 수 있습니다.</p>
-  <img class="rad mt32" src="img/stack.jpg" alt="여러 색 수건을 쌓아둔 모습"><span class="chk-block">회색·아이보리 수건이 섞여 있음 → 확정 판매 4색만 쌓은 컷으로 교체</span>
-  <div class="colors">
-    <figure><img src="img/c_white.jpg" alt="화이트"><figcaption><span class="dot" style="background:#f6f3ec"></span>화이트</figcaption></figure>
-    <figure><img src="img/c_sky.jpg" alt="스카이블루"><figcaption><span class="dot" style="background:#bcd6ef"></span>스카이블루</figcaption></figure>
-    <figure><img src="img/c_mint.jpg" alt="민트"><figcaption><span class="dot" style="background:#c4ece3"></span>민트</figcaption></figure>
-    <figure><img src="img/c_lavender.jpg" alt="라벤더"><figcaption><span class="dot" style="background:#b9a3e6"></span>라벤더</figcaption></figure>
-  </div>
-  <span class="chk-block">G4 — 판매 컬러·색상명 확정 (제안서 4색 vs 9월 촬영 컬러). 사진은 9월 테스트 촬영 기준</span>
-</section>
-
-<!-- ═══ 10 관리 + 교환 ═══ -->
-<section id="care">
-  <span class="eyebrow">CARE</span>
-  <h2 class="h2">받으신 날부터,<br>이렇게 써 주세요</h2>
-  <div class="steps">
-    <div class="step"><div><b>첫 세탁은 단독으로</b><p>처음 한두 번은 다른 빨래와 나눠 세탁해 주세요.</p></div></div>
-    <div class="step"><div><b>미지근한 물, 중성세제</b><p>30~40℃ 물에 중성세제로 세탁해 주세요.</p></div></div>
-    <div class="step"><div><b>섬유유연제는 넣지 않기</b><p>유연제가 루프에 남으면 흡수가 줄어들 수 있습니다.</p></div></div>
-    <div class="step"><div><b>그늘에서 펴서 말리기</b><p>건조기는 저온으로 짧게, 가능하면 펴서 말려 주세요.</p></div></div>
-  </div>
-  <div class="care-icons">
-    <div><strong>30~40℃</strong>미온수</div>
-    <div><strong>✕</strong>유연제</div>
-    <div><strong>✕</strong>표백제</div>
-    <div><strong>저온</strong>건조</div>
-  </div>
-  <span class="chk-block">G5 — 위 세탁법은 일반 밤부 수건 기준 초안. 제조사 최종 취급표시·동봉 가이드와 반드시 일치시키기</span>
-  <div class="promise">
-    <div>세탁 가이드를 함께 보내드립니다</div>
-    <div>초기 불량은 무상으로 교환해 드립니다</div>
-    <div>문의는 언커먼이 직접 답합니다</div>
-  </div>
-  <p class="small mt16">교환·반품 기준은 페이지 맨 아래 거래 조건에서 확인하세요.</p>
-</section>
-
-<!-- ═══ 11 브랜드 맥락 / 선물 ═══ -->
-<section class="bg gift">
-  <span class="eyebrow">OUR STORY</span>
-  <h2 class="h2">소중한 날을 위해 시작한 수건을,<br>매일의 자리로</h2>
-  <div class="pair">
-    <img src="img/bts_bag1.jpg" alt="민트색 쇼핑백">
-    <img src="img/bts_bag2.jpg" alt="욕실에 놓인 민트색 쇼핑백">
-  </div>
-  <p class="body">시작은 소중한 사람과 소중한 날을 위한<br>신부타올이었습니다.<br><br>축복을 담고 싶었던 그 마음을<br>매일 쓰는 한 장에 이어갑니다.</p>
-  <span class="chk-block">G5 — 쇼핑백·박스 포함 여부 확인 전에는 '선물 포장' 문구 넣지 않음</span>
-</section>
-
-<!-- ═══ 12 OFFER ═══ -->
-<section id="offer">
-  <span class="eyebrow">OFFER</span>
-  <h2 class="h2">집에 남길 수건과<br>바꿀 수건을 세어보세요</h2>
-  <p class="sub">필요한 장수와 총금액을 함께 보고 고르세요.<br>컬러는 구성 안에서 자유롭게 나눠 담을 수 있습니다.<span class="chk">G4 조합 방식</span></p>
-  <div class="offer-list">
-    <label class="opt"><input type="radio" name="set" value="8" checked>
-      <div class="row"><span class="qty">8장</span><span><span class="was" style="display:block">136,000원</span><span class="price">102,000원</span></span></div>
-      <p class="per">25% 할인 · 장당 12,750원</p></label>
-    <label class="opt"><input type="radio" name="set" value="12">
-      <div class="row"><span class="qty">12장</span><span><span class="was" style="display:block">204,000원</span><span class="price">146,880원</span></span></div>
-      <p class="per">28% 할인 · 장당 12,240원</p></label>
-    <label class="opt"><input type="radio" name="set" value="20">
-      <div class="row"><span class="qty">20장<span class="badge">최대 할인</span></span><span><span class="was" style="display:block">340,000원</span><span class="price">238,000원</span></span></div>
-      <p class="per">30% 할인 · 장당 11,900원</p></label>
-  </div>
-  <p class="small mt16">부가세 포함 · 배송비 <span class="chk">G5</span> 무료 · 공구 기간 <span class="chk">확인</span> 2026.00.00 ~ 00.00</p>
-  <div class="promise">
-    <div>공구 기간에는 이 가격보다 싸게 다른 곳에서 팔지 않습니다</div>
-    <div>초기 불량 무상 교환</div>
-    <div>세탁 가이드 동봉</div>
-  </div>
-  <button class="btn btn-main mt24" type="button" onclick="openSheet()">내 수건 구성 고르기</button>
-  <a class="btn btn-line mt8" href="#" onclick="return false">구매 전에 물어보기<span class="chk">채널톡/카카오 링크</span></a>
-</section>
-
-<!-- ═══ 13 FAQ + 고시 ═══ -->
-<section class="bg">
-  <span class="eyebrow">FAQ</span>
-  <h2 class="h2">자주 묻는 질문</h2>
-  <div class="mt32">
-    <details><summary>두꺼우면 늦게 마르지 않나요?</summary><div class="a">현재 확보한 자료로는 특정 건조 시간을 안내해 드리기 어렵습니다. 사용 후에는 접어두지 말고 펴서 걸어 주시면 더 빨리 마릅니다.</div></details>
-    <details><summary>빨아도 항균이 유지되나요?</summary><div class="a">반복 세탁 후 항균 유지 여부는 현재 확보한 자료로 확인되지 않았습니다. 확인되는 대로 이 자리에 업데이트하겠습니다.</div></details>
-    <details><summary>첫 세탁 때 물이 빠지나요?</summary><div class="a">첫 세탁은 단독 세탁을 권장합니다.</div></details>
-    <details><summary>한 장만 살 수 있나요?</summary><div class="a">이번 공구 구성은 8장·12장·20장입니다. 컬러는 구성 안에서 자유롭게 나눠 담을 수 있습니다.<span class="chk">단품 판매 여부</span></div></details>
-    <details><summary>아이도 함께 쓸 수 있나요?</summary><div class="a">가족 모두 페이스타월로 쓰실 수 있습니다. 피부가 예민하다면 첫 세탁 후 사용해 주세요.<span class="chk">G3 — OEKO-TEX 갱신 전 인증 언급 금지</span></div></details>
-    <details><summary>배송은 언제 시작되나요?</summary><div class="a">공구 마감 후 순차 발송합니다. <span class="chk">G5 발송 일정</span></div></details>
-  </div>
-
-  <h3 style="font-size:16px;font-weight:800;margin-top:48px">상품정보 제공고시</h3>
-  <table class="notice">
-    <tr><th>제품 소재</th><td>비스코스 레이온(대나무 유래) 100% <span class="chk">G1</span></td></tr>
-    <tr><th>색상</th><td>화이트 / 스카이블루 / 민트 / 라벤더 <span class="chk">G4</span></td></tr>
-    <tr><th>치수·무게</th><td>40 × 80cm / 장당 220g</td></tr>
-    <tr><th>제조자(수입자)</th><td><span class="chk">확인</span></td></tr>
-    <tr><th>제조국</th><td>대한민국 <span class="chk">확인</span></td></tr>
-    <tr><th>세탁방법 및 취급 시 주의사항</th><td>30~40℃ 중성세제 세탁, 유연제·표백제 사용 금지, 저온 건조 <span class="chk">G5</span></td></tr>
-    <tr><th>제조연월</th><td><span class="chk">확인</span></td></tr>
-    <tr><th>품질보증기준</th><td>관련 법 및 소비자분쟁해결기준에 따름</td></tr>
-    <tr><th>A/S 책임자·연락처</th><td>언커먼 고객센터 <span class="chk">연락처</span></td></tr>
-  </table>
-
-  <h3 style="font-size:16px;font-weight:800;margin-top:36px">배송·교환·반품</h3>
-  <table class="notice">
-    <tr><th>배송</th><td>공구 마감 후 순차 발송 <span class="chk">G5</span></td></tr>
-    <tr><th>교환·반품</th><td>받으신 날부터 7일 이내 신청. 사용·세탁한 상품은 교환·반품이 어렵습니다. <span class="chk">G5 반품 기준</span></td></tr>
-    <tr><th>불량</th><td>초기 불량은 무상 교환 <span class="chk">배송비 부담 주체</span></td></tr>
-    <tr><th>판매자</th><td><span class="chk">상호·대표·사업자번호·통신판매업 신고번호</span></td></tr>
-  </table>
-</section>
-
 </div>
 
-<!-- 고정 하단 구매바 -->
-<div class="bar">
-  <div class="p"><small>8장 구성부터</small><b>102,000원</b></div>
-  <button class="btn btn-main" type="button" onclick="openSheet()">내 수건 구성 고르기</button>
+<!-- 흐르는 띠 배너 -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track"><span>UNCOMMON TOWEL · THE SOFT</span><i>◆</i><span>UNCOMMON TOWEL · THE SOFT</span><i>◆</i><span>UNCOMMON TOWEL · THE SOFT</span><i>◆</i><span>UNCOMMON TOWEL · THE SOFT</span><i>◆</i><span>UNCOMMON TOWEL · THE SOFT</span><i>◆</i><span>UNCOMMON TOWEL · THE SOFT</span><i>◆</i><span>UNCOMMON TOWEL · THE SOFT</span><i>◆</i><span>UNCOMMON TOWEL · THE SOFT</span><i>◆</i></div>
 </div>
 
-<!-- 옵션 시트 -->
-<div class="dim" onclick="closeSheet()"></div>
-<div class="sheet" role="dialog" aria-label="구성 고르기">
-  <h4>① 구성</h4>
-  <div class="seg" id="seg">
-    <button type="button" data-n="8" data-p="102000" class="on">8장<small>102,000원</small></button>
-    <button type="button" data-n="12" data-p="146880">12장<small>146,880원</small></button>
-    <button type="button" data-n="20" data-p="238000">20장<small>238,000원</small></button>
+<!-- [5c] 비교표 -->
+<section>
+  <h2 class="section-title cmp-title">왜 일반 수건이 아닌<br><strong>언커먼 타올이어야 하나?</strong></h2>
+  <p class="section-subtitle">같은 페이스타월이 아닙니다. 표기부터 다릅니다</p>
+  <div class="cmp-wrap">
+    <span class="cmp-glow" aria-hidden="true"></span>
+    <span class="cmp-head base"><span class="cmp-circle" style="background-image:url('img/fold1.jpg')"></span></span>
+    <span class="cmp-head dia"><span class="cmp-circle" style="background-image:url('img/roll2.jpg')"></span></span>
+    <div class="cmp-cell base first title">일반 수건</div>
+    <div class="cmp-cell dia first title">언커먼 타올</div>
+    <div class="cmp-cell base">소재 표기가<br>'천연 대나무' 등 모호</div>
+    <div class="cmp-cell dia">밤부 비스코스(레이온)<br>100% 명시</div>
+    <div class="cmp-cell base">무게 미표기</div>
+    <div class="cmp-cell dia">장당 220g<br>(40×80cm)</div>
+    <div class="cmp-cell base">'천연 항균' 표현</div>
+    <div class="cmp-cell dia">항균 가공 후<br>시험 균주까지 표기</div>
+    <div class="cmp-cell base">시험 결과 미공개</div>
+    <div class="cmp-cell dia">FITI 시험<br>6개 항목</div>
+    <div class="cmp-cell base last">일반 헴 마감</div>
+    <div class="cmp-cell dia last">디자인 등록<br>빗금문 가장자리</div>
   </div>
-  <h4>② 컬러 나눠 담기 <span class="left" id="left"></span></h4>
-  <div id="crows"></div>
-  <div class="sum"><span id="perTxt" class="small"></span><b id="total"></b></div>
-  <button class="btn btn-main" type="button" id="buy" disabled style="opacity:.4">구매하기</button>
-  <p class="small mt8" style="text-align:center">결제 연결은 판매 채널 확정 후 연결 <span class="chk">링크</span></p>
+  <p class="note cmp-note">※ 특정 브랜드를 지칭하지 않으며, 시중 수건에서 흔히 볼 수 있는 표기 방식과의 비교입니다.</p>
+  <span class="chk-block">비교광고 — '일반 수건' 칸은 일반화 표현이라 법무 검토 필요. 기획안 v2에서는 제외했던 블록</span>
+</section>
+
+<!-- [5b2] 구조 다이어그램 — 한 장의 5가지 디테일 -->
+<section class="spic-sec">
+  <div class="sp-bg" aria-hidden="true"></div>
+  <h2 class="section-title">한 장을 이루는<br><strong>5가지 디테일</strong></h2>
+  <p style="font-size:14px;color:var(--text-dark);text-align:center;line-height:1.85;margin-bottom:22px">언커먼 타올은 단순한 면 수건이 아닌 <strong style="color:var(--brand-deep)">실부터 라벨까지 설계한 한 장</strong>입니다. 마지막 디테일, <strong style="color:var(--brand-deep)">빗금문 가장자리</strong>가 언커먼의 얼굴이에요.</p>
+  <div class="sp-wrap">
+    <div class="sp-figure"></div>
+    <svg class="sp-lines" aria-hidden="true"></svg>
+      <div class="sp-item y right">
+        <div class="sp-thumb" style="background-image:url('img/loop.jpg')"></div>
+        <p class="sp-label">1st Detail</p>
+        <h4 class="sp-name">Bamboo Yarn</h4>
+        <p class="sp-body">대나무 펄프에서 뽑은 밤부 비스코스 원사로, <em>매끄럽고 부드러운 첫 감촉</em>을 만듭니다.</p>
+      </div>
+      <div class="sp-item t left">
+        <div class="sp-thumb" style="background-image:url('img/spread.jpg')"></div>
+        <p class="sp-label">2nd Detail</p>
+        <h4 class="sp-name">Loop Pile</h4>
+        <p class="sp-body">촘촘하게 세운 표면 루프가 <em>세안 후 물기를 거두고</em>, 얼굴에 먼저 닿습니다.</p>
+      </div>
+      <div class="sp-item v right">
+        <div class="sp-thumb" style="background-image:url('img/fold2.jpg')"></div>
+        <p class="sp-label">3rd Detail</p>
+        <h4 class="sp-name">220g Weight</h4>
+        <p class="sp-ppm">장당 <b>220G</b> <span>40×80cm 기준</span></p>
+        <p class="sp-body">같은 크기라도 무게는 다릅니다. 손에 쥐면 느껴지는 <em>도톰한 두께</em>로 짰습니다.</p>
+      </div>
+      <div class="sp-item g left">
+        <div class="sp-thumb" style="background-image:url('img/fold1.jpg')"></div>
+        <p class="sp-label">Border</p>
+        <h4 class="sp-name">Hatch Pattern</h4>
+        <p class="sp-body">디자인 등록 제30-1303321호 빗금문 가장자리. <em>접어두었을 때도 보이는</em> 언커먼만의 무늬입니다.</p>
+      </div>
+      <div class="sp-item n right">
+        <div class="sp-thumb" style="background-image:url('img/label2.jpg')"><span class="sp-cap">LABEL</span></div>
+        <p class="sp-label">Finish</p>
+        <h4 class="sp-name">Brand Label</h4>
+        <p class="sp-body">기계 봉제로는 맞추기 어려운 비율로 단 라벨이 <em>마감의 차이</em>를 보여줍니다.</p>
+      </div>
+  </div>
+  <div class="sp-tech">
+    <div class="sp-thumb sp-tech-img" style="background-image:url('img/c_white.jpg')"></div>
+    <div class="sp-tech-txt">
+      <p class="sp-label">Uncommon, Finishing</p>
+      <h4 class="sp-name">항균 가공</h4>
+      <p class="sp-body">원단에 <em>항균 가공을 더하고 시험으로 확인</em>했습니다. 황색포도상구균 99.9%, 폐렴균 95.0% 감소(KS K 0693).</p>
+      <p class="sp-foot">※ 가공 결과이며 대나무 원료의 효과가 아닙니다</p>
+    </div>
+  </div>
+  <p class="note" style="margin-top:12px">※ 무게·치수는 판매 제품 규격 기준이며, 항균 결과는 시험 시료 기준입니다.</p>
+  <span class="chk-block">라벨 '기계로 따라 하기 어려운 비율'은 대표 메시지 기반 — 수봉제 공정 확인 필요</span>
+</section>
+
+<!-- [6-0b] 하나의 수건, 5가지 만족 -->
+<div class="five-sec">
+  <div class="fb-stage">
+    <div class="fb-head">
+      <p class="fb-lead">무엇으로 만들었는지만큼,<br>매일 어떻게 느껴지는지도 중요합니다</p>
+      <h2 class="fb-title">하나의 수건, <strong>5가지 만족</strong></h2>
+      <p class="fb-sub">ONE TOWEL · FIVE BENEFITS</p>
+    </div>
+    <svg class="fb-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <line class="fb-seg" style="--i:0" x1="54.1" y1="39.4" x2="37.9" y2="50.5" pathLength="1" vector-effect="non-scaling-stroke"/>
+      <line class="fb-seg" style="--i:1" x1="37.9" y1="50.5" x2="44.2" y2="57.9" pathLength="1" vector-effect="non-scaling-stroke"/>
+      <line class="fb-seg" style="--i:2" x1="44.2" y1="57.9" x2="58.5" y2="63.8" pathLength="1" vector-effect="non-scaling-stroke"/>
+      <line class="fb-seg" style="--i:3" x1="58.5" y1="63.8" x2="79.7" y2="68.5" pathLength="1" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <span class="fb-dot" style="left:54.1%;top:39.4%;--i:0"></span>
+    <span class="fb-dot" style="left:37.9%;top:50.5%;--i:1"></span>
+    <span class="fb-dot" style="left:44.2%;top:57.9%;--i:2"></span>
+    <span class="fb-dot" style="left:58.5%;top:63.8%;--i:3"></span>
+    <span class="fb-dot" style="left:79.7%;top:68.5%;--i:4"></span>
+    <div class="fb-item" style="top:39.4%;width:50.6%;--i:0"><p class="fb-desc">밤부 비스코스<br>100%</p><span class="fb-word">감촉</span></div>
+    <div class="fb-item fb-stack" style="top:50.5%;width:34.4%;--i:1"><p class="fb-desc">40×80cm<br>장당 220g</p><span class="fb-word">두께</span></div>
+    <div class="fb-item" style="top:57.9%;width:40.7%;--i:2"><p class="fb-desc">황색포도상구균<br>99.9% 감소</p><span class="fb-word">항균</span></div>
+    <div class="fb-item" style="top:63.8%;width:55.0%;--i:3"><p class="fb-desc">욕실에 어울리는<br>4가지 컬러</p><span class="fb-word">색감</span></div>
+    <div class="fb-item" style="top:68.5%;width:76.2%;--i:4"><p class="fb-desc">디자인 등록<br>빗금문 가장자리</p><span class="fb-word">디자인</span></div>
+  </div>
 </div>
+
+<!-- [6-1b0] 띠배너 -->
+<div class="marquee ing-marquee" aria-hidden="true">
+  <div class="marquee-track"><span>밤부 비스코스 100%</span><i></i><span>40×80cm</span><i></i><span>장당 220g</span><i></i><span>퓨어 화이트</span><i></i><span>에그 아이보리</span><i></i><span>플린트 그레이</span><i></i><span>아르테 민트</span><i></i><span>항균 가공</span><i></i><span>알러지성 염료 22종 불검출</span><i></i><span>빗금문 가장자리</span><i></i><span>디자인 등록</span><i></i><span>상표 등록</span><i></i><span>밤부 비스코스 100%</span><i></i><span>40×80cm</span><i></i><span>장당 220g</span><i></i><span>퓨어 화이트</span><i></i><span>에그 아이보리</span><i></i><span>플린트 그레이</span><i></i><span>아르테 민트</span><i></i><span>항균 가공</span><i></i><span>알러지성 염료 22종 불검출</span><i></i><span>빗금문 가장자리</span><i></i><span>디자인 등록</span><i></i><span>상표 등록</span><i></i></div>
+</div>
+
+<!-- [6-1b] 풀 스펙 -->
+<section class="ing-sec">
+  <h2 class="section-title"><strong>5가지</strong> 기준을 한 장에</h2>
+  <p class="section-subtitle">언커먼 타올이 지키는 풀 스펙</p>
+  <div class="ing-stage">
+    <div class="ing-waves" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="ing-orbit">
+      <div class="ing-node" style="left:27.2%;top:22.9%"><div class="ing-node-in"><div class="ing-dot" style="background-image:url('img/loop.jpg')"></div><p>밤부 비스코스<br>100%</p></div></div>
+      <div class="ing-node" style="left:72.8%;top:22.9%"><div class="ing-node-in"><div class="ing-dot" style="background-image:url('img/fold2.jpg')"></div><p>40×80cm<br>220g</p></div></div>
+      <div class="ing-node" style="left:86.8%;top:53.4%"><div class="ing-node-in"><div class="ing-dot" style="background-image:url('img/c_mint.jpg')"></div><p>4가지<br>컬러</p></div></div>
+      <div class="ing-node" style="left:50.0%;top:72.3%"><div class="ing-node-in"><div class="ing-dot" style="background-image:url('img/c_white.jpg')"></div><p>FITI<br>시험 6건</p></div></div>
+      <div class="ing-node" style="left:13.2%;top:53.4%"><div class="ing-node-in"><div class="ing-dot" style="background-image:url('img/fold1.jpg')"></div><p>디자인<br>등록</p></div></div>
+    </div>
+    <img class="ing-product" loading="lazy" decoding="async" src="img/roll3.jpg" alt="언커먼 타올">
+    <div class="ing-top-fade" aria-hidden="true"></div>
+  </div>
+  <div class="ing-cards">
+    <div class="ing-item">
+      <div class="ing-head">
+        <div class="ing-img" style="background-image:url('img/loop.jpg')"></div>
+        <div class="ing-txt">
+          <p class="ing-eyebrow">MATERIAL</p>
+          <h3>밤부 비스코스(레이온) 100%</h3>
+          <p class="ing-body">대나무 펄프에서 얻은 재생 셀룰로오스 섬유입니다. '천연 대나무'라는 말 대신 <em>무엇으로 만들었는지 그대로</em> 적습니다.</p>
+        </div>
+      </div>
+      <div class="ing-list"><p>소재 · 비스코스 레이온(대나무 유래) 100%<span class="ing-src">*최종 표기는 제품 라벨 기준 <span class="chk">G1</span></span></p></div>
+    </div>
+    <div class="ing-item">
+      <div class="ing-head">
+        <div class="ing-img" style="background-image:url('img/fold2.jpg')"></div>
+        <div class="ing-txt">
+          <p class="ing-eyebrow">SIZE · WEIGHT</p>
+          <h3>40×80cm · 장당 220g</h3>
+          <p class="ing-body">세안 후 얼굴과 머리까지 닦기 넉넉한 크기. 지금 쓰는 수건 무게와 <em>직접 비교해 보세요</em>.</p>
+        </div>
+      </div>
+      <div class="ing-list"><p>무게가 곧 품질이라는 뜻은 아닙니다. 손에 쥐었을 때의 도톰함을 가늠하는 기준입니다.</p></div>
+    </div>
+    <div class="ing-item">
+      <div class="ing-head">
+        <div class="ing-img" style="background-image:url('img/c_mint.jpg')"></div>
+        <div class="ing-txt">
+          <p class="ing-eyebrow">COLOR</p>
+          <h3>욕실에 어울리는 4가지 컬러</h3>
+          <p class="ing-body">쌓아두기만 해도 정돈되어 보이는 <em>은은한 톤</em>으로 골랐습니다.</p>
+        </div>
+      </div>
+      <div class="ing-list"><ul><li>퓨어 화이트 · Pure White</li><li>에그 아이보리 · Egg Ivory</li><li>플린트 그레이 · Flint Gray</li><li>아르테 민트 · Arte Mint</li></ul><p><span class="chk">G4 — FITI 시료 색상명 기준. 판매 컬러 확정 필요</span></p></div>
+    </div>
+    <div class="ing-item">
+      <div class="ing-head">
+        <div class="ing-img" style="background-image:url('img/c_white.jpg')"></div>
+        <div class="ing-txt">
+          <p class="ing-eyebrow">TESTED</p>
+          <h3>FITI시험연구원 6개 항목</h3>
+          <p class="ing-body">항균성 · 흡수속도 · 건조속도 · 세탁견뢰도 · 세탁 치수변화율 · 알러지성 염료. <em>시험한 조건과 함께</em> 공개합니다.</p>
+        </div>
+      </div>
+      <div class="ing-list"><p>시료명 UNCOMMON TOWEL-THE SOFT · 2024.03~04 시험<span class="chk">G2</span></p></div>
+    </div>
+    <div class="ing-item">
+      <div class="ing-head">
+        <div class="ing-img" style="background-image:url('img/fold1.jpg')"></div>
+        <div class="ing-txt">
+          <p class="ing-eyebrow">DESIGN</p>
+          <h3>디자인·상표 등록</h3>
+          <p class="ing-body">빗금문 가장자리는 <em>디자인 등록 제30-1303321호</em>, UNCOMMON TOWEL은 등록 상표입니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="note">※ 디자인 등록은 형태에 관한 권리이며, 제품의 성능을 보증하지 않습니다.</p>
+</section>
+
+<!-- [6-1c] 시험 데이터 -->
+<div class="abs-top" aria-hidden="true"></div>
+<div class="abs-sec">
+  <h2 class="section-title">매일 빨아 써도,<br><strong>색과 크기가 그대로</strong></h2>
+  <p class="abs-lead abs-boost-lead">세안 후 물기를 거두고, 빨아서 다시 쓰는 수건.<br>
+    흡수와 세탁 후 변화까지<br><strong>시험으로 확인했습니다.</strong></p>
+  <div class="abs-flow" aria-hidden="true">
+    <div class="abs-flow-step">
+      <span class="abs-flow-img" style="background-image:url('img/spread.jpg')"></span>
+      <span class="abs-flow-cap">USE<b>물기 흡수</b></span>
+    </div>
+    <span class="abs-flow-arrow">+</span>
+    <div class="abs-flow-step">
+      <span class="abs-flow-img" style="background-image:url('img/stack.jpg')"></span>
+      <span class="abs-flow-cap">WASH<b>세탁 후</b></span>
+    </div>
+  </div>
+
+  <h2 class="section-title" style="margin-top:60px">FITI 시험 완료<br><strong>세탁 견뢰도 4~5급</strong></h2>
+  <p class="abs-lead">세탁 후 색이 빠지는 정도를 보는 시험에서<br>
+    1~5급 중 <strong class="abs-hl">4~5급</strong>을<br>받았습니다</p>
+
+  <div class="abs-card">
+    <div class="abs-idx-head">
+      <div>
+        <h3 class="abs-card-title">흡수 높이 (바이렉법)</h3>
+        <p class="abs-card-sub">WATER ABSORPTION HEIGHT</p>
+      </div>
+      <p class="abs-idx-x">최대 <b><span class="acount" data-to="59" data-duration="1200">0</span>mm</b></p>
+    </div>
+    <div class="abs-chart">
+      <div class="abs-col">
+        <span class="val base"><span class="acount" data-to="57" data-duration="1200">0</span></span>
+        <div class="abs-bar base" style="--h:96%"></div>
+      </div>
+      <div class="abs-col">
+        <span class="val dia"><span class="acount" data-to="59" data-duration="1400">0</span></span>
+        <div class="abs-bar dia" style="--h:100%"></div>
+      </div>
+    </div>
+    <div class="abs-x">
+      <p>길이 방향<br>(mm)</p>
+      <p>너비 방향<br>(mm)</p>
+    </div>
+  </div>
+
+  <div class="abs-card">
+    <h3 class="abs-card-title">세탁 후 변화</h3>
+    <p class="abs-card-sub">AFTER WASHING</p>
+    <p class="abs-grp-guide">시험 시료 <b>1회 세탁</b> 후 측정값</p>
+    <div class="abs-grp">
+      <h4 class="abs-grp-name">치수변화율</h4>
+      <div class="abs-metric">
+        <p class="mlbl">길이</p>
+        <div class="hrow"><span class="who">세탁 전</span><span class="htrack"><span class="hfill base" style="--w:100%"></span></span><span class="hval base">기준</span></div>
+        <div class="hrow"><span class="who">세탁 후</span><span class="htrack"><span class="hfill dia" style="--w:97%"></span></span><span class="hval">−3.0%</span></div>
+      </div>
+      <div class="abs-metric">
+        <p class="mlbl">폭</p>
+        <div class="hrow"><span class="who">세탁 전</span><span class="htrack"><span class="hfill base" style="--w:100%"></span></span><span class="hval base">기준</span></div>
+        <div class="hrow"><span class="who">세탁 후</span><span class="htrack"><span class="hfill dia" style="--w:100%"></span></span><span class="hval">+0.5%</span></div>
+      </div>
+    </div>
+    <div class="abs-grp">
+      <h4 class="abs-grp-name">세탁 견뢰도</h4>
+      <div class="abs-metric">
+        <p class="mlbl">등급 (1~5급)</p>
+        <div class="hrow"><span class="who">최고 등급</span><span class="htrack"><span class="hfill base" style="--w:100%"></span></span><span class="hval base">5급</span></div>
+        <div class="hrow"><span class="who">언커먼</span><span class="htrack"><span class="hfill dia" style="--w:90%"></span></span><span class="hval">4~5급</span></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="note abs-note">[FITI시험연구원 · 2024.03~04] 흡수성 바이렉법 · 세탁 치수변화율 · 세탁 견뢰도(3개 색상 시료)<br>
+  시험한 시료의 결과이며, 세탁 조건·횟수에 따라 달라질 수 있습니다.</p>
+  <span class="chk-block">G2 — 측정 시간·시험규격·시료 색상은 결과 전문으로 확인 후 기입</span>
+</div>
+
+<!-- 사용법 사이 이미지 -->
+<div class="full-img fade-btm"><img loading="lazy" decoding="async" src="img/roll3.jpg" alt=""></div>
+
+<section class="htu-sec">
+  <h2 class="section-title">오래 부드럽게,<br><strong>이렇게 관리하세요</strong></h2>
+  <p class="section-subtitle">페이스타월은 매일 또는 이틀에 한 번<br>새 수건으로 바꿔 쓰시길 권합니다.</p>
+  <div class="htu-card">
+    <div class="htu-step">
+      <div class="htu-img" style="background-image:url('img/c_mint.jpg')"></div>
+      <div class="htu-txt">
+        <span class="htu-badge">STEP 1</span>
+        <h4 class="htu-title">첫 세탁은 단독으로</h4>
+        <p class="htu-body">처음 한두 번은 다른 빨래와<br>나눠 세탁해 주세요.</p>
+      </div>
+    </div>
+    <div class="htu-step">
+      <div class="htu-img" style="background-image:url('img/loop.jpg')"></div>
+      <div class="htu-txt">
+        <span class="htu-badge">STEP 2</span>
+        <h4 class="htu-title">미온수 · 중성세제</h4>
+        <p class="htu-body">30~40℃ 물에 중성세제로.<br>섬유유연제는 넣지 마세요.</p>
+      </div>
+    </div>
+    <div class="htu-step">
+      <div class="htu-img" style="background-image:url('img/spread.jpg')"></div>
+      <div class="htu-txt">
+        <span class="htu-badge">STEP 3</span>
+        <h4 class="htu-title">펴서 바로 말리기</h4>
+        <p class="htu-body">사용 후·세탁 후 접어두지 말고<br>펴서 걸어 말려 주세요.</p>
+      </div>
+    </div>
+  </div>
+  <div class="alert"><div>
+    <strong class="alert-title"><span class="ic">⚠️</span>이것만은 피해 주세요</strong>
+    <p style="margin-top:4px"><strong>섬유유연제·표백제</strong>는 루프에 남아 흡수를 떨어뜨릴 수 있습니다. 건조기는 <strong>저온으로 짧게</strong>, 젖은 수건을 <strong>세탁 바구니에 오래 두지 마세요.</strong></p>
+  </div></div>
+  <p class="note" style="margin-top:8px">※ 세탁 가이드를 함께 보내드립니다. 제품 라벨의 취급 표시를 우선해 주세요.</p>
+  <span class="chk-block">G5 — 세탁법은 일반 밤부 수건 기준 초안. 제조사 취급표시·동봉 가이드와 일치시키기</span>
+</section>
+
+<!-- EVIDENCE 상단 이미지 -->
+<div class="full-img fade-btm-gray"><img loading="lazy" decoding="async" src="img/label1.jpg" alt=""></div>
+
+<!-- [7] EVIDENCE — 시험 성적서 + 등록증 -->
+<section class="evi-sec">
+  <h2 class="section-title">공인 시험기관에서 받은<br><strong>6장의 시험 성적서</strong></h2>
+  <div class="doc-slider papers" data-doc-slider>
+    <div class="doc-viewport">
+      <div class="doc-track">
+        <div class="doc-slide" data-title="항균성 시험" data-body="KS K 0693 · 황색포도상구균 <strong>99.9% 감소</strong>">
+          <div class="doc-img doc-real" style="background-image:url('img/doc-anti.jpg')"></div>
+        </div>
+        <div class="doc-slide" data-title="흡수속도 시험" data-body="바이렉법 · 흡수 높이 <strong>최대 59mm</strong>">
+          <div class="doc-img doc-real" style="background-image:url('img/doc-abs.jpg')"></div>
+        </div>
+        <div class="doc-slide" data-title="건조속도 시험" data-body="FITI시험연구원 · <strong>K232-24-08244</strong>">
+          <div class="doc-img doc-real" style="background-image:url('img/doc-dry.jpg')"></div>
+        </div>
+        <div class="doc-slide" data-title="세탁 견뢰도 시험" data-body="3개 색상 시료 <strong>4~5급</strong>">
+          <div class="doc-img doc-real" style="background-image:url('img/doc-fast.jpg')"></div>
+        </div>
+        <div class="doc-slide" data-title="세탁 치수변화율" data-body="1회 세탁 후 <strong>길이 −3.0% · 폭 +0.5%</strong>">
+          <div class="doc-img doc-real" style="background-image:url('img/doc-dim.jpg')"></div>
+        </div>
+        <div class="doc-slide" data-title="알러지성 염료" data-body="KS K 0736 · 22종 <strong>검출한계 미만</strong>">
+          <div class="doc-img doc-real" style="background-image:url('img/doc-allergy.jpg')"></div>
+        </div>
+      </div>
+    </div>
+    <div class="doc-cap"><h4 class="doc-cap-title"></h4><p class="doc-cap-body"></p></div>
+    <div class="doc-dots" aria-hidden="true"></div>
+  </div>
+  <p class="note" style="margin-top:16px">※ FITI시험연구원 시험 성적서(2024.04 발급) 표지이며, 시험 시료 기준 결과입니다.</p>
+  <span class="chk-block">G2 — 성적서 이미지 광고 게재는 FITI 사전 서면 동의 필요. 건조속도는 결과 수치 미확보(표지만)</span>
+  <h3 class="section-title" style="margin-top:40px">빗금문 디자인 등록</h3>
+  <div class="doc-single">
+    <div class="doc-img doc-real" style="background-image:url('img/doc-design.jpg')"></div>
+    <div class="doc-cap">
+      <h4 class="doc-cap-title">디자인등록증</h4>
+      <p class="doc-cap-body">직물 · 빗금문 형태 · <strong>제30-1303321호</strong></p>
+    </div>
+  </div>
+  <p class="note" style="margin-top:16px">※ 디자인 등록은 형태에 관한 권리이며, 제품의 성능을 보증하지 않습니다. 개인정보는 가렸습니다.</p>
+</section>
+
+<!-- [7b] 딥 밴드 — 납품 이력 -->
+<section class="band">
+  <div class="inner" style="border-radius:0">
+    <h2 style="font-size:34px;font-weight:800;color:#fff;line-height:1.3;letter-spacing:-.03em;margin:14px 0 4px">관공서·대학·기업<br>50여 곳 납품</h2>
+    <p style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.8)">경찰청·법무부·대학·협회 등<br>여러 기관에 언커먼 수건을 납품해 왔습니다</p>
+    <div class="mocra-card" style="background-image:url('img/doc-tm.jpg')"></div>
+    <p class="note" style="color:rgba(255,255,255,.7);margin-top:14px">* 납품 이력은 언커먼 수건 전체 기준이며, 이 페이스타월 제품에 한정되지 않습니다. 이미지는 상표등록증(제40-2382569호)입니다.</p>
+    <span class="chk-block">기관명 노출은 동의받은 곳만 · 원본처럼 고객사 로고 띠로 바꿀 수 있음(고객사_로고 폴더)</span>
+  </div>
+</section>
+
+<!-- [7.5] STORIES -->
+<section class="stories">
+  <div class="st-top"></div>
+  <h2 class="section-title">달라진 욕실</h2>
+  <p class="section-subtitle">수건 한 장을 바꾼 사람들의 이야기</p>
+  <div class="rv">
+    <div class="rv-img" style="background-image:url('img/roll2.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">직장인 · 실제 후기 자리</div>
+    <p class="rv-text">아침 세안 후 얼굴에 대는 순간이 기다려져요. 수건 하나 바꿨을 뿐인데 하루 시작이 달라졌어요</p>
+  </div>
+  <div class="rv">
+    <div class="rv-img" style="background-image:url('img/stack.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">신혼부부 · 실제 후기 자리</div>
+    <p class="rv-text">욕실 수건을 전부 같은 톤으로 맞췄더니 호텔 욕실 같다는 말을 들어요</p>
+  </div>
+  <div class="rv">
+    <div class="rv-img" style="background-image:url('img/bts_bag2.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">선물 구매 · 실제 후기 자리</div>
+    <p class="rv-text">부모님 댁에 보내드렸는데 부드럽다고 더 사달라고 하셨어요</p>
+  </div>
+  <p class="section-subtitle" style="margin:22px 0 6px">소중한 날을 위해 만든 수건을, 매일의 자리로.</p>
+  <p class="note" style="text-align:center">※ 개인의 사용 경험이며, 사용 환경에 따라 다를 수 있습니다.</p>
+  <span class="chk-block">자리 표시용 예시 문장 — 실제 후기로 교체 전 공개 금지</span>
+</section>
+
+<!-- [8a] 보장 -->
+<section class="guarantee">
+  <p class="eyebrow">FIRST ORDER GUARANTEE</p>
+  <h2 class="section-title">받아보고 불량이면<br><strong>무상 교환</strong></h2>
+  <div class="gt-badge" aria-hidden="true">🔄</div>
+  <p class="gt-body">여러 장을 한 번에 바꾸는 만큼 부담 없도록,<br>받으신 수건에 초기 불량이 있으면<br><strong>배송비 없이 새 제품으로 교환</strong>해 드립니다.</p>
+  <p class="note" style="text-align:center;margin-top:16px">* 제품 수령 후 7일 이내 신청 · 사용·세탁 전 제품 기준<br>· 단순 변심 반품은 하단 반품 안내를 따릅니다</p>
+  <span class="chk-block">G5 — 교환 기준·기간·배송비 부담은 대표 확인 후 확정</span>
+</section>
+
+<!-- [8b] 구성 · 가격 -->
+<section>
+  <h2 class="section-title">한 번에 바꾸고 <strong>오래 쓰세요</strong></h2>
+  <p class="section-subtitle">세 가지 구성, 하나의 욕실. 필요한 장수를 선택하세요</p>
+
+  <div class="card pg-card">
+    <span class="tag">BASIC</span>
+    <h3 class="pg-title">베이직 · 8장 구성</h3>
+    <div class="pg-img" style="background-image:url('img/roll3.jpg')"></div>
+    <p class="pg-meta"><strong>8장</strong> / 1~2인 가구</p>
+    <p class="pg-desc">첫 교체 · 페이스타월만 · 라이트</p>
+    <div class="pg-price">
+      <span class="pg-list">정가 <s>136,000원</s></span>
+      <strong>공구가 102,000원</strong> <span class="pg-per">(장당 12,750원)</span>
+      <span class="tag" style="margin-top:8px">25% 할인</span>
+    </div>
+  </div>
+  <div class="card pg-card pg-best">
+    <span class="tag" style="background:var(--brand);color:#fff;border-color:var(--brand)">FAMILY</span>
+    <h3 class="pg-title">패밀리 · 12장 구성</h3>
+    <div class="pg-img" style="background-image:url('img/stack.jpg')"></div>
+    <p class="pg-meta"><strong>12장</strong> / 3~4인 가구</p>
+    <p class="pg-desc">욕실 전체 교체 · 컬러 섞어 담기</p>
+    <div class="pg-price">
+      <span class="pg-list">정가 <s>204,000원</s></span>
+      <strong>공구가 146,880원</strong> <span class="pg-per">(장당 12,240원)</span>
+      <span class="tag" style="margin-top:8px">28% 할인</span>
+    </div>
+  </div>
+  <div class="card pg-card">
+    <span class="tag">COMPLETE</span>
+    <h3 class="pg-title">컴플리트 · 20장 구성</h3>
+    <div class="pg-img" style="background-image:url('img/bts_bag1.jpg')"></div>
+    <p class="pg-meta"><strong>20장</strong> / 대가족·선물 나눔</p>
+    <p class="pg-desc">넉넉한 교체 주기 · 선물용 · 최대 할인</p>
+    <div class="pg-price">
+      <span class="pg-list">정가 <s>340,000원</s></span>
+      <strong>공구가 238,000원</strong> <span class="pg-per">(장당 11,900원)</span>
+      <span class="tag" style="margin-top:8px">30% 할인</span>
+    </div>
+  </div>
+  <span class="chk-block">가구 인원 표기는 예시(단정 금지 원칙 — 삭제 가능) · 컬러 조합 방식 G4 · 배송비·공구 기간 G5</span>
+
+  <h3 class="block-title" style="text-align:center">한눈에 비교</h3>
+  <div class="pg-tbl-wrap">
+    <span class="pg-glow" aria-hidden="true"></span>
+    <table class="pg-tbl">
+      <tr><th>구성</th><th>장수</th><th>공구가</th><th>장당</th><th>할인</th></tr>
+      <tr><td class="name">베이직</td><td>8</td><td>102,000</td><td>12,750</td><td>25%</td></tr>
+      <tr class="best"><td class="name">패밀리</td><td>12</td><td>146,880</td><td>12,240</td><td>28%</td></tr>
+      <tr><td class="name">컴플리트</td><td>20</td><td>238,000</td><td>11,900</td><td>30%</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- [8c] QnA -->
+<section class="qna">
+  <h2 class="section-title">궁금한 점, <strong>미리 풀어드려요</strong></h2>
+  <div style="display:flex;flex-direction:column;gap:12px;margin-top:20px">
+    <div class="card"><strong style="font-size:14px">Q1. 두꺼우면 늦게 마르지 않나요?</strong><p style="font-size:13px;color:var(--text-gray);margin-top:6px">건조속도 시험을 진행했으며 결과는 확인되는 대로 안내드리겠습니다. 사용 후에는 접어두지 말고 펴서 걸어 주시면 더 빨리 마릅니다.</p></div>
+    <div class="card"><strong style="font-size:14px">Q2. 빨아도 항균이 유지되나요?</strong><p style="font-size:13px;color:var(--text-gray);margin-top:6px">반복 세탁 후 항균 유지 여부는 현재 확보한 자료로 확인되지 않았습니다. 페이스타월은 매일 또는 이틀에 한 번 세탁해 쓰시길 권합니다.</p></div>
+    <div class="card"><strong style="font-size:14px">Q3. 첫 세탁 때 물이 빠지나요?</strong><p style="font-size:13px;color:var(--text-gray);margin-top:6px">첫 세탁은 단독 세탁을 권장합니다.</p></div>
+    <div class="card"><strong style="font-size:14px">Q4. 한 장만 살 수 있나요?</strong><p style="font-size:13px;color:var(--text-gray);margin-top:6px">이번 공구 구성은 8장·12장·20장입니다. 컬러는 구성 안에서 나눠 담을 수 있습니다.</p></div>
+    <div class="card"><strong style="font-size:14px">Q5. 아이도 함께 쓸 수 있나요?</strong><p style="font-size:13px;color:var(--text-gray);margin-top:6px">가족 모두 페이스타월로 쓰실 수 있습니다. 피부가 예민하다면 첫 세탁 후 사용해 주세요.</p></div>
+    <div class="card"><strong style="font-size:14px">Q6. 선물 포장이 되나요?</strong><p style="font-size:13px;color:var(--text-gray);margin-top:6px">쇼핑백·박스 포함 여부는 구성별로 안내드립니다.</p></div>
+  </div>
+  <span class="chk-block">Q5 G3 — OEKO-TEX 갱신 전 인증 언급 금지 · Q6 포장 포함 범위 G5 · Q4 단품 판매 여부</span>
+</section>
+
+<!-- [9] 상품정보고시 -->
+<section style="background:var(--bg-soft)">
+  <h2 class="section-title" style="font-size:18px">상품정보 제공고시</h2>
+  <p class="section-subtitle">전자상거래법 필수 표기 (의류·섬유제품)</p>
+  <div class="info-table">
+    <p class="info-row"><strong>제품 소재</strong><span>비스코스 레이온(대나무 유래) 100% <span class="chk">G1</span></span></p>
+    <p class="info-row"><strong>색상</strong><span>퓨어 화이트 / 에그 아이보리 / 플린트 그레이 / 아르테 민트 <span class="chk">G4</span></span></p>
+    <p class="info-row"><strong>치수</strong><span>40 × 80cm / 장당 220g</span></p>
+    <p class="info-row"><strong>제조자(수입자)</strong><span><span class="chk">확인</span></span></p>
+    <p class="info-row"><strong>제조국</strong><span>대한민국 <span class="chk">확인</span></span></p>
+    <p class="info-row"><strong>세탁방법 및 취급 시 주의사항</strong><span>30~40℃ 중성세제 세탁, 유연제·표백제 사용 금지, 저온 건조 <span class="chk">G5</span></span></p>
+    <p class="info-row"><strong>제조연월</strong><span><span class="chk">확인</span></span></p>
+    <p class="info-row"><strong>품질보증기준</strong><span>제품 이상 시 공정거래위원회 고시 소비자분쟁해결기준에 의거 보상합니다.</span></p>
+    <p class="info-row"><strong>A/S 책임자와 전화번호</strong><span>언커먼 고객센터 <span class="chk">연락처</span></span></p>
+  </div>
+
+  <h3 class="block-title" style="margin-top:30px">배송 · 반품/교환 안내</h3>
+  <div class="info-table">
+    <p class="info-row"><strong>배송방법</strong><span>택배 <span class="chk">택배사</span></span></p>
+    <p class="info-row"><strong>배송비</strong><span>무료 <span class="chk">G5</span></span></p>
+    <p class="info-row"><strong>주문 이후 예상 배송기간</strong><span>공구 마감 후 순차 발송 <span class="chk">G5</span></span></p>
+    <p class="info-row"><strong>반품배송비</strong><span><span class="chk">확인</span></span></p>
+    <p class="info-row"><strong>교환배송비</strong><span><span class="chk">확인</span></span></p>
+    <p class="info-row"><strong>반품·교환 주소</strong><span><span class="chk">확인</span></span></p>
+  </div>
+  <p class="note" style="margin-top:14px">· 구매자 단순 변심: 상품 수령 후 <strong>7일 이내</strong> (반품배송비 구매자 부담)<br>
+  · 표시·광고와 상이하거나 계약 내용과 다르게 이행된 경우: 상품 수령 후 <strong>3개월 이내</strong> 또는 그 사실을 안 날부터 <strong>30일 이내</strong> (반품배송비 판매자 부담)<br>
+  · 반품 요청 기간 경과, 구매자 책임으로 상품이 멸실·훼손된 경우, 사용·세탁으로 상품 가치가 현저히 감소한 경우에는 반품·교환이 제한될 수 있습니다.<br>
+  · 반품 시 먼저 판매자와 연락해 반품 사유·택배사·배송비·반품지 주소를 협의한 뒤 상품을 발송해 주세요.<br>
+  · 소비자피해보상 및 분쟁 처리는 소비자분쟁해결기준(공정거래위원회 고시) 및 관계법령에 따릅니다.</p>
+</section>
+
 
 <script>
-(function(){
-  var colors=[['화이트','#f6f3ec'],['스카이블루','#bcd6ef'],['민트','#c4ece3'],['라벤더','#b9a3e6']];
-  var n=8,p=102000,cnt=[0,0,0,0];
-  var crows=document.getElementById('crows');
-  colors.forEach(function(c,i){
-    var r=document.createElement('div');r.className='crow';
-    r.innerHTML='<span class="l"><span class="dot" style="background:'+c[1]+'"></span>'+c[0]+'</span><span class="stepper"><button type="button" data-i="'+i+'" data-d="-1">−</button><span id="c'+i+'">0</span><button type="button" data-i="'+i+'" data-d="1">+</button></span>';
-    crows.appendChild(r);
-  });
-  crows.addEventListener('click',function(e){
-    var b=e.target.closest('button');if(!b)return;
-    var i=+b.dataset.i,d=+b.dataset.d,sum=cnt.reduce(function(a,b){return a+b},0);
-    if(d>0&&sum>=n)return; if(d<0&&cnt[i]===0)return;
-    cnt[i]+=d;render();
-  });
-  document.getElementById('seg').addEventListener('click',function(e){
-    var b=e.target.closest('button');if(!b)return;
-    [].forEach.call(this.children,function(x){x.classList.remove('on')});b.classList.add('on');
-    n=+b.dataset.n;p=+b.dataset.p;
-    while(cnt.reduce(function(a,b){return a+b},0)>n){for(var i=3;i>=0;i--){if(cnt[i]>0){cnt[i]--;break}}}
-    render();
-  });
-  document.querySelectorAll('input[name=set]').forEach(function(r){r.addEventListener('change',function(){
-    var b=document.querySelector('#seg button[data-n="'+r.value+'"]');if(b)b.click();
-  })});
-  function won(v){return v.toLocaleString('ko-KR')+'원'}
-  function render(){
-    cnt.forEach(function(v,i){document.getElementById('c'+i).textContent=v});
-    var sum=cnt.reduce(function(a,b){return a+b},0),left=n-sum,el=document.getElementById('left');
-    el.textContent=left>0?left+'장 더 담아주세요':'다 담았어요';el.className='left'+(left>0?'':' ok');
-    document.getElementById('total').textContent=won(p);
-    document.getElementById('perTxt').textContent=n+'장 · 장당 '+won(Math.round(p/n));
-    var buy=document.getElementById('buy');buy.disabled=left>0;buy.style.opacity=left>0?.4:1;
-  }
-  window.openSheet=function(){
-    var chosen=document.querySelector('input[name=set]:checked');
-    if(chosen){var b=document.querySelector('#seg button[data-n="'+chosen.value+'"]');if(b&&!b.classList.contains('on'))b.click();}
-    document.body.classList.add('open');
+/* 숫자 카운트업 — .count 요소가 화면에 들어올 때 1회 실행 */
+(function () {
+  var els = document.querySelectorAll('.count');
+  if (!els.length) return;
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fmt = function (n) { return n.toLocaleString('en-US'); };
+
+  var run = function (el) {
+    var to = parseFloat(el.dataset.to) || 0;
+    var suffix = el.dataset.suffix || '';
+    var prefix = el.dataset.prefix || '';
+    var dur = parseInt(el.dataset.duration, 10) || 1600;
+
+    if (reduce) { el.textContent = prefix + fmt(to) + suffix; return; }
+
+    var start = null;
+    var step = function (ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);            // easeOutCubic
+      el.textContent = prefix + fmt(Math.round(to * eased)) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
   };
-  window.closeSheet=function(){document.body.classList.remove('open')};
-  render();
+
+  if (!('IntersectionObserver' in window)) {
+    Array.prototype.forEach.call(els, run);
+    return;
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      run(e.target);
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.6 });
+
+  Array.prototype.forEach.call(els, function (el) { io.observe(el); });
+})();
+
+/* 임상 그래프: 사용 전 → 사용 후 곡선 화살표 */
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+
+  function draw(chart) {
+    var svg = chart.querySelector('.cl-flow');
+    var b = chart.querySelector('.cl-bar.before');
+    var a = chart.querySelector('.cl-bar.after');
+    if (!svg || !b || !a) return;
+
+    var cw = chart.clientWidth, ch = chart.clientHeight;
+    if (!cw) return;
+    var cr = { width: cw, height: ch };
+
+    var x1 = b.offsetLeft + b.offsetWidth / 2;
+    var y1 = b.offsetTop;
+    var x2 = a.offsetLeft + a.offsetWidth / 2;
+    var y2 = a.offsetTop;
+    // 점 중심에서 점 가장자리까지만 띄우고 직선으로 연결
+    var R = 7, HEAD = 10;                     // 점 반지름, 화살촉 길이
+    var dx = x2 - x1, dy = y2 - y1;
+    var len = Math.sqrt(dx * dx + dy * dy) || 1;
+    var ux = dx / len, uy = dy / len;
+    var sx = x1 + ux * R, sy = y1 + uy * R;   // 사용 전 점 가장자리
+    var ex = x2 - ux * R, ey = y2 - uy * R;   // 사용 후 점 가장자리
+    var tx = ex - ux * HEAD, ty = ey - uy * HEAD;  // 점선 꼬리 끝
+
+    svg.setAttribute('viewBox', '0 0 ' + cr.width + ' ' + cr.height);
+    svg.innerHTML = '';
+
+    var path = document.createElementNS(NS, 'path');
+    svg.appendChild(path);
+    var head = document.createElementNS(NS, 'polygon');
+    svg.appendChild(head);
+
+    var w = 5.5;
+    function render(pr) {                       // 0 = 사용 전 점, 1 = 사용 후 점
+      var hx = sx + (ex - sx) * pr, hy = sy + (ey - sy) * pr;   // 화살촉 끝
+      var bx = hx - ux * HEAD, by = hy - uy * HEAD;             // 화살촉 밑변 중앙
+      path.setAttribute('d', 'M' + sx + ',' + sy + ' L' + bx + ',' + by);
+      head.setAttribute('points', hx + ',' + hy + ' ' +
+        (bx - uy * w) + ',' + (by + ux * w) + ' ' + (bx + uy * w) + ',' + (by - ux * w));
+    }
+    render(chart._played ? 1 : 0);      // 다시 그릴 때 이미 재생됐으면 끝 상태 유지
+
+    chart._playArrow = function () {
+      chart._played = true;
+      chart.classList.add('playing');
+      var st = null, dur = 900;
+      function step(ts) {
+        if (st === null) st = ts;
+        var pr = Math.min((ts - st) / dur, 1);
+        render(1 - Math.pow(1 - pr, 3));
+        if (pr < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    };
+  }
+
+  function drawAll() {
+    Array.prototype.forEach.call(document.querySelectorAll('.cl-chart'), draw);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', drawAll);
+  else drawAll();
+  window.addEventListener('resize', drawAll);
+  window.addEventListener('load', drawAll);
+})();
+
+/* 스피큘 도해: 각 블록 → 해당 층 위치에 연결선 + 점 */
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+  // 스피큘 실루엣의 세로 위치별 반폭 비율(0~1), 0%~100%를 101단계로 샘플링
+  var PROFILE = [0.038,0.204,0.285,0.349,0.398,0.441,0.478,0.511,0.548,0.575,0.602,0.629,0.651,0.677,0.699,0.715,
+    0.737,0.753,0.769,0.785,0.801,0.817,0.833,0.844,0.855,0.866,0.876,0.887,0.898,0.909,0.919,0.925,0.935,0.941,
+    0.952,0.957,0.962,0.968,0.973,0.978,0.984,0.984,0.989,0.989,0.995,0.995,0.995,0.995,1,1,1,1,1,0.995,0.995,
+    0.995,0.995,0.989,0.989,0.984,0.984,0.978,0.973,0.968,0.962,0.957,0.952,0.941,0.935,0.925,0.919,0.909,0.898,
+    0.887,0.876,0.866,0.855,0.844,0.833,0.817,0.801,0.785,0.769,0.753,0.737,0.715,0.694,0.672,0.651,0.629,0.602,
+    0.575,0.543,0.511,0.478,0.435,0.392,0.344,0.285,0.204,0.022];
+  // 층별 위치(중심=0, 바깥 끝=1): 지질막·활성성분·다이아몬드·본체(마이크로홀)·중앙채널
+  var LAYER = [0.91, 0.73, 0.54, 0.27, 0];
+
+  function draw() {
+    var wrap = document.querySelector('.sp-wrap');
+    var svg = wrap && wrap.querySelector('.sp-lines');
+    var fig = wrap && wrap.querySelector('.sp-figure');
+    if (!wrap || !svg || !fig) return;
+
+    var wr = { width: wrap.clientWidth, height: wrap.clientHeight };
+    var fr = { left: fig.offsetLeft, top: fig.offsetTop, width: fig.offsetWidth, height: fig.offsetHeight };
+    if (!wr.width) return;
+    var cx = wr.width / 2;            // 스피큘은 래퍼 정중앙
+    var halfPx = fr.width / 2;
+
+    svg.setAttribute('viewBox', '0 0 ' + wr.width + ' ' + wr.height);
+    svg.innerHTML = '';
+
+    var items = wrap.querySelectorAll('.sp-item');
+    Array.prototype.forEach.call(items, function (item, i) {
+      var thumb = item.querySelector('.sp-thumb');
+      if (!thumb) return;
+      var ir = { left: item.offsetLeft, right: item.offsetLeft + item.offsetWidth };
+      var y = item.offsetTop + thumb.offsetTop + thumb.offsetHeight / 2;
+
+      // 그 높이에서의 스피큘 반폭
+      var t = Math.max(0, Math.min(1, (y - fr.top) / fr.height));
+      var idx = t * (PROFILE.length - 1);
+      var lo = Math.floor(idx), hi = Math.min(PROFILE.length - 1, lo + 1);
+      var w = PROFILE[lo] + (PROFILE[hi] - PROFILE[lo]) * (idx - lo);
+
+      var right = item.classList.contains('right');
+      var dx = LAYER[i] * w * halfPx;
+      var dotX = right ? cx + dx : cx - dx;
+      var startX = right ? ir.left : ir.right;
+      var color = getComputedStyle(item).color;
+
+      // 스피큘(점)에서 블록 쪽으로 자라나도록 x1=점, x2=블록
+      var line = document.createElementNS(NS, 'line');
+      line.setAttribute('x1', dotX);   line.setAttribute('y1', y);
+      line.setAttribute('x2', startX); line.setAttribute('y2', y);
+      line.setAttribute('stroke', color);
+      line.setAttribute('stroke-width', '1.5');
+      var len = Math.abs(startX - dotX) + 1;
+      line.style.strokeDasharray = len;
+      line.style.transition = 'stroke-dashoffset .7s cubic-bezier(.22,1,.36,1) .05s';
+      line.style.strokeDashoffset = item.classList.contains('shown') ? 0 : len;
+      svg.appendChild(line);
+
+      var dot = document.createElementNS(NS, 'circle');
+      dot.setAttribute('cx', dotX); dot.setAttribute('cy', y); dot.setAttribute('r', '4');
+      dot.setAttribute('fill', color);
+      dot.setAttribute('stroke', '#fff');
+      dot.setAttribute('stroke-width', '1.5');
+      dot.style.transformOrigin = dotX + 'px ' + y + 'px';
+      dot.style.transition = 'transform .45s cubic-bezier(.34,1.56,.64,1), opacity .35s ease';
+      if (!item.classList.contains('shown')) { dot.style.transform = 'scale(0)'; dot.style.opacity = '0'; }
+      svg.appendChild(dot);
+
+      item._line = line; item._dot = dot; item._len = len;
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', draw);
+  else draw();
+  window.addEventListener('load', draw);
+  window.addEventListener('resize', draw);
+})();
+
+/* ===== 스크롤 등장 애니메이션 ===== */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+
+  var SKIP = '';                           // 히어로 포함 전 섹션 적용
+  function inSkip(el) { return SKIP ? !!el.closest(SKIP) : false; }
+
+  var IMG_SEL = '.ph, .cl-photo, .rv-img, .cause-img, .sponge-img, .ing-map, .full-img img, .sp-tech-img';
+  var BOX_SEL = '.card, .spx-box, .ing-row, .rev, .step, .qa, section table, .dark';
+  var TXT_SEL = 'section h1, section h2, section h3, section h4, section p, section li,'
+              + ' .point-wrap, .test-tag, .cause-no, .copy-band p, .wr-title, .cl-title, .cl-sub,'
+              + ' .cl-name, .cl-delta, .cl-x, .fd-title, .fd-body, .fd-sign, .cc-lead, .cc-next, .sp-tech-txt,'
+              + ' .sub-eyebrow, .sub-title, .fb-lead, .fb-title, .fb-sub,'
+              + ' .abs-sec h2, .abs-sec h3, .abs-sec h4, .abs-sec p,'
+              + ' .step-sec h2, .step-sec h3, .step-sec p';
+
+  function tag(sel, cls) {
+    Array.prototype.forEach.call(document.querySelectorAll(sel), function (el) {
+      if (inSkip(el)) return;
+      if (el.closest('.sp-item') || el.closest('.ing-node')) return;                 // 자체 애니메이션 사용
+      if (el.closest('.doc-slider')) return;                                        // 슬라이더는 자체 제어
+      if (el.closest('.abs-flow')) return;                                          // 부스터 플로우는 자체 제어
+      if (el.closest('.fb-stage') && !el.closest('.fb-head')) return;               // 얼굴 콜아웃은 고정
+      if (el.classList.contains('rv-up') || el.classList.contains('rv-fade')) return;
+      if (el.parentElement && el.parentElement.closest('.rv-up, .rv-fade')) return;  // 상위가 이미 움직임
+      if (cls === 'rv-up' && el.querySelector(IMG_SEL)) return;                      // 이미지를 품은 묶음 제외
+      el.classList.add(cls);
+    });
+  }
+  tag(IMG_SEL, 'rv-fade');
+  tag(BOX_SEL, 'rv-up');
+  tag(TXT_SEL, 'rv-up');
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('shown');
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.rv-up, .rv-fade'), function (el) { io.observe(el); });
+
+  /* 히어로는 첫 화면이므로 로드 직후 자동 재생 */
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      Array.prototype.forEach.call(
+        document.querySelectorAll('.hero .rv-up, .hero .rv-fade'),
+        function (el) { el.classList.add('shown'); io.unobserve(el); }
+      );
+    });
+  });
+
+  // 안전장치: 화면에 들어온 요소는 반드시 보이게
+  var ticking = false;
+  function sweep() {
+    ticking = false;
+    var h = window.innerHeight;
+    Array.prototype.forEach.call(document.querySelectorAll('.rv-up:not(.shown), .rv-fade:not(.shown)'), function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < h * 0.92 && r.bottom > 0) el.classList.add('shown');
+    });
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(sweep); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('load', sweep);
+  setTimeout(sweep, 300);
+
+  /* 채팅 말풍선: 순서대로 하나씩 */
+  var chat = document.querySelector('.wr-chat');
+  if (chat) {
+    var chatIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        Array.prototype.forEach.call(chat.children, function (b, i) {
+          setTimeout(function () { b.classList.add('shown'); }, 220 * i);
+        });
+        chatIO.unobserve(e.target);
+      });
+    }, { threshold: 0.25 });
+    chatIO.observe(chat);
+  }
+
+  /* 스피큘 도해: 블록별 점·선·원형 + 텍스트 */
+  var spIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var item = e.target;
+      item.classList.add('shown');
+      if (item._line) item._line.style.strokeDashoffset = 0;
+      if (item._dot) { item._dot.style.transform = 'scale(1)'; item._dot.style.opacity = '1'; }
+      spIO.unobserve(item);
+    });
+  }, { threshold: 0.3 });
+  Array.prototype.forEach.call(document.querySelectorAll('.sp-item'), function (el) { spIO.observe(el); });
+
+  /* 임상 그래프: 막대 성장 → 수치 카운트업 → 화살표 이동 */
+  function countUp(el, to, suffix, dur, dec) {
+    var start = null;
+    function step(ts) {
+      if (start === null) start = ts;
+      var pr = Math.min((ts - start) / dur, 1);
+      el.textContent = (to * (1 - Math.pow(1 - pr, 3))).toFixed(dec || 0) + suffix;
+      if (pr < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  var clIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var chart = e.target;
+      chart.classList.add('shown');
+      var result = chart.closest('.cl-result');
+      var num = result && result.querySelector('.cl-delta b');
+      if (num) {
+        var m = num.textContent.match(/([\d.]+)(.*)/);
+        if (m) {
+          num.textContent = '0' + m[2];
+          var dec = (m[1].split('.')[1] || '').length;
+          setTimeout(function () { countUp(num, parseFloat(m[1]), m[2], 1200, dec); }, 450);
+        }
+      }
+      setTimeout(function () { if (chart._playArrow) chart._playArrow(); }, 1150);
+      clIO.unobserve(chart);
+    });
+  }, { threshold: 0.35 });
+  Array.prototype.forEach.call(document.querySelectorAll('.cl-chart'), function (el) { clIO.observe(el); });
+})();
+
+
+/* ===== 문서 카드 슬라이더 — 스와이프 + 자동 무한 루프 ===== */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-doc-slider]'), function (root) {
+    var view  = root.querySelector('.doc-viewport');
+    var track = root.querySelector('.doc-track');
+    var capEl = root.querySelector('.doc-cap');
+    var capT  = root.querySelector('.doc-cap-title');
+    var capB  = root.querySelector('.doc-cap-body');
+    var dotWrap = root.querySelector('.doc-dots');
+    var reals = Array.prototype.slice.call(track.children);
+    var n = reals.length;
+    if (!n) return;
+
+    var meta = reals.map(function (el) {
+      return { title: el.getAttribute('data-title') || '', body: el.getAttribute('data-body') || '' };
+    });
+
+    /* 앞뒤로 복제해 무한 루프 */
+    var CL = Math.min(2, n);
+    for (var i = 0; i < CL; i++) {
+      var head = reals[n - 1 - i].cloneNode(true);
+      head.setAttribute('aria-hidden', 'true');
+      track.insertBefore(head, track.firstChild);
+      var tail = reals[i].cloneNode(true);
+      tail.setAttribute('aria-hidden', 'true');
+      track.appendChild(tail);
+    }
+    var all = Array.prototype.slice.call(track.children);
+
+    /* 인디케이터 */
+    for (var d = 0; d < n; d++) dotWrap.appendChild(document.createElement('b'));
+    var dots = Array.prototype.slice.call(dotWrap.children);
+
+    var index = CL;            // 현재 위치(복제 포함 기준)
+    var animating = false;
+    var timer = null;
+
+    function step() {
+      var w = all[0].getBoundingClientRect().width;
+      var g = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+      return { w: w, s: w + g };
+    }
+    function offset(idx) {
+      var m = step();
+      return view.clientWidth / 2 - (idx * m.s + m.w / 2);
+    }
+    function place(anim, x) {
+      if (x === undefined) x = offset(index);
+      track.style.transition = anim ? 'transform .5s cubic-bezier(.22,1,.36,1)' : 'none';
+      track.style.transform = 'translate3d(' + x + 'px,0,0)';
+    }
+    function real() { return ((index - CL) % n + n) % n; }
+    function paint() {
+      var r = real();
+      all.forEach(function (el, i) { el.classList.toggle('is-active', i === index); });
+      dots.forEach(function (b, i) { b.classList.toggle('on', i === r); });
+      if (capT.textContent === meta[r].title) return;
+      capEl.classList.add('fading');
+      setTimeout(function () {
+        capT.textContent = meta[r].title;
+        capB.innerHTML = meta[r].body;
+        capEl.classList.remove('fading');
+      }, reduce ? 0 : 180);
+    }
+    function go(dir) {
+      if (animating) return;
+      animating = true;
+      index += dir;
+      place(true);
+      paint();
+      window.setTimeout(normalize, 520);
+    }
+    function normalize() {
+      animating = false;
+      if (index >= CL + n) { index -= n; place(false); }
+      else if (index < CL) { index += n; place(false); }
+      all.forEach(function (el, i) { el.classList.toggle('is-active', i === index); });
+    }
+
+    /* 자동 전환 */
+    function start() { if (reduce) return; stop(); timer = window.setInterval(function () { go(1); }, 3600); }
+    function stop() { if (timer) { window.clearInterval(timer); timer = null; } }
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+
+    /* 스와이프 / 드래그 */
+    var dragging = false, startX = 0, baseX = 0, moved = 0, lock = null;
+    function pt(e) { return e.touches ? e.touches[0].clientX : e.clientX; }
+    function ptY(e) { return e.touches ? e.touches[0].clientY : e.clientY; }
+    var startY = 0;
+
+    function down(e) {
+      if (animating) return;
+      dragging = true; lock = null; moved = 0;
+      startX = pt(e); startY = ptY(e);
+      baseX = offset(index);
+      stop();
+      view.classList.add('dragging');
+      track.style.transition = 'none';
+    }
+    function move(e) {
+      if (!dragging) return;
+      var dx = pt(e) - startX, dy = ptY(e) - startY;
+      if (lock === null) {
+        if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return;
+        lock = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+        if (lock === 'y') { dragging = false; view.classList.remove('dragging'); return; }
+      }
+      moved = dx;
+      if (e.cancelable) e.preventDefault();
+      place(false, baseX + dx);
+    }
+    function up() {
+      if (!dragging) return;
+      dragging = false;
+      view.classList.remove('dragging');
+      var m = step();
+      if (Math.abs(moved) > Math.min(56, m.w * 0.18)) go(moved < 0 ? 1 : -1);
+      else place(true);
+      start();
+    }
+    view.addEventListener('mousedown', down);
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', up);
+    view.addEventListener('touchstart', down, { passive: true });
+    view.addEventListener('touchmove', move, { passive: false });
+    view.addEventListener('touchend', up);
+    view.addEventListener('touchcancel', up);
+    view.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
+    dots.forEach(function (b, i) {
+      b.addEventListener('click', function () {
+        if (animating) return;
+        index = CL + i; place(true); paint(); window.setTimeout(normalize, 520); start();
+      });
+    });
+
+    function layout() { place(false); }
+    window.addEventListener('resize', layout);
+    window.addEventListener('load', layout);
+
+    place(false);
+    paint();
+    start();
+  });
+})();
+
+/* ===== 성분 섹션 파동 — 섹션 bottom까지 도달하도록 크기 계산 ===== */
+(function () {
+  var sec = document.querySelector('.ing-sec');
+  if (!sec) return;
+  var map = sec.querySelector('.ing-stage');
+  var waves = sec.querySelector('.ing-waves');
+  if (!map || !waves) return;
+
+  function fit() {
+    /* 제품 이미지를 중심으로, 성분 다이어그램 영역 안에서만 퍼지도록 */
+    var d = map.offsetWidth * 1.35;
+    if (!d) return;
+    sec.style.setProperty('--wave-size', Math.round(d) + 'px');  // 최종 지름
+  }
+  fit();
+  window.addEventListener('load', fit);
+  window.addEventListener('resize', fit);
+  if (window.ResizeObserver) new ResizeObserver(fit).observe(sec);
+})();
+
+/* ===== 5가지 케어 — 점·선·텍스트 순차 등장 ===== */
+(function () {
+  var stage = document.querySelector('.fb-stage');
+  if (!stage) return;
+  function play() { stage.classList.add('play'); }
+  if (!('IntersectionObserver' in window)) { play(); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      play();
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+  io.observe(stage);
+  window.addEventListener('load', function () {
+    var r = stage.getBoundingClientRect();
+    if (r.top < window.innerHeight * 0.9 && r.bottom > 0) play();
+  });
+})();
+
+/* ===== 흡수율 섹션 — 그래프·수치 동시 재생 ===== */
+(function () {
+  var secs = document.querySelectorAll('.abs-sec');
+  if (!secs.length) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function runCount(el) {
+    var to = parseFloat(el.dataset.to) || 0;
+    var sfx = el.dataset.suffix || '';
+    var dur = parseInt(el.dataset.duration, 10) || 1300;
+    if (reduce) { el.textContent = to.toLocaleString('en-US') + sfx; return; }
+    var start = null;
+    (function step(ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(to * eased).toLocaleString('en-US') + sfx;
+      if (p < 1) requestAnimationFrame(step);
+    })(performance.now());
+  }
+
+  function play(el) {
+    if (el.dataset.played) return;
+    el.dataset.played = '1';
+    el.classList.add('play');
+    Array.prototype.forEach.call(el.querySelectorAll('.acount'), function (c, i) {
+      setTimeout(function () { runCount(c); }, 140 + i * 90);
+    });
+  }
+
+  var targets = [];
+  Array.prototype.forEach.call(secs, function (sc) {
+    targets = targets.concat(Array.prototype.slice.call(
+      sc.querySelectorAll('.abs-flow, .abs-metric, .abs-chart, .abs-idx-head')));
+  });
+  if (!('IntersectionObserver' in window)) { targets.forEach(play); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      play(e.target);
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.4, rootMargin: '0px 0px -8% 0px' });
+  targets.forEach(function (t) { io.observe(t); });
+})();
+/* ===== 화면 밖 애니메이션·영상 일시정지 (모바일 성능) ===== */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+
+  var animHosts = document.querySelectorAll('.ing-stage, .marquee, .cmp-wrap, .abs-sec');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      e.target.classList.toggle('anim-off', !e.isIntersecting);
+    });
+  }, { rootMargin: '150px 0px' });
+  Array.prototype.forEach.call(animHosts, function (el) { io.observe(el); });
+
 })();
 </script>
+
 </body>
 </html>
