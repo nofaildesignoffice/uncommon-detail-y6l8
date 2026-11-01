@@ -1303,6 +1303,17 @@ section.ask-sec .note{margin-top:12px;text-align:left}
 /* why-top 하단을 섹션 배경색으로 */
 .why-top{background:linear-gradient(to bottom,rgba(11,28,27,0) 0%,rgba(11,28,27,0) 42%,rgba(11,28,27,.5) 62%,rgba(11,28,27,.88) 80%,#0B1C1B 94%,#0B1C1B 100%),url('img/why.jpg') center top / cover no-repeat!important}
 section.why-sec{background:#0B1C1B!important}
+/* 브랜드 글자 로고 (공구제안서 index_common.html과 동일: Pretendard 600, 자간 .04em, ®) */
+.ut-mark{font-family:'Pretendard Variable',Pretendard,sans-serif;font-weight:600;letter-spacing:.04em;line-height:1;white-space:nowrap;text-align:center}
+.ut-mark sup{font-size:.5em;vertical-align:super;margin-left:1px}
+.it-mark{color:#fff;font-size:26px;margin:0 auto 44px}
+.rs-mark{position:absolute!important;z-index:0!important;left:0;right:0;top:64px;color:#fff;font-size:34px;opacity:.12}
+.fd-mark{position:absolute;left:0;right:0;bottom:36px;color:#fff;font-size:34px;opacity:.4}
+.made-mark{display:block;color:#173634;font-size:22px;margin:0 auto 10px}
+.fi-mark{color:#fff;font-size:22px;text-shadow:0 1px 12px rgba(0,0,0,.25)}
+/* Codex 생성 이미지 */
+.how-fig img{display:block;width:100%;aspect-ratio:18/11;object-fit:cover}
+.stop-card img{object-fit:cover}
 /* 고민 섹션 물방울 */
 .wc-flake{width:300px;height:300px;left:-110px}
 .lw-flake{width:300px;height:300px}
@@ -1313,7 +1324,7 @@ section.why-sec{background:#0B1C1B!important}
 <!-- [01] 인트로 -->
 <section class="intro-sec">
   <div class="it-in">
-    <img class="it-logo rv-up" src="img/logo_white.svg" alt="UN COMMON TOWEL">
+    <p class="ut-mark it-mark rv-up">UNCOMMON&nbsp;TOWEL<sup>®</sup></p>
     <p class="it-none rv-up">두꺼운 만큼<br>늦게 마르는</p>
     <p class="it-big rv-up"><s>호텔 수건</s><br><s>두꺼운 면 수건</s><br><s>고중량 타올</s></p>
     <i class="it-line rv-up"></i>
@@ -1335,9 +1346,9 @@ section.why-sec{background:#0B1C1B!important}
 <section class="stop-sec">
   <p class="stop-big stop-top rv-up">매일 같이</p>
   <div class="stop-row">
-    <figure class="stop-card rv-up"><img src="img/stop1.svg" alt="축축하게 걸려 있는 수건" loading="lazy"><figcaption>덜 마르고</figcaption></figure>
-    <figure class="stop-card rv-up"><img src="img/stop2.svg" alt="수건에서 올라오는 냄새" loading="lazy"><figcaption>냄새나고</figcaption></figure>
-    <figure class="stop-card rv-up"><img src="img/stop3.svg" alt="다시 돌리는 세탁기" loading="lazy"><figcaption>다시 빨고</figcaption></figure>
+    <figure class="stop-card rv-up"><img src="img/stop1.jpg" alt="축축하게 걸려 있는 수건" loading="lazy"><figcaption>덜 마르고</figcaption></figure>
+    <figure class="stop-card rv-up"><img src="img/stop2.jpg" alt="수건에서 올라오는 냄새" loading="lazy"><figcaption>냄새나고</figcaption></figure>
+    <figure class="stop-card rv-up"><img src="img/stop3.jpg" alt="다시 돌리는 세탁기" loading="lazy"><figcaption>다시 빨고</figcaption></figure>
   </div>
   <p class="stop-lead rv-up">이제 그만,</p>
   <p class="stop-big rv-up">필요한 건<br>도톰하고 빨리 마르는 한 장</p>
@@ -1410,7 +1421,7 @@ section.why-sec{background:#0B1C1B!important}
 
 <!-- [07] 결과: 흡수 -->
 <section class="result-sec">
-  <img class="rs-logo" src="img/logo_white.svg" alt="" aria-hidden="true">
+  <p class="ut-mark rs-mark" aria-hidden="true">UNCOMMON&nbsp;TOWEL<sup>®</sup></p>
   <p class="fl-max rs-max rv-up"><span>흡수 높이</span><br><b data-count="59">59</b><span>mm</span></p>
   <h2 class="rs-title rv-up" style="text-align:left">닦는 순간,<br><strong>물기를 끌어올리는 힘</strong></h2>
 
@@ -1466,7 +1477,7 @@ section.why-sec{background:#0B1C1B!important}
   <p class="fd-body rv-up">축복을 담는 물건이라 아무 실이나 쓸 수 없었어요.<br>감촉과 흡수력을 끌어올리면서도<br>매일 빨아 쓰는 수건답게 오래 쓰는 것까지 고민했습니다.</p>
   <p class="fd-body rv-up">그 마음 그대로, 이제 매일 얼굴에 닿는<br>페이스타월 한 장에 담았습니다.</p>
   <p class="fd-sign rv-up">언커먼 타올 대표</p>
-  <img class="fd-word" src="img/logo_white.svg" alt="UN COMMON TOWEL">
+  <p class="ut-mark fd-mark">UNCOMMON&nbsp;TOWEL<sup>®</sup></p>
 </section>
 
 <!-- [10] 먼저 고른 곳들 -->
@@ -1491,12 +1502,12 @@ section.why-sec{background:#0B1C1B!important}
   <svg class="wc-flake" viewBox="-100 -100 200 200" aria-hidden="true"><path d="M0 -92C28 -48 62 -14 62 24A62 62 0 0 1 -62 24C-62 -14 -28 -48 0 -92Z" fill="#CFDCE4" fill-opacity=".8"/><path d="M-30 20A32 32 0 0 0 -6 52" stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none" opacity=".7"/></svg>
   <h2 class="section-title rv-up" style="margin-bottom:30px;font-size:44px;line-height:1.15;letter-spacing:-.03em">젖은 수건 때문에<br><strong>매일 겪는 불편함</strong></h2>
   <div class="wp-list">
-    <div class="wp rv-up"><figure class="wp-img"><img src="img/w1.svg" alt="욕실에 젖은 채 걸려 있는 수건" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">저녁 욕실에서</span><p>아침에 쓴 수건이 <em>저녁까지 축축해요.</em> 욕실 문을 열면 꿉꿉한 냄새부터 나요.</p></div></div>
-    <div class="wp r rv-up"><figure class="wp-img"><img src="img/w2.svg" alt="비 오는 날" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">장마철 빨래</span><p>장마철엔 <em>빨아도 잘 안 말라요.</em> 덜 마른 수건을 다시 세탁기에 넣는 날이 늘어요.</p></div></div>
-    <div class="wp rv-up"><figure class="wp-img"><img src="img/w3.svg" alt="수건으로 얼굴을 문지르는 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">세안 직후</span><p>물기가 <em>한 번에 안 닦이고 겉돌아요.</em> 여러 번 문지르다 보면 볼이 금방 빨개져요.</p></div></div>
-    <div class="wp r rv-up"><figure class="wp-img"><img src="img/w4.svg" alt="뻣뻣하게 굳은 수건" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">몇 번 빨고 나면</span><p>새로 산 수건도 <em>금방 뻣뻣해져요.</em> 처음의 보송한 느낌이 오래가지 않아요.</p></div></div>
-    <div class="wp rv-up"><figure class="wp-img"><img src="img/w5.svg" alt="다시 돌리는 세탁기" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">두꺼운 수건의 배신</span><p>도톰한 게 좋아서 샀는데, <em>반나절이 지나도 눅눅해요.</em> 결국 얇은 수건만 꺼내 써요.</p></div></div>
-    <div class="wp r rv-up"><figure class="wp-img"><img src="img/w6.svg" alt="수건에서 올라오는 냄새" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">얼굴에 대는 순간</span><p>빨았는데도 <em>쉰내가 올라와요.</em> 냄새나는 수건을 얼굴에 대는 게 찝찝해요.</p></div></div>
+    <div class="wp rv-up"><figure class="wp-img"><img src="img/w1.jpg" alt="욕실에 젖은 채 걸려 있는 수건" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">저녁 욕실에서</span><p>아침에 쓴 수건이 <em>저녁까지 축축해요.</em> 욕실 문을 열면 꿉꿉한 냄새부터 나요.</p></div></div>
+    <div class="wp r rv-up"><figure class="wp-img"><img src="img/w2.jpg" alt="비 오는 날" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">장마철 빨래</span><p>장마철엔 <em>빨아도 잘 안 말라요.</em> 덜 마른 수건을 다시 세탁기에 넣는 날이 늘어요.</p></div></div>
+    <div class="wp rv-up"><figure class="wp-img"><img src="img/w3.jpg" alt="수건으로 얼굴을 문지르는 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">세안 직후</span><p>물기가 <em>한 번에 안 닦이고 겉돌아요.</em> 여러 번 문지르다 보면 볼이 금방 빨개져요.</p></div></div>
+    <div class="wp r rv-up"><figure class="wp-img"><img src="img/w4.jpg" alt="뻣뻣하게 굳은 수건" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">몇 번 빨고 나면</span><p>새로 산 수건도 <em>금방 뻣뻣해져요.</em> 처음의 보송한 느낌이 오래가지 않아요.</p></div></div>
+    <div class="wp rv-up"><figure class="wp-img"><img src="img/w5.jpg" alt="다시 돌리는 세탁기" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">두꺼운 수건의 배신</span><p>도톰한 게 좋아서 샀는데, <em>반나절이 지나도 눅눅해요.</em> 결국 얇은 수건만 꺼내 써요.</p></div></div>
+    <div class="wp r rv-up"><figure class="wp-img"><img src="img/w6.jpg" alt="수건에서 올라오는 냄새" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">얼굴에 대는 순간</span><p>빨았는데도 <em>쉰내가 올라와요.</em> 냄새나는 수건을 얼굴에 대는 게 찝찝해요.</p></div></div>
   </div>
 </section>
 
@@ -1509,9 +1520,9 @@ section.why-sec{background:#0B1C1B!important}
     <span class="lw-h2 rv-up"><small>연구가 말하는</small><b>젖은 수건의 영향</b></span>
   </h2>
   <ol class="lw-list">
-    <li class="lw-item rv-up"><figure class="lw-img"><img src="img/lw1.svg" alt="수건 속 세균 일러스트" loading="lazy"></figure><span class="lw-no">01</span><div class="lw-txt"><h3>세균</h3><p>미국 애리조나대 Gerba 교수 연구팀이 가정 욕실 수건을 조사한 결과, <b>약 90%에서 대장균군이 검출됐어요.</b> 사용 후 수분과 각질이 남으면 세균이 빠르게 늘고, 이때 생기는 물질이 쉰내로 이어집니다.</p><span class="lw-src">출처 : C. Gerba, 애리조나대학교 가정 위생 연구</span></div></li>
-    <li class="lw-item rv-up"><figure class="lw-img"><img src="img/lw2.svg" alt="섬유 속에 쌓이는 미생물막 일러스트" loading="lazy"></figure><span class="lw-no">02</span><div class="lw-txt"><h3>오래 젖어 있는 시간</h3><p>미생물이 자라려면 수분이 오래 머물러야 해요. <b>잘 마르지 않는 수건은 젖어 있는 시간이 길어지고,</b> 섬유 깊숙이 미생물막이 생기면 일반 세탁으로 잘 지워지지 않습니다.</p><span class="lw-src">출처 : 수건 건조와 미생물막(바이오필름) 관련 연구</span></div></li>
-    <li class="lw-item rv-up"><figure class="lw-img"><img src="img/lw3.svg" alt="거친 표면의 마찰 일러스트" loading="lazy"></figure><span class="lw-no">03</span><div class="lw-txt"><h3>마찰</h3><p>섬유 촉감 평가(KES-FB) 연구에서 <b>표면 마찰계수가 낮고 매끄러운 직물일수록 피부에 주는 물리적 자극이 적었어요.</b> 세안 직후 얼굴은 매일 이 마찰을 만납니다.</p><span class="lw-src">출처 : KES-FB 직물 촉감 평가 연구</span></div></li>
+    <li class="lw-item rv-up"><figure class="lw-img"><img src="img/lw1.jpg" alt="수건 속 세균 일러스트" loading="lazy"></figure><span class="lw-no">01</span><div class="lw-txt"><h3>세균</h3><p>미국 애리조나대 Gerba 교수 연구팀이 가정 욕실 수건을 조사한 결과, <b>약 90%에서 대장균군이 검출됐어요.</b> 사용 후 수분과 각질이 남으면 세균이 빠르게 늘고, 이때 생기는 물질이 쉰내로 이어집니다.</p><span class="lw-src">출처 : C. Gerba, 애리조나대학교 가정 위생 연구</span></div></li>
+    <li class="lw-item rv-up"><figure class="lw-img"><img src="img/lw2.jpg" alt="섬유 속에 쌓이는 미생물막 일러스트" loading="lazy"></figure><span class="lw-no">02</span><div class="lw-txt"><h3>오래 젖어 있는 시간</h3><p>미생물이 자라려면 수분이 오래 머물러야 해요. <b>잘 마르지 않는 수건은 젖어 있는 시간이 길어지고,</b> 섬유 깊숙이 미생물막이 생기면 일반 세탁으로 잘 지워지지 않습니다.</p><span class="lw-src">출처 : 수건 건조와 미생물막(바이오필름) 관련 연구</span></div></li>
+    <li class="lw-item rv-up"><figure class="lw-img"><img src="img/lw3.jpg" alt="거친 표면의 마찰 일러스트" loading="lazy"></figure><span class="lw-no">03</span><div class="lw-txt"><h3>마찰</h3><p>섬유 촉감 평가(KES-FB) 연구에서 <b>표면 마찰계수가 낮고 매끄러운 직물일수록 피부에 주는 물리적 자극이 적었어요.</b> 세안 직후 얼굴은 매일 이 마찰을 만납니다.</p><span class="lw-src">출처 : KES-FB 직물 촉감 평가 연구</span></div></li>
   </ol>
   <p class="note lw-note">※ 일반 미생물학·섬유공학 연구 결과이며, 특정 제품의 효능을 뜻하지 않습니다.</p>
 </section>
@@ -1554,7 +1565,7 @@ section.why-sec{background:#0B1C1B!important}
   <div class="u1-made">
     <span class="u1-made-lead rv-up">그래서, 도톰하고 보송한 한 장을 위해<br>만들었습니다</span>
     <i class="lw-line u1-made-line rv-up"></i>
-    <span class="sg-big u1-made-big rv-up"><img class="u1-made-logo" src="img/logo_dark.svg" alt="UN COMMON TOWEL 언커먼 타올">밤부 비스코스 페이스타월</span>
+    <span class="sg-big u1-made-big rv-up"><span class="ut-mark made-mark">UNCOMMON&nbsp;TOWEL<sup>®</sup></span>밤부 비스코스 페이스타월</span>
     <img class="sg-img u1-made-img rv-up" src="img/made.jpg" alt="벤치에 쌓인 언커먼 타올" loading="lazy">
   </div>
 </section>
@@ -1617,12 +1628,12 @@ section.why-sec{background:#0B1C1B!important}
   <p class="how-eyebrow rv-up">밤부 비스코스 원사와 숨 쉬는 루프</p>
   <h2 class="section-title rv-up">도톰한데 빨리 마르는<br><strong>언커먼의 원리</strong></h2>
   <div class="how-list">
-    <div class="how-row s1 rv-up"><div class="how-fig"><svg viewBox="0 0 360 220" aria-hidden="true"><rect width="360" height="220" fill="#fff"/><rect x="0" y="170" width="360" height="22" fill="#E3F3F2"/><g fill="none" stroke="#7CC6C2" stroke-width="3" stroke-linecap="round"><path d="M14 172C14 128 32 128 32 172" /><path d="M32 172C32 128 50 128 50 172" /><path d="M50 172C50 128 68 128 68 172" /><path d="M68 172C68 128 86 128 86 172" /><path d="M86 172C86 128 104 128 104 172" /><path d="M104 172C104 128 122 128 122 172" /><path d="M122 172C122 128 140 128 140 172" /><path d="M140 172C140 128 158 128 158 172" /><path d="M158 172C158 128 176 128 176 172" /><path d="M176 172C176 128 194 128 194 172" /><path d="M194 172C194 128 212 128 212 172" /><path d="M212 172C212 128 230 128 230 172" /><path d="M230 172C230 128 248 128 248 172" /><path d="M248 172C248 128 266 128 266 172" /><path d="M266 172C266 128 284 128 284 172" /><path d="M284 172C284 128 302 128 302 172" /><path d="M302 172C302 128 320 128 320 172" /><path d="M320 172C320 128 338 128 338 172" /><path d="M338 172C338 128 356 128 356 172" /></g><g class="hw-a hw-drop"><path d="M90 30c-8 12-12 18-12 24a12 12 0 0 0 24 0c0-6-4-12-12-24z"/></g><g class="hw-a hw-drop d2"><path d="M180 22c-8 12-12 18-12 24a12 12 0 0 0 24 0c0-6-4-12-12-24z"/></g><g class="hw-a hw-drop d3"><path d="M270 30c-8 12-12 18-12 24a12 12 0 0 0 24 0c0-6-4-12-12-24z"/></g><text x="20" y="212" class="hw-t">밤부 비스코스 원사</text></svg></div><div class="how-txt"><span class="how-no">STEP 01</span><h3>머금고</h3><p>물과 잘 어울리는 셀룰로오스 섬유,<br>밤부 비스코스가 세안 후 물기를 끌어당깁니다.</p></div></div>
-    <div class="how-row s2 rv-up"><div class="how-fig"><svg viewBox="0 0 360 220" aria-hidden="true"><rect width="360" height="220" fill="#fff"/><rect x="0" y="170" width="360" height="22" fill="#E3F3F2"/><g fill="none" stroke="#7CC6C2" stroke-width="3" stroke-linecap="round"><path d="M14 172C14 128 32 128 32 172" /><path d="M32 172C32 128 50 128 50 172" /><path d="M50 172C50 128 68 128 68 172" /><path d="M68 172C68 128 86 128 86 172" /><path d="M86 172C86 128 104 128 104 172" /><path d="M104 172C104 128 122 128 122 172" /><path d="M122 172C122 128 140 128 140 172" /><path d="M140 172C140 128 158 128 158 172" /><path d="M158 172C158 128 176 128 176 172" /><path d="M176 172C176 128 194 128 194 172" /><path d="M194 172C194 128 212 128 212 172" /><path d="M212 172C212 128 230 128 230 172" /><path d="M230 172C230 128 248 128 248 172" /><path d="M248 172C248 128 266 128 266 172" /><path d="M266 172C266 128 284 128 284 172" /><path d="M284 172C284 128 302 128 302 172" /><path d="M302 172C302 128 320 128 320 172" /><path d="M320 172C320 128 338 128 338 172" /><path d="M338 172C338 128 356 128 356 172" /></g><g class="hw-a hw-press"><rect x="40" y="50" width="280" height="44" rx="22" fill="#F6DCCB"/><text x="180" y="78" text-anchor="middle" class="hw-t" fill="#9A6A55">피부</text></g><g class="hw-a hw-mini"><circle cx="110" cy="108" r="4"/><circle cx="180" cy="104" r="4"/><circle cx="250" cy="108" r="4"/></g><text x="20" y="212" class="hw-t">촘촘한 루프</text></svg></div><div class="how-txt"><span class="how-no">STEP 02</span><h3>거두고</h3><p>촘촘하게 세운 루프가 얼굴에 먼저 닿아,<br>문지르지 않고 눌러만 줘도 물기를 거둡니다.</p></div></div>
-    <div class="how-row s3 rv-up"><div class="how-fig"><svg viewBox="0 0 360 220" aria-hidden="true"><rect width="360" height="220" fill="#fff"/><rect x="0" y="170" width="360" height="22" fill="#E3F3F2"/><g fill="none" stroke="#7CC6C2" stroke-width="3" stroke-linecap="round"><path d="M14 172C14 128 32 128 32 172" /><path d="M32 172C32 128 50 128 50 172" /><path d="M50 172C50 128 68 128 68 172" /><path d="M68 172C68 128 86 128 86 172" /><path d="M86 172C86 128 104 128 104 172" /><path d="M104 172C104 128 122 128 122 172" /><path d="M122 172C122 128 140 128 140 172" /><path d="M140 172C140 128 158 128 158 172" /><path d="M158 172C158 128 176 128 176 172" /><path d="M176 172C176 128 194 128 194 172" /><path d="M194 172C194 128 212 128 212 172" /><path d="M212 172C212 128 230 128 230 172" /><path d="M230 172C230 128 248 128 248 172" /><path d="M248 172C248 128 266 128 266 172" /><path d="M266 172C266 128 284 128 284 172" /><path d="M284 172C284 128 302 128 302 172" /><path d="M302 172C302 128 320 128 320 172" /><path d="M320 172C320 128 338 128 338 172" /><path d="M338 172C338 128 356 128 356 172" /></g><g class="hw-a hw-air" fill="none" stroke="#7FB8E6" stroke-width="3" stroke-linecap="round"><path d="M10 150h330"/><path d="M10 162h330"/></g><g class="hw-a hw-vap" fill="none" stroke="#9CCFCC" stroke-width="3" stroke-linecap="round"><path d="M100 110c-8-10 8-16 0-28"/><path d="M180 104c-8-10 8-16 0-28"/><path d="M260 110c-8-10 8-16 0-28"/></g><text x="20" y="212" class="hw-t">루프 사이 공기 흐름</text></svg></div><div class="how-txt"><span class="how-no">STEP 03</span><h3>날려 보내고</h3><p>루프 사이로 공기가 지나가도록 짜,<br>220g의 도톰함에도 시험에서<br>146분 만에 말랐습니다.</p></div></div>
+    <div class="how-row s1 rv-up"><div class="how-fig"><img src="img/how1.jpg" alt="밤부 비스코스 루프 사이로 물방울이 스며드는 확대 이미지" loading="lazy"></div><div class="how-txt"><span class="how-no">STEP 01</span><h3>머금고</h3><p>물과 잘 어울리는 셀룰로오스 섬유,<br>밤부 비스코스가 세안 후 물기를 끌어당깁니다.</p></div></div>
+    <div class="how-row s2 rv-up"><div class="how-fig"><img src="img/how2.jpg" alt="피부에 닿은 루프가 물기를 거두는 확대 이미지" loading="lazy"></div><div class="how-txt"><span class="how-no">STEP 02</span><h3>거두고</h3><p>촘촘하게 세운 루프가 얼굴에 먼저 닿아,<br>문지르지 않고 눌러만 줘도 물기를 거둡니다.</p></div></div>
+    <div class="how-row s3 rv-up"><div class="how-fig"><img src="img/how3.jpg" alt="루프 사이로 공기가 지나며 수분이 날아가는 확대 이미지" loading="lazy"></div><div class="how-txt"><span class="how-no">STEP 03</span><h3>날려 보내고</h3><p>루프 사이로 공기가 지나가도록 짜,<br>220g의 도톰함에도 시험에서<br>146분 만에 말랐습니다.</p></div></div>
   </div>
   <p class="how-tech">장당 <b>220g · 40×80cm</b>, 루프 설계로 완성한 한 장</p>
-  <p class="note">* 원리는 브랜드 설명이며, 일러스트는 이해를 돕기 위한 개념도입니다. 건조 시간은 시험 시료 기준입니다.</p>
+  <p class="note">* 원리는 브랜드 설명이며, 이미지는 이해를 돕기 위한 연출 이미지입니다. 건조 시간은 시험 시료 기준입니다.</p>
 </section>
 
 <!-- [21] 7가지 디테일 -->
@@ -1798,7 +1809,7 @@ section.why-sec{background:#0B1C1B!important}
 </section>
 
 <!-- [25] 엔딩 컷 -->
-<div class="full-img"><img src="img/end.jpg" alt="햇빛 드는 욕실의 언커먼 타올"><p class="rv-up fi-logo"><img src="img/logo_white.svg" alt="UN COMMON TOWEL"></p></div>
+<div class="full-img"><img src="img/end.jpg" alt="햇빛 드는 욕실의 언커먼 타올"><p class="ut-mark fi-logo fi-mark rv-up">UNCOMMON&nbsp;TOWEL<sup>®</sup></p></div>
 
 <!-- [26] Q&A -->
 <section class="qna">
