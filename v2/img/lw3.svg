@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426 240"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE4EA"/><stop offset="1" stop-color="#C6D2DB"/></linearGradient></defs><style>
+.a-fall{animation:fall 1.8s ease-in infinite}.d2{animation-delay:.6s}.d3{animation-delay:1.1s}
+@keyframes fall{0%{transform:translateY(-6px);opacity:0}30%{opacity:1}100%{transform:translateY(10px);opacity:0}}
+.a-steam path{animation:st 2s ease-in-out infinite}.a-steam path:nth-child(2){animation-delay:.35s}.a-steam path:nth-child(3){animation-delay:.7s}
+@keyframes st{0%{transform:translateY(4px);opacity:0}50%{opacity:1}100%{transform:translateY(-6px);opacity:0}}
+.a-spin{transform-origin:50px 57px;animation:sp 2.4s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+.a-rain path{animation:rn 1s linear infinite}.a-rain path:nth-child(2n){animation-delay:.4s}
+@keyframes rn{0%{transform:translateY(-4px);opacity:0}40%{opacity:1}100%{transform:translateY(6px);opacity:0}}
+.a-rub{animation:rb 1.2s ease-in-out infinite}@keyframes rb{0%,100%{transform:translateX(-4px)}50%{transform:translateX(4px)}}
+.a-crack{stroke-dasharray:30;animation:ck 2.4s ease-in-out infinite}@keyframes ck{0%{stroke-dashoffset:30}50%,100%{stroke-dashoffset:0}}
+.a-float{animation:fl 3s ease-in-out infinite}@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.a-grow{transform-origin:50px 86px;animation:gr 3s ease-in-out infinite}@keyframes gr{0%,100%{transform:scaleY(.6)}50%{transform:scaleY(1.1)}}
+.a-spark{animation:sk 1s steps(2) infinite}@keyframes sk{to{opacity:.15}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="426" height="240" fill="url(#g)"/><g transform="translate(123.0 30.0) scale(1.8)" fill="none" stroke="#4F6372" stroke-width="2.60" stroke-linecap="round" stroke-linejoin="round"><path d="M14 36h72"/><path d="M14 64l8-8 8 8 8-8 8 8 8-8 8 8 8-8 8 8"/>
+<g class="a-rub"><path d="M30 24h40"/><path d="M64 18l6 6-6 6"/></g><path class="a-spark" d="M50 44l-4 6h6l-4 6"/></g></svg>

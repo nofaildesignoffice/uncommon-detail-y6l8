@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>언커먼 타올 상세페이지 기획 의도</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+:root{--ink:#111;--sub:#555;--mute:#888;--line:#E4E4E4;--bg:#F4F4F4;--card:#fff;--on:#111}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:'Pretendard Variable',Pretendard,-apple-system,'Apple SD Gothic Neo',sans-serif;color:var(--ink);background:var(--bg);word-break:keep-all;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:40px;max-width:1240px;margin:0 auto;padding:32px 32px 0;height:100vh}
+.doc{position:relative;overflow-y:auto;padding:8px 8px 120px 0;scrollbar-width:thin}
+.phone{position:relative;align-self:start;height:calc(100vh - 64px);border-radius:28px;background:#000;padding:10px;box-shadow:0 18px 50px rgba(0,0,0,.18)}
+.phone iframe{width:100%;height:100%;border:0;border-radius:20px;background:#fff;display:block}
+.phone-cap{position:absolute;left:0;right:0;bottom:-26px;text-align:center;font-size:12px;color:var(--mute)}
+header h1{font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1.3}
+header .meta{margin-top:8px;font-size:13px;color:var(--mute)}
+header .lead{margin-top:20px;font-size:16px;line-height:1.75;color:#222}
+.how{margin-top:14px;font-size:13.5px;color:var(--sub);background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+h2{margin:56px 0 6px;font-size:22px;font-weight:800;letter-spacing:-.02em}
+h2 small{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--mute);margin-bottom:6px}
+.stage-lead{font-size:15px;color:var(--sub);line-height:1.7;margin-bottom:16px}
+table{width:100%;border-collapse:collapse;margin-top:18px;font-size:14px;background:#fff;border:1px solid var(--line)}
+th,td{padding:11px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;line-height:1.6}
+th{background:#FAFAFA;font-weight:700;font-size:13px;color:var(--sub)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:12px;cursor:pointer;transition:border-color .2s,box-shadow .2s}
+.card:hover{border-color:#bbb}
+.card.on{border-color:var(--on);box-shadow:0 0 0 1px var(--on)}
+.card h3{font-size:16.5px;font-weight:800;letter-spacing:-.02em;line-height:1.45;display:flex;gap:10px;align-items:baseline}
+.card h3 .no{flex:none;font-size:12px;font-weight:700;color:var(--mute);min-width:22px}
+.card h3 .go{margin-left:auto;flex:none;font-size:12px;font-weight:600;color:var(--mute)}
+.card ul{margin:10px 0 0 32px;font-size:14.5px;line-height:1.75;color:#333}
+.card li{margin-top:4px}
+.card b{color:var(--ink)}
+.closing{margin-top:56px}
+@media (max-width:960px){
+  .wrap{display:block;height:auto;padding:20px 16px 0}
+  .doc{overflow:visible;padding:0 0 60px}
+  .phone{align-self:stretch;position:sticky;top:0;z-index:5;height:46vh;border-radius:0 0 18px 18px;margin:0 -16px 20px;padding:0 0 8px}
+  .phone iframe{border-radius:0}
+  .phone-cap{display:none}
+  .wrap{display:flex;flex-direction:column-reverse}
+  header h1{font-size:24px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<main class="doc" id="doc">
+<header>
+  <h1>언커먼 타올 상세페이지 기획 의도 (v2)</h1>
+  <p class="meta">노페일 디자인 · 2026.11.01 · 마이온도 상세페이지 구조 적용</p>
+  <p class="lead">이 페이지는 "도톰한 수건은 늦게 마른다"는 고객의 생각을 "도톰한데도 빨리 마르는 한 장"으로 바꾸도록 설계했습니다. 마이온도 상세페이지와 같은 순서로, 사람의 뇌가 정보를 받아들이고 결정을 내리는 흐름에 맞춰 <b>주의 → 욕구 → 신뢰 → 납득 → 불안 해소</b>의 다섯 단계로 구성했습니다.</p>
+  <p class="how">각 항목을 누르면 옆 화면의 상세페이지가 해당 섹션으로 이동합니다. 상세페이지를 스크롤하면 지금 보고 있는 섹션의 설명이 표시됩니다.</p>
+</header>
+
+<h2>설계 흐름 한눈에</h2>
+<p class="stage-lead">상단(1~3단계)은 결론부터 던져 빠르게 결정하는 고객을, 하단(4~5단계)은 문제부터 차근차근 쌓아 망설이는 고객을 설득합니다.</p>
+<table>
+<tr><th>단계</th><th>뇌가 하는 일</th><th>섹션</th></tr>
+<tr><td>1. 주의를 끈다</td><td>3초 안에 "나와 관련 있다"고 판단</td><td>인트로, 히어로, 매일 같이</td></tr>
+<tr><td>2. 원하게 만든다</td><td>머릿속에서 미리 써 봄</td><td>브랜드 비주얼·질문 대화, 데일리·요약, MADE IN KOREA, 흡수 결과, 146분 그래프</td></tr>
+<tr><td>3. 믿게 만든다</td><td>사람과 사람들을 통해 경계를 풂</td><td>대표 스토리, 50여 곳 납품</td></tr>
+<tr><td>4. 깊이 납득시킨다</td><td>문제 → 영향 → 목표 → 해답 → 반론 순으로 스스로 결론에 도달</td><td>고민, 젖은 수건의 영향, 도톰하고 보송해지면, 그래서 만들었다, 왜 언커먼인가, 다른 수건 비교, 막대그래프, 결론</td></tr>
+<tr><td>5. 불안을 없앤다</td><td>결제 직전의 작은 의심을 하나씩 해소</td><td>디테일 컷, 원리, 7가지 디테일, 시험·등록, 사용시 꼭 알아두세요, 사용법·사이즈·TIP·루틴, 몇 장이면 충분할까, 엔딩 컷, Q&amp;A, 상품정보 고시</td></tr>
+</table>
+
+<h2><small>STAGE 1</small>주의를 끈다</h2>
+<p class="stage-lead">3초 안에 "나와 관련 있다"고 느끼게 해서 스크롤을 멈추게 합니다.</p>
+
+<div class="card" data-sel="section.intro-sec"><h3><span class="no">01</span>인트로 — "두꺼운 만큼 늦게 마르는 / <s>호텔 수건 두꺼운 면 수건 고중량 타올</s>"<span class="go">보기 →</span></h3><ul>
+<li>뇌는 낯선 정보보다 <b>이미 아는 것</b>에 먼저 반응합니다. "좋은 수건 = 두꺼운 수건"이라는 익숙한 기준과 고객이 아는 수건 이름 세 개로 시작합니다.</li>
+<li>그 익숙한 이름에 취소선을 그어 <b>예측을 깨뜨립니다</b>. "두꺼우면 늦게 마른다"는, 고객이 알면서도 포기해 온 단점을 먼저 꺼냅니다.</li>
+<li>제품 사진 없이 글과 로고만 두어 시선이 이 한 줄에 모이게 했습니다.</li></ul></div>
+
+<div class="card" data-sel="section.hero"><h3><span class="no">02</span>히어로 — "도톰한 220g인데도 146분 만에 마르는"<span class="go">보기 →</span></h3><ul>
+<li>인트로의 "두꺼운 만큼 늦게"와 정반대인 "도톰한데도 빨리"를 바로 붙였습니다. 두 개념을 연달아 보여주면 뇌는 그 <b>차이를 실제보다 크게</b> 인식합니다(대비 효과).</li>
+<li>햇빛 드는 창가의 바구니 컷으로 "보송함·햇볕·마른 수건"이라는 연상을 설명 없이 먼저 심었습니다(점화 효과).</li>
+<li>220g과 146분, 두 숫자만 남겼습니다. 하나는 도톰함, 하나는 빠른 건조로 이 페이지의 약속 전부입니다.</li></ul></div>
+
+<div class="card" data-sel="section.stop-sec"><h3><span class="no">03</span>매일 같이 — "덜 마르고 / 냄새나고 / 다시 빨고 → 이제 그만, 필요한 건 도톰하고 빨리 마르는 한 장"<span class="go">보기 →</span></h3><ul>
+<li>사람은 같은 가치라도 <b>얻는 것보다 잃는 것에 더 크게</b> 반응합니다(손실 회피). 장점보다 고객이 매일 겪는 꿉꿉함과 다시 빠는 수고를 먼저 보여줍니다.</li>
+<li>세 장면은 사진 대신 움직이는 아이콘으로 그렸습니다. 우리 제품 사진이 '문제 장면'에 쓰이지 않게 하려는 선택입니다.</li>
+<li>"필요한 건 도톰하고 빨리 마르는 한 장"이 페이지의 핵심 문장입니다. 처음에 각인하고 결론에서 같은 문형으로 반복해 <b>기억에 고정</b>합니다.</li></ul></div>
+
+<h2><small>STAGE 2</small>원하게 만든다</h2>
+<p class="stage-lead">고객이 머릿속에서 제품을 미리 써 보게 해서 "갖고 싶다"는 마음을 만듭니다.</p>
+
+<div class="card" data-sel="section.sub:not(.daily)"><h3><span class="no">04</span>브랜드 비주얼 (글 없음) + 질문 대화 — "도톰하지만, 오래 젖어 있지 않아요"<span class="go">보기 →</span></h3><ul>
+<li>뇌는 글보다 이미지를 훨씬 빠르게 처리합니다. 민트 상자 속 루프 확대 컷을 천천히 확대해 <b>손으로 만지는 듯한 감촉</b>부터 상상하게 합니다.</li>
+<li>이어지는 대화는 고객이 속으로 품은 의심("이것도 두꺼운데 안 마르는 거 아니야?")을 고객의 말로 먼저 꺼내고, 바로 숫자로 답합니다. 묻기 전에 답하면 <b>반론이 자라지 않습니다</b>.</li></ul></div>
+
+<div class="card" data-sel="section.sub.daily"><h3><span class="no">05</span>데일리 + 요약 — "세안 루틴은 그대로, 수건만 바꾸세요"<span class="go">보기 →</span></h3><ul>
+<li>사람은 좋아 보여도 <b>복잡해 보이면 행동하지 않습니다</b>. 바꿀 것은 수건 한 장뿐이라는 걸 보여줍니다.</li>
+<li>"STEP 1 세안 + STEP 2 언커먼 한 장" 덧셈 공식으로 정보를 두 덩어리로 끊어 한눈에 이해되게 했습니다.</li></ul></div>
+
+<div class="card" data-sel="section.band-sec"><h3><span class="no">06</span>MADE IN KOREA<span class="go">보기 →</span></h3><ul>
+<li>효과를 말하기 전에 <b>기본 신뢰</b>부터 깝니다. 매일 얼굴에 닿는 제품이라 어디서 만들었는지가 먼저 걸리기 때문입니다.</li></ul></div>
+
+<div class="card" data-sel="section.result-sec"><h3><span class="no">07</span>결과 — "흡수 높이 59mm" + 성적서 + 실물 루프<span class="go">보기 →</span></h3><ul>
+<li>숫자 하나를 가장 크게 보여줘 <b>기준점</b>을 심습니다(앵커링). "닦는 순간"의 약속을 먼저 숫자로 증명합니다.</li>
+<li>성적서 표지와 실물 루프 확대 컷을 나란히, 아래에는 성적서와 디테일 컷이 계속 흐르게 해 <b>정리되지 않은 실제 기록</b>이라는 인상을 줍니다.</li></ul></div>
+
+<div class="card" data-sel="section.flow-sec"><h3><span class="no">08</span>146분 그래프 — "도톰한데도 빨리 마르는 한 장"<span class="go">보기 →</span></h3><ul>
+<li>히어로에서 던진 약속(146분)을 그래프로 <b>다시 확인</b>시킵니다. 같은 메시지를 다른 형식으로 반복하면 뇌는 그것을 더 사실로 받아들입니다.</li>
+<li>"흡수(07) → 건조(08)" 순서로 붙여, 닦을 때와 다 쓴 뒤 두 장면을 모두 채웠습니다. 마지막 구간만 민트로 칠해 시선이 "건조 완료"에 머물게 했습니다.</li></ul></div>
+
+<h2><small>STAGE 3</small>믿게 만든다</h2>
+<p class="stage-lead">판매자의 말이 아니라 사람과 사람들의 선택으로 경계를 풉니다. 여기까지가 빠르게 결정하는 고객을 위한 구간입니다.</p>
+
+<div class="card" data-sel="section.founder"><h3><span class="no">09</span>대표 스토리 — "소중한 날을 위한 수건, 신부타올에서 시작했습니다"<span class="go">보기 →</span></h3><ul>
+<li>사람은 정보보다 <b>이야기에 몰입</b>할 때 경계를 풉니다. 신부타올과 은방울꽃 카드는 대표 메시지에서 그대로 가져온 실제 이야기입니다.</li>
+<li>효과를 먼저 보여준 다음에 두어, "좋다"고 느낀 뒤 "그래서 이렇게 만든 거구나"로 <b>납득</b>되게 했습니다. 배경은 은방울꽃 카드가 담긴 상자 컷입니다.</li></ul></div>
+
+<div class="card" data-sel="section.reviews"><h3><span class="no">10</span>먼저 고른 곳들 — "#50여_곳_납품"<span class="go">보기 →</span></h3><ul>
+<li>사람은 불확실할 때 <b>다른 사람의 선택</b>을 따라갑니다(사회적 증거). 마이온도는 구매 리뷰로 이 자리를 채웠지만, 언커먼은 아직 실제 후기가 없어 <b>납품 기관 로고</b>로 대신했습니다.</li>
+<li>경찰청·법무부·대학처럼 까다롭게 고르는 곳의 이름이 권위까지 함께 빌려줍니다. 실제 후기가 쌓이면 이 자리에 리뷰 카드를 더합니다.</li></ul></div>
+
+<h2><small>STAGE 4</small>깊이 납득시킨다</h2>
+<p class="stage-lead">망설이는 고객은 결론이 아니라 과정을 봐야 움직입니다. 문제 → 영향 → 목표 → 해답 → 반론 처리 순서로 한 계단씩 다시 쌓았습니다.</p>
+
+<div class="card" data-sel="section.worry"><h3><span class="no">11</span>고민 — "젖은 수건 때문에 매일 겪는 불편함"<span class="go">보기 →</span></h3><ul>
+<li>사람은 <b>자기 이야기</b>를 가장 잘 기억합니다(자기 참조 효과). 저녁까지 축축한 수건, 장마철 빨래, 뻣뻣해진 새 수건처럼 구체적인 장면으로 "이거 나네"를 찾게 했습니다.</li>
+<li>그림을 모두 회청색 톤으로 맞춰 색만으로 눅눅함을 느끼게 했고, 스크롤을 따라 떨어지는 물방울이 다음 섹션까지 이어집니다.</li></ul></div>
+
+<div class="card" data-sel="section.low-sec"><h3><span class="no">12</span>젖은 수건의 영향 — "일상의 찝찝함이 끝이 아니에요"<span class="go">보기 →</span></h3><ul>
+<li>불편함을 위생 문제로 한 단계 키워 <b>"그냥 두면 안 된다"는 긴장</b>을 만듭니다. 해결책을 원하는 마음은 문제가 커졌다고 느낄 때 생깁니다.</li>
+<li>세균·오래 젖어 있는 시간·마찰, 세 가지를 연구 출처와 함께 두어 <b>권위</b>로 무게를 더했습니다. 이 구간에서 감정이 가장 낮은 바닥을 찍습니다.</li></ul></div>
+
+<div class="card" data-sel="section.up1-sec"><h3><span class="no">13</span>도톰하고 보송해지면 — "어떤 변화가 생길까?"<span class="go">보기 →</span></h3><ul>
+<li>바닥을 찍은 직후에 <b>희망</b>을 보여줍니다. 이 섹션부터 그림이 회청색에서 햇빛 든 실사 컷으로 바뀌어 "눅눅함 → 보송함" 전환이 먼저 느껴집니다.</li>
+<li>무게 게이지에서 얇은 수건(빨리 마르지만 금방 젖음)과 두꺼운 수건(넉넉하지만 늦게 마름) 사이, <b>220g 자리</b>에 언커먼을 꽂아 "둘 다 가진 한 장"을 한눈에 보여줍니다.</li></ul></div>
+
+<div class="card" data-sel="section.made-sec"><h3><span class="no">14</span>그래서, 도톰하고 보송한 한 장을 위해 만들었습니다<span class="go">보기 →</span></h3><ul>
+<li>앞에서 세운 목표에 제품을 정답으로 끼워 넣는 순간입니다. 스스로 문제를 인식한 뒤 받은 해답은 훨씬 쉽게 받아들여집니다.</li>
+<li>흰 배경에 제품 컷만 단독으로 두어 이 장면이 결론처럼 또렷하게 남게 했습니다.</li></ul></div>
+
+<div class="card" data-sel="section.why-sec"><h3><span class="no">15</span>왜 다른 수건이 아닌 언커먼 타올이어야 하나?<span class="go">보기 →</span></h3><ul>
+<li>해답을 보여주면 뇌는 곧바로 <b>반론</b>을 떠올립니다("그냥 호텔 수건 사면 되잖아?"). 그 반론이 생기기 전에 먼저 꺼내서 답합니다.</li>
+<li>밝은 배경에서 어두운 배경으로 넘어가는 문 역할을 해, 여기부터 다시 단호한 주장이 시작된다는 신호를 줍니다.</li></ul></div>
+
+<div class="card" data-sel="section.cause-sec:not(.ka-sec)"><h3><span class="no">16</span>얇은 면 / 두꺼운 호텔 / 극세사 수건 말풍선<span class="go">보기 →</span></h3><ul>
+<li>특정 브랜드가 아니라 고객이 아는 <b>수건 종류</b>로 나눠, 비난이 아니라 일상의 관찰로 들리게 했습니다.</li>
+<li>말풍선 형식은 대화를 엿듣는 느낌을 줘 광고라는 경계를 낮추고, 움직이는 아이콘(떨어지는 물방울, 도는 시곗바늘, 올라오는 냄새)이 짧은 문장을 1초 만에 이해시킵니다.</li></ul></div>
+
+<div class="card" data-sel="section.ka-sec"><h3><span class="no">17</span>심지어 + 막대그래프 (무게별 건조 시간)<span class="go">보기 →</span></h3><ul>
+<li>4단계의 <b>결정타</b>입니다. 무게가 늘수록 회색 막대가 길어지는데, 220g인 언커먼 막대만 색을 가진 채 얇은 수건 쪽 높이에 머뭅니다.</li>
+<li>뇌는 숫자보다 <b>길이와 색의 차이</b>를 훨씬 빠르게 받아들입니다. 설명을 읽지 않아도 "도톰한데 빨리 마른다"가 보이게 했습니다.</li></ul></div>
+
+<div class="card" data-sel="section.conclusion"><h3><span class="no">18</span>결론 — "필요한 건 두껍기만 한 수건이 아니라, 도톰하게 닦이고 빨리 마르는 한 장입니다"<span class="go">보기 →</span></h3><ul>
+<li>페이지 처음의 "필요한 건 도톰하고 빨리 마르는 한 장"과 <b>같은 문형</b>으로 닫습니다. 시작과 끝이 맞물리면 뇌는 그 메시지를 완결된 하나로 저장합니다.</li>
+<li>결론 아래 실물 컷과 빗금문 클로즈업을 이어 붙여 "어떻게 그게 가능하지?"라는 다음 궁금증을 자연스럽게 엽니다.</li></ul></div>
+
+<h2><small>STAGE 5</small>불안을 없앤다</h2>
+<p class="stage-lead">마음이 기운 고객도 결제 직전에는 작은 의심 하나에 멈춥니다. 마지막 구간은 그 의심을 하나씩 지우는 순서로 짰습니다.</p>
+
+<div class="card" data-sel="section.sponge-sec"><h3><span class="no">19</span>디테일 사진 (글 없음)<span class="go">보기 →</span></h3><ul>
+<li>빗금문 가장자리와 라벨을 가까이 보여주는 한 장으로 숨을 고르고, 다음 설명으로 넘어갑니다.</li></ul></div>
+
+<div class="card" data-sel="section.how-sec"><h3><span class="no">20</span>원리 — "머금고 / 거두고 / 날려 보내고"<span class="go">보기 →</span></h3><ul>
+<li>사람은 <b>작동 방식을 이해하면</b> 효과를 더 믿습니다. "두꺼운데 어떻게 빨리 마르지?"라는 의문을 그림 세 장으로 풉니다.</li>
+<li>같은 루프 단면을 세 번 반복하고 움직임(물방울 → 피부 → 공기)만 바꿔 <b>변화만 보이게</b> 했습니다.</li></ul></div>
+
+<div class="card" data-sel="section.spic-sec"><h3><span class="no">21</span>한 장에 담은 7가지 디테일<span class="go">보기 →</span></h3><ul>
+<li>원리를 가능하게 하는 요소를 해부도처럼 펼칩니다. 원형 확대 컷마다 질감이 달라, 글을 읽기 전에 "많은 게 들어 있다"는 느낌이 먼저 옵니다.</li></ul></div>
+
+<div class="card" data-sel="section.evi-sec"><h3><span class="no">22</span>매일 얼굴에 닿는 수건, 시험부터 챙겼어요 + 디자인·상표 등록<span class="go">보기 →</span></h3><ul>
+<li>얼굴에 닿는다는 말을 들으면 뇌는 자동으로 <b>위험부터 점검</b>합니다. 염료·세균·흡수·건조·세탁 후 변화처럼 고객이 속으로 떠올릴 질문을 먼저 꺼내고 바로 답합니다.</li>
+<li>성적서와 등록증을 원본 그대로 보여줘 <b>공문서 자체의 권위</b>를 빌렸습니다.</li></ul></div>
+
+<div class="card" data-sel="section.step-sec"><h3><span class="no">23</span>사용시 꼭 알아두세요!<span class="go">보기 →</span></h3><ul>
+<li>이 제품의 실망 포인트는 "처음엔 물을 덜 먹는 것 같다", "접어 두니 늦게 마른다", "유연제를 넣었더니 흡수가 떨어졌다"입니다. 사람은 <b>예상한 실망에는 덜 실망합니다</b>. 미리 알려 반품과 낮은 평점을 막습니다.</li>
+<li>주의사항이지만 어두운 배경과 실물 컷으로 만들어 불안이 아니라 <b>배려</b>로 느껴지게 했습니다.</li></ul></div>
+
+<div class="card" data-sel="section.htu-sec"><h3><span class="no">24</span>사용법 → 사이즈 → TIP → 하루 루틴 → 몇 장이면 충분할까<span class="go">보기 →</span></h3><ul>
+<li>결정한 고객이 마지막에 확인하는 실무 정보입니다. 같은 욕실, 같은 조명의 컷으로 통일해 정보만 눈에 들어오게 했습니다.</li>
+<li>마이온도의 "사용 기간" 자리에는 "몇 장이면 충분할까"를 두어, 교체 주기 이야기에서 8·12·20장 구성과 장당 가격으로 <b>고민 시간 없이</b> 넘어가게 했습니다.</li></ul></div>
+
+<div class="card" data-sel="div.full-img"><h3><span class="no">25</span>엔딩 컷 (바구니 + 로고)<span class="go">보기 →</span></h3><ul>
+<li>사람은 경험 전체가 아니라 <b>가장 강렬했던 순간과 마지막 순간</b>으로 기억합니다(피크-엔드 법칙).</li>
+<li>히어로와 같은 햇빛 든 바구니 장면으로 돌아가 문구 없이 로고만 남겨, 마지막 기억이 정보가 아니라 브랜드가 되게 했습니다.</li></ul></div>
+
+<div class="card" data-sel="section.qna"><h3><span class="no">26</span>Q&amp;A → 상품정보 고시<span class="go">보기 →</span></h3><ul>
+<li>남은 질문을 모두 답해 둔 부록입니다. 배경색을 하나로 맞춰 <b>"이제 다 확인했다"는 완결감</b>을 줍니다.</li></ul></div>
+
+<h2 class="closing">페이지 전체를 관통하는 설계 원칙</h2>
+<p class="stage-lead">모든 섹션은 "두꺼운 만큼 늦게 마르는 수건 vs 도톰한데 빨리 마르는 한 장"이라는 대비 하나를 형식만 바꿔 반복합니다.</p>
+<table>
+<tr><th>원칙</th><th>적용</th></tr>
+<tr><td>대비로 기억시킨다</td><td>"늦게 마르는 vs 146분"을 인트로, 히어로, 질문 대화, 막대그래프, 결론에서 형식만 바꿔 반복</td></tr>
+<tr><td>색으로 감정을 먼저 움직인다</td><td>고민·젖은 수건의 영향은 회청색 일러스트, 13번부터는 햇빛 든 실사 컷. 글보다 색이 먼저 전환을 알림</td></tr>
+<tr><td>배경으로 말하기와 듣기를 나눈다</td><td>어두운 딥틸 배경은 주장, 흰 배경은 공감과 설명. 번갈아 배치해 긴 페이지를 리듬 있게 읽게 함</td></tr>
+<tr><td>문제 장면에 제품을 쓰지 않는다</td><td>매일 같이·고민·영향 섹션은 일러스트로 그려, 언커먼 실물 사진은 해답 쪽에만 등장</td></tr>
+<tr><td>두 번 설득한다</td><td>상단은 빠르게 결정하는 고객을 위해 결론부터, 하단은 망설이는 고객을 위해 문제부터</td></tr>
+<tr><td>반론은 생기기 전에 꺼낸다</td><td>"두꺼운데 안 마르지 않나", 다른 수건과의 차이, 염료·세균, "처음엔 물을 덜 먹음"까지 고객이 떠올리기 전에 먼저 답함</td></tr>
+</table>
+</main>
+
+<aside class="phone"><iframe id="pv" src="index.html" title="언커먼 타올 상세페이지 미리보기"></iframe><p class="phone-cap">상세페이지 미리보기 · 직접 스크롤할 수 있습니다</p></aside>
+</div>
+<script>
+(function(){
+  var pv=document.getElementById('pv'),cards=[].slice.call(document.querySelectorAll('.card[data-sel]')),lock=0;
+  function el(c){try{return pv.contentDocument.querySelector(c.dataset.sel)}catch(e){return null}}
+  function mark(c){cards.forEach(function(x){x.classList.toggle('on',x===c)})}
+  cards.forEach(function(c){c.addEventListener('click',function(){
+    var t=el(c);if(!t)return;var w=pv.contentWindow;
+    lock=Date.now();mark(c);
+    w.scrollTo({top:t.getBoundingClientRect().top+w.scrollY,behavior:'smooth'});
+  })});
+  pv.addEventListener('load',function(){
+    var w=pv.contentWindow,tick=false;
+    w.addEventListener('scroll',function(){
+      if(tick)return;tick=true;
+      requestAnimationFrame(function(){
+        tick=false;if(Date.now()-lock<900)return;
+        var mid=w.innerHeight*.35,cur=null;
+        cards.forEach(function(c){var t=el(c);if(t&&t.getBoundingClientRect().top<=mid)cur=c;});
+        if(cur&&!cur.classList.contains('on')){mark(cur);
+          if(window.innerWidth>960){var d=document.getElementById('doc');d.scrollTo({top:cur.offsetTop-80,behavior:'smooth'})}}
+      });
+    },{passive:true});
+  });
+})();
+</script>
+</body>
+</html>
