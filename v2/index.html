@@ -1323,6 +1323,127 @@ section.ka-sec .vb-col.my .vb-b{background:linear-gradient(to top,#6DD7D4,#0ABAB
 section.ka-sec .vb-col.my .vb-v{color:#0ABAB5}
 section.ka-sec .vb-col.my .vb-n{color:#212121}
 section.ka-sec .hg-src,section.ka-sec .hg-src li,section.ka-sec .hg-note{color:#999}
+
+/* ===== 밝은 배경만 사용 (리건 요청: 어두운 배경·어두운 오버레이 금지) ===== */
+html{background:#F7F6F3!important}
+/* 섹션 배경: 흰색 / 웜 오프화이트 번갈아 */
+section.intro-sec{background:#F7F6F3!important}
+section.stop-sec{background:#fff!important}
+section.ask-sec{background:#F7F6F3!important}
+section.band-sec{background:#fff!important}
+section.result-sec{background:#F7F6F3!important}
+section.flow-sec{background:#fff!important}
+section.why-sec{background:#F7F6F3!important}
+section.cause-sec:not(.ka-sec){background:#fff!important}
+section.conclusion{background:#fff!important}
+section.spic-sec{background:#F7F6F3!important}
+section.step-sec{background:#fff!important}
+section.founder{color:#212121!important;background:linear-gradient(to bottom,rgba(247,246,243,.92) 0%,rgba(247,246,243,.82) 55%,rgba(247,246,243,.9) 80%,#F7F6F3 100%),url('img/founder.jpg') 50% center / cover no-repeat!important}
+section.sponge-sec{background:linear-gradient(to bottom,#F7F6F3 0%,rgba(247,246,243,0) 22%,rgba(247,246,243,0) 78%,#fff 100%),url('img/sponge.jpg') center / cover no-repeat!important}
+
+/* 사진 위 오버레이: 어두운 그라디언트 → 밝은 페이드 */
+.hero-inner::before{background:linear-gradient(to bottom,#F7F6F3 0%,rgba(247,246,243,.92) 30%,rgba(247,246,243,.6) 60%,rgba(247,246,243,0) 100%)!important;height:56%!important}
+.hero-inner::after{background:linear-gradient(to top,rgba(255,255,255,.8) 0%,rgba(255,255,255,0) 100%)!important}
+.sub-inner::before,.sub-inner:not(.daily-inner)::before{background:linear-gradient(to bottom,#fff 0%,rgba(255,255,255,.88) 22%,rgba(255,255,255,.4) 55%,rgba(255,255,255,0) 100%)!important}
+.sub-inner:not(.daily-inner)::after{background:none!important}
+.rv-top{background:linear-gradient(to bottom,rgba(247,246,243,.9) 0%,rgba(247,246,243,.5) 22%,rgba(247,246,243,0) 40%,rgba(247,246,243,0) 76%,rgba(247,246,243,.6) 91%,#F7F6F3 100%),url('img/rv_top.jpg') center top / cover no-repeat!important}
+.u1-top::before,.u1-top::after{background:linear-gradient(to bottom,rgba(255,255,255,0) 40%,#fff 100%)!important}
+.htu-top::before{background:linear-gradient(to bottom,rgba(255,255,255,.92) 0%,rgba(255,255,255,.55) 26%,rgba(255,255,255,0) 44%,rgba(255,255,255,0) 76%,rgba(255,255,255,.6) 91%,#fff 100%)!important}
+.why-top{background:linear-gradient(to bottom,rgba(247,246,243,0) 0%,rgba(247,246,243,0) 42%,rgba(247,246,243,.6) 62%,rgba(247,246,243,.92) 80%,#F7F6F3 94%,#F7F6F3 100%),url('img/why.jpg') center top / cover no-repeat!important}
+.full-img::after{background:linear-gradient(to top,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 45%)!important}
+.it-logo{-webkit-mask-image:none!important;mask-image:none!important}
+.stop-card img{background:#ECE9E3!important}
+
+/* 밝은 배경 위 글자색: 제목 #212121, 본문 #363636·#757575, 주석 #999 */
+.intro-sec .it-none,.intro-sec s{color:#212121!important}
+.intro-sec .it-big{color:#757575!important}
+.intro-sec .it-line,.lw-line,.cc-line{background:#CFC9BE!important}
+.hero .it-only,.hero .it-only b,.hero .it-me{color:#212121!important;text-shadow:none!important}
+.hero .hero-foot{color:#757575!important;text-shadow:none!important}
+.stop-sec .stop-big,.stop-sec .stop-lead,.stop-sec figcaption{color:#212121!important}
+.stop-sec .stop-lead{color:#757575!important}
+.ask-sec .who{color:#999!important}
+.ask-sec .ttl,.ask-sec .ttl strong{color:#212121!important}
+.ask-sec .note{color:#999!important}
+.ask-sec .b.q{background:#fff!important;color:#363636!important;box-shadow:0 4px 14px rgba(33,33,33,.06)}
+.sub .sub-eyebrow{color:#0ABAB5!important;text-shadow:none!important}
+.sub .sub-title,.sub .sub-title strong{color:#212121!important;text-shadow:none!important}
+.band-sec .mk-big{color:#212121!important}
+.band-sec .mk-desc{color:#757575!important}
+.band-sec .band-cap{color:#999!important}
+.result-sec .fl-max span,.flow-sec .fl-max span{color:#757575!important}
+.result-sec .fl-max b,.flow-sec .fl-max b{color:#0ABAB5!important}
+.result-sec .rs-title,.result-sec .rs-title strong,.flow-sec .rs-title,.flow-sec .rs-title strong{color:#212121!important}
+.result-sec .note,.flow-sec .note,.flow-sec .rs-meta{color:#757575!important}
+.flow-sec .rs-line{background:#F7F6F3!important}
+.founder .fd-title,.founder .fd-body,.founder .fd-body strong,.founder .fd-sign{color:#212121!important;text-shadow:none!important}
+.founder .fd-body{color:#363636!important}
+.founder .fd-body strong{color:#0ABAB5!important}
+.reviews .rv-eyebrow{color:#0ABAB5!important;text-shadow:none!important}
+.reviews .rv-title,.reviews .rv-title strong{color:#212121!important;text-shadow:none!important}
+.why-sec .cmp-title,.why-sec .cmp-title strong{color:#212121!important;text-shadow:none!important}
+.why-sec .why-lead{color:#757575!important;text-shadow:none!important}
+section.cause-sec:not(.ka-sec) .cz-head h3,section.cause-sec:not(.ka-sec) .cz-title{color:#212121!important;text-shadow:none!important}
+section.cause-sec:not(.ka-sec) .cz-txt{box-shadow:0 6px 20px rgba(33,33,33,.08)}
+section.cause-sec:not(.ka-sec) .cz-txt,section.cause-sec:not(.ka-sec) .cz-txt::before,section.cause-sec:not(.ka-sec) .cz-txt::after{background:#F7F6F3!important}
+.conclusion .cc-lead,.conclusion .cc-big{color:#212121!important}
+.conclusion .cc-lead{color:#757575!important}
+.conclusion .cc-note{color:#999!important}
+.spic-sec .section-title,.spic-sec .section-title strong{color:#212121!important}
+.spic-sec .section-title strong{color:#0ABAB5!important}
+.spic-sec .sp-lead{color:#757575!important}.spic-sec .sp-lead strong{color:#212121!important}
+.spic-sec .sp-label{color:#999!important}
+.spic-sec .sp-name{color:#212121!important}
+.spic-sec .sp-body{color:#757575!important}.spic-sec .sp-body em{color:#0ABAB5!important}
+.spic-sec .sp-foot{color:#999!important}
+.spic-sec .sp-item{color:#0ABAB5!important}
+.spic-sec .sp-thumb{border-color:#fff!important;box-shadow:0 4px 14px rgba(33,33,33,.12)}
+.step-sec .section-title,.step-sec .section-title strong{color:#212121!important}
+.step-sec .cause-no{color:#212121!important;border-color:#212121!important}
+.step-sec .cause-title{color:#212121!important}
+.step-sec .cause-body{color:#363636!important}.step-sec .cause-body b{color:#212121!important}
+.step-sec .note{color:#999!important}
+.step-sec .pc-time b{color:#212121!important}.step-sec .pc-time span{color:#757575!important}
+.step-sec .sk-card{background:#F7F6F3!important;border-color:#E8E5DE!important}
+.step-sec .sk-card h3{color:#212121!important}.step-sec .sk-card h3 span{color:#999!important}
+.step-sec .sk-card li{color:#363636!important}.step-sec .sk-card li span{color:#757575!important}
+.step-sec .sk-do{color:#757575!important}.step-sec .sk-do b{color:#212121!important}
+.htu-sec .rv-eyebrow{color:#0ABAB5!important;text-shadow:none!important}
+.htu-sec .rv-title,.htu-sec .rv-title strong{color:#212121!important;text-shadow:none!important}
+.htu-sec .htu-top-sub{color:#757575!important;text-shadow:none!important}
+.sponge-sec *{color:#212121!important}
+
+/* 다른 수건 비교: 누끼컷 */
+.cause-sec .cz-nk img{width:150px!important;height:auto!important;max-height:130px;object-fit:contain;filter:drop-shadow(0 10px 14px rgba(33,33,33,.14))}
+
+/* 밤부 비스코스 섹션 */
+section.bb-sec{padding:90px 15px 80px;background:#fff;text-align:center}
+.bb-eyebrow{font-size:14px;font-weight:600;letter-spacing:.14em;color:#0ABAB5}
+.bb-title{margin-top:12px;font-size:32px;font-weight:300;line-height:1.4;letter-spacing:-.03em;color:#212121}
+.bb-title strong{font-weight:800}
+.bb-lead{margin-top:16px;font-size:16px;line-height:1.7;color:#757575}.bb-lead b{color:#212121}
+.bb-hero{margin:34px -15px 0}.bb-hero img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.bb-journey{margin-top:40px;padding:18px;background:#F7F6F3;border-radius:18px}
+.bb-journey img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px}
+.bb-steps{display:flex;justify-content:space-between;margin:16px 4px 0;padding:0;list-style:none;position:relative}
+.bb-steps::before{content:"";position:absolute;left:10%;right:10%;top:50%;height:2px;background:linear-gradient(90deg,#6DD7D4,#0ABAB5)}
+.bb-steps li{position:relative;z-index:1;padding:7px 12px;background:#fff;border:1.5px solid #6DD7D4;border-radius:99px;font-size:13.5px;color:#212121}
+.bb-steps li:last-child{background:#0ABAB5;border-color:#0ABAB5;color:#fff}.bb-steps li:last-child b{color:#fff}
+.bb-cap{margin-top:14px;font-size:14px;line-height:1.6;color:#757575}
+.bb-list{margin-top:22px;display:grid;gap:14px;text-align:left}
+.bb-card{padding:24px 20px;background:#F7F6F3;border-radius:18px}
+.bb-no{font-size:13px;font-weight:700;color:#0ABAB5;letter-spacing:.06em}
+.bb-card h3{margin-top:6px;font-size:20px;font-weight:800;letter-spacing:-.03em;color:#212121}
+.bb-card p{margin-top:10px;font-size:15px;line-height:1.7;color:#363636}.bb-card p b{color:#0ABAB5}
+.bb-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;margin-top:16px}
+.bb-bars{margin-top:16px;display:grid;gap:10px}
+.bb-bars div{display:grid;grid-template-columns:92px 1fr 48px;align-items:center;gap:10px;font-size:13.5px;color:#363636}
+.bb-bars i{display:block;height:12px;border-radius:99px;background:#DAD6CE;width:0;transition:width 1.2s cubic-bezier(.22,1,.36,1) .2s}
+.bb-bars div:first-child i{background:linear-gradient(90deg,#6DD7D4,#0ABAB5)}
+.bb-card.shown .bb-bars i{width:var(--w)}
+.bb-bars b{text-align:right;font-weight:800;color:#212121}.bb-bars div:first-child b{color:#0ABAB5}
+.bb-src{margin-top:10px!important;font-size:12px!important;color:#999!important}
+.bb-note{margin-top:18px;text-align:left}
 </style>
 </head>
 <body>
@@ -1330,7 +1451,7 @@ section.ka-sec .hg-src,section.ka-sec .hg-src li,section.ka-sec .hg-note{color:#
 <!-- [01] 인트로 -->
 <section class="intro-sec">
   <div class="it-in">
-    <img class="it-logo rv-up" src="img/logo_white.svg" alt="UNCOMMON TOWEL">
+    <img class="it-logo rv-up" src="img/logo_dark.svg" alt="UNCOMMON TOWEL">
     <p class="it-none rv-up">두꺼운 만큼<br>늦게 마르는</p>
     <p class="it-big rv-up"><s>호텔 수건</s><br><s>두꺼운 면 수건</s><br><s>고중량 타올</s></p>
     <i class="it-line rv-up"></i>
@@ -1427,7 +1548,7 @@ section.ka-sec .hg-src,section.ka-sec .hg-src li,section.ka-sec .hg-note{color:#
 
 <!-- [07] 결과: 흡수 -->
 <section class="result-sec">
-  <img class="rs-logo" src="img/logo_white.svg" alt="" aria-hidden="true">
+  <img class="rs-logo" src="img/logo_dark.svg" alt="" aria-hidden="true">
   <p class="fl-max rs-max rv-up"><span>흡수 높이</span><br><b data-count="59">59</b><span>mm</span></p>
   <h2 class="rs-title rv-up" style="text-align:left">닦는 순간,<br><strong>물기를 끌어올리는 힘</strong></h2>
 
@@ -1483,7 +1604,7 @@ section.ka-sec .hg-src,section.ka-sec .hg-src li,section.ka-sec .hg-note{color:#
   <p class="fd-body rv-up">축복을 담는 물건이라 아무 실이나 쓸 수 없었어요.<br>감촉과 흡수력을 끌어올리면서도<br>매일 빨아 쓰는 수건답게 오래 쓰는 것까지 고민했습니다.</p>
   <p class="fd-body rv-up">그 마음 그대로, 이제 매일 얼굴에 닿는<br>페이스타월 한 장에 담았습니다.</p>
   <p class="fd-sign rv-up">언커먼 타올 대표</p>
-  <img class="fd-word" src="img/logo_white.svg" alt="UNCOMMON TOWEL">
+  <img class="fd-word" src="img/logo_dark.svg" alt="UNCOMMON TOWEL">
 </section>
 
 <!-- [10] 먼저 고른 곳들 -->
@@ -1587,17 +1708,17 @@ section.ka-sec .hg-src,section.ka-sec .hg-src li,section.ka-sec .hg-note{color:#
 <!-- [16] 다른 수건들 -->
 <section class="cause-sec">
   <div class="cz-card rv-up">
-    <div class="cz-head"><h3>얇은 면 수건은</h3><span class="cz-nk"><img src="img/nk1.svg" alt="얇은 면 수건" loading="lazy"></span></div>
+    <div class="cz-head"><h3>얇은 면 수건은</h3><span class="cz-nk"><img src="img/nk1.png" alt="얇은 면 수건" loading="lazy"></span></div>
     <div class="cz-row"><div class="cz-txt"><svg class="zi" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 8c6 9 12 15 12 22a12 12 0 0 1-24 0c0-7 6-13 12-22z"/><path class="zi-down" d="M24 22v10m-3-3 3 3 3-3"/></svg><b>금방 축축해져요</b><p class="cz-q">한 번 닦으면 수건 전체가 젖어, 남은 물기가 얼굴에서 겉돌아요.</p></div></div>
     <div class="cz-row"><div class="cz-txt"><svg class="zi" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="16" width="32" height="18" rx="2"/><path class="zi-wave" d="M8 25l4-3 4 3 4-3 4 3 4-3 4 3 4-3 4 3"/></svg><b>빨수록 뻣뻣해져요</b><p class="cz-q">얇은 루프는 세탁을 반복하면 금방 거칠어지기 쉬워요.</p></div></div>
   </div>
   <div class="cz-card cz-r rv-up">
-    <div class="cz-head"><h3>두꺼운 호텔 수건은</h3><span class="cz-nk"><img src="img/nk2.svg" alt="두꺼운 호텔 수건" loading="lazy"></span></div>
+    <div class="cz-head"><h3>두꺼운 호텔 수건은</h3><span class="cz-nk"><img src="img/nk2.png" alt="두꺼운 호텔 수건" loading="lazy"></span></div>
     <div class="cz-row"><div class="cz-txt"><svg class="zi" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="25" r="14"/><path d="M24 25V16"/><path class="zi-spin" d="M24 25l7 4"/><path d="M20 7h8"/></svg><b>잘 안 말라요</b><p class="cz-q">도톰한 만큼 물을 오래 머금어, 걸어 두어도 반나절이 지나도록 눅눅해요.</p></div></div>
     <div class="cz-row"><div class="cz-txt"><svg class="zi" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="zi-steam" stroke-width="1.1"><path d="M18 20c-1.6-2.2 1.6-3.6 0-6"/><path d="M24 19c-1.6-2.2 1.6-3.6 0-6"/><path d="M30 20c-1.6-2.2 1.6-3.6 0-6"/></g><rect x="10" y="26" width="28" height="12" rx="2"/><path d="M10 32h28" opacity=".5"/></svg><b>쉰내가 나기 쉬워요</b><p class="cz-q">오래 젖어 있는 수건은 세균이 늘기 쉬워 꿉꿉한 냄새로 이어져요.</p></div></div>
   </div>
   <div class="cz-card rv-up">
-    <div class="cz-head"><h3>극세사 수건은</h3><span class="cz-nk"><img src="img/nk3.svg" alt="극세사 수건" loading="lazy"></span></div>
+    <div class="cz-head"><h3>극세사 수건은</h3><span class="cz-nk"><img src="img/nk3.png" alt="극세사 수건" loading="lazy"></span></div>
     <div class="cz-row"><div class="cz-txt"><svg class="zi" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="zi-bolt" d="M26 8 14 27h9l-2 13 12-19h-9z"/></svg><b>먼지가 잘 달라붙어요</b><p class="cz-q">합성섬유라 정전기가 생기기 쉽고, 먼지와 머리카락이 잘 붙어요.</p></div></div>
     <div class="cz-row"><div class="cz-txt"><svg class="zi" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="22" r="11"/><path d="M20 20h.01M28 20h.01" stroke-width="3"/><path class="zi-zz" d="M14 38h20"/></svg><b>피부에 걸리는 느낌</b><p class="cz-q">가는 섬유가 피부에 착 감겨, 세안 직후 부담스럽다는 분도 있어요.</p></div></div>
   </div>
@@ -1658,6 +1779,45 @@ section.ka-sec .hg-src,section.ka-sec .hg-src li,section.ka-sec .hg-note{color:#
     <div class="sp-item right c7"><span class="sp-thumb" style="background-image:url('img/sp_color.jpg')"></span><p class="sp-label">Finish</p><h4 class="sp-name">항균 가공</h4><p class="sp-body">황색포도상구균<br><em>99.9% 감소</em> 시험</p></div>
   </div>
   <p class="sp-foot">* 항균은 원단에 더한 가공의 시험 결과이며, 대나무 원료 자체의 효과가 아닙니다. 반복 세탁 후 유지 여부는 확인되지 않았습니다. 디자인 등록은 형태에 관한 권리이며 제품 성능을 보증하지 않습니다.</p>
+</section>
+
+<!-- [21b] 밤부 비스코스 어필 -->
+<section class="bb-sec">
+  <p class="bb-eyebrow rv-up">BAMBOO VISCOSE</p>
+  <h2 class="bb-title rv-up">대나무에서 온 실,<br><strong>밤부 비스코스</strong></h2>
+  <p class="bb-lead rv-up">언커먼 타올은 <b>대나무 펄프에서 뽑은<br>밤부 비스코스(레이온) 100%</b>로 짰습니다.</p>
+  <figure class="bb-hero rv-up"><img src="img/bb_hero.jpg" alt="햇살 드는 대나무 숲" loading="lazy"></figure>
+
+  <div class="bb-journey rv-up">
+    <img src="img/bb_fiber.jpg" alt="대나무 줄기, 펄프, 섬유, 실" loading="lazy">
+    <ol class="bb-steps"><li><b>대나무</b></li><li><b>펄프</b></li><li><b>섬유</b></li><li><b>실</b></li></ol>
+    <p class="bb-cap">대나무를 펄프로 만든 뒤, 녹여서 가늘고 고른 실로 다시 뽑아냅니다.</p>
+  </div>
+
+  <div class="bb-list">
+    <div class="bb-card rv-up">
+      <span class="bb-no">01</span>
+      <h3>매끄럽고 부드러운 감촉</h3>
+      <p>비스코스 섬유는 표면이 매끄럽고 굵기가 고르게 뽑혀, 면보다 <b>부드럽게 닿고 은은한 광택</b>이 돕니다. 세안 직후 예민한 얼굴에 닿는 수건에 잘 맞는 이유예요.</p>
+      <img src="img/bb_touch.jpg" alt="부드러운 밤부 비스코스 루프를 누르는 손" loading="lazy">
+    </div>
+    <div class="bb-card rv-up">
+      <span class="bb-no">02</span>
+      <h3>물과 친한 섬유</h3>
+      <p>비스코스는 셀룰로오스 섬유라 물과 잘 어울려요. 섬유가 공기 중 수분을 머금는 정도(공정 수분율)를 보면 <b>면보다 높습니다.</b></p>
+      <div class="bb-bars">
+        <div><span>비스코스(레이온)</span><i style="--w:100%"></i><b>11.0%</b></div>
+        <div><span>면</span><i style="--w:77%"></i><b>8.5%</b></div>
+      </div>
+      <p class="bb-src">공정 수분율 · ASTM D1909 섬유 일반값 (제품 시험값 아님)</p>
+    </div>
+    <div class="bb-card rv-up">
+      <span class="bb-no">03</span>
+      <h3>빨리 자라는 원료</h3>
+      <p>대나무는 매우 빨리 자라고, 베어 낸 뒤에도 뿌리에서 다시 자라는 식물이에요. <b>다시 키워 쓸 수 있는 식물</b>을 실의 원료로 골랐습니다.</p>
+    </div>
+  </div>
+  <p class="note bb-note">※ 밤부 비스코스는 대나무 펄프를 녹여 다시 뽑은 재생 섬유로, 대나무의 성질이 그대로 남아 있는 천연 섬유는 아닙니다. 항균은 원료가 아니라 별도 가공의 시험 결과이며(위 7가지 디테일 참고), 원료 표기는 제품 소재 기준입니다.</p>
 </section>
 
 <!-- [22] 시험부터 챙겼어요 -->
@@ -1815,7 +1975,7 @@ section.ka-sec .hg-src,section.ka-sec .hg-src li,section.ka-sec .hg-note{color:#
 </section>
 
 <!-- [25] 엔딩 컷 -->
-<div class="full-img"><img src="img/end.jpg" alt="햇빛 드는 욕실의 언커먼 타올"><p class="rv-up fi-logo"><img src="img/logo_white.svg" alt="UNCOMMON TOWEL"></p></div>
+<div class="full-img"><img src="img/end.jpg" alt="햇빛 드는 욕실의 언커먼 타올"><p class="rv-up fi-logo"><img src="img/logo_dark.svg" alt="UNCOMMON TOWEL"></p></div>
 
 <!-- [26] Q&A -->
 <section class="qna">
