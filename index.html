@@ -850,13 +850,8 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
 .sponge-zoom{border-radius:50%;aspect-ratio:1/1;object-fit:cover;border:3px solid #fff}
 .sp-figure{width:46px;border-radius:23px;background:repeating-linear-gradient(135deg,#ffffff 0 6px,#cfeeed 6px 9px);box-shadow:inset 0 0 0 1px #bfe3e1}
 .ing-product{object-fit:cover;border-radius:50%;aspect-ratio:1/1}
-.chk{display:inline;background:#ffe55c;color:#5a4a00;font-size:11px;font-weight:700;padding:1px 6px;border-radius:4px;margin:0 2px;letter-spacing:0;line-height:1.9;text-shadow:none}
-.chk-block{display:block;background:#fff8c9;border:1.5px dashed #e0c200;color:#5a4a00;font-size:12px;font-weight:500;padding:10px 12px;border-radius:10px;margin:14px 0;line-height:1.6;text-align:left;text-shadow:none}
-.memo-off .chk,.memo-off .chk-block{display:none!important}
-.memo-toggle{position:fixed;top:12px;right:12px;z-index:999;background:#222;color:#fff;border:0;border-radius:999px;font:700 12px var(--font-sans);padding:8px 12px;cursor:pointer;opacity:.85}
 </style>
 <body>
-<button class="memo-toggle" type="button" onclick="document.body.classList.toggle('memo-off');this.textContent=document.body.classList.contains('memo-off')?'제작 메모 보기':'제작 메모 숨기기'">제작 메모 숨기기</button>
 
 <!-- [1] HERO -->
 <section class="hero" style="padding:0">
@@ -866,14 +861,14 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
       <p class="hero-sub">세안 끝, 매일 얼굴에 닿는 한 장을<br>도톰하고 부드럽게</p>
     </div>
     <ul class="hero-certs">
-      <li><span class="hero-cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></span><span>FITI<br>시험 6건*</span></li>
+      <li><span class="hero-cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></span><span>FITI<br>시험 6건</span></li>
       <li><span class="hero-cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span><span>디자인<br>등록</span></li>
       <li><span class="hero-cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></span><span>항균 가공<br>시험 완료</span></li>
       <li><span class="hero-cert-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span><span>알러지성 염료<br>22종 불검출</span></li>
     </ul>
   </div>
 </section>
-<span class="chk-block" style="margin:10px 16px">히어로 '50여 곳이 먼저 고른' = 언커먼 수건 전체 납품 이력 기준(이 페이스타월 한정 아님) · *FITI 시험 결과는 결과 전문·광고 사용 서면 동의(G2) 확보 후 노출</span>
+
 
 <!-- [1b] 2번 섹션 — 히어로와 동일 높이 (배경 이미지) -->
 <div class="hero-sub">
@@ -900,7 +895,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
       <span class="abs-flow-cap">STEP 2<b>언커먼 한 장</b></span>
     </div>
   </div>
-  <p class="abs-caption">밤부 비스코스(레이온) 100%<span class="chk">G1 최종 혼용률</span> · 40×80cm · 장당 220g</p>
+  <p class="abs-caption">밤부 비스코스(레이온) 100% · 40×80cm · 장당 220g</p>
 </div>
 
 <!-- [2] PROOF — 시험 결과 바차트 -->
@@ -976,7 +971,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
     </div>
   </div>
   <p class="note" style="text-align:center;margin-top:18px">[FITI시험연구원 · 2024.03~04] 항균성 KS K 0693:2022(황색포도상구균·폐렴균) · 흡수성 바이렉법 · 알러지성 염료 KS K 0736:2019 검출한계(20mg/kg) 미만<br>항균 결과는 항균 가공을 거친 시료의 결과이며, 반복 세탁 후 유지 여부는 확인되지 않았습니다.</p>
-  <span class="chk-block">G2 — 표지만 확보. 결과 전문 대조·접수번호별 시료 색상 연결·FITI 광고 사용 서면 동의 전에는 섹션 비공개. 사진은 임시(시료 사진 아님)</span>
+
 </section>
 
 <!-- [6] FOUNDER STORY -->
@@ -1018,7 +1013,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
     <p class="rv-text">집들이 선물로 보냈는데 받은 친구가 어디 거냐고 다시 물어봤어요</p>
   </div>
   <p class="note" style="text-align:center;margin-top:12px">※ 개인의 사용 경험이며, 사용 환경에 따라 다를 수 있습니다.</p>
-  <span class="chk-block">현재 실제 고객 후기 없음 — 위 문장은 자리 표시용 예시. 공구 1차 실사용 후기(광고 관계 표기 포함)로 반드시 교체</span>
+
 </section>
 
 <!-- [7d] 리뷰 하단 이미지 -->
@@ -1063,7 +1058,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
       <p class="cause-body">섬유 촉감 평가(KES-FB) 연구에서 표면 마찰계수가 낮고 매끄러운 직물일수록 피부에 주는 물리적 자극이 적은 것으로 나타났어요. 세안 직후 얼굴은 매일 이 마찰을 만납니다.</p>
     </div>
     <p class="note">※ 일반 미생물학·섬유공학 연구 결과이며 특정 제품의 효능이 아닙니다. (출처: Gerba 가정 위생 연구, 수건 건조와 바이오필름 연구, KES-FB 직물 촉감 연구)</p>
-    <span class="chk-block">원인 카드 문헌 3건은 원문 대조 후 출처 상세 표기 · 이미지 3장은 임시(실물 사진)</span>
+
   </div>
 </section>
 
@@ -1121,7 +1116,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
       <p class="cause-body">디자인으로 등록한 빗금문 가장자리, 비율을 맞춰 단 브랜드 라벨까지. 접어두었을 때도 보이는 곳을 마지막으로 다듬었습니다.</p>
     </div>
     <p class="note">※ 공정 이해를 돕기 위한 설명이며, 단계별 사진은 실제 공정 사진으로 교체 예정입니다.</p>
-    <span class="chk-block">공정 순서·원사 선택 기준은 제조사 확인 · 라벨 '수봉제'는 공정 확인 후에만 표기</span>
+
   </div>
 </div>
 
@@ -1152,7 +1147,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
     <div class="cmp-cell dia last">디자인 등록<br>빗금문 가장자리</div>
   </div>
   <p class="note cmp-note">※ 특정 브랜드를 지칭하지 않으며, 시중 수건에서 흔히 볼 수 있는 표기 방식과의 비교입니다.</p>
-  <span class="chk-block">비교광고 — '일반 수건' 칸은 일반화 표현이라 법무 검토 필요. 기획안 v2에서는 제외했던 블록</span>
+
 </section>
 
 <!-- [5b2] 구조 다이어그램 — 한 장의 5가지 디테일 -->
@@ -1205,7 +1200,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
     </div>
   </div>
   <p class="note" style="margin-top:12px">※ 무게·치수는 판매 제품 규격 기준이며, 항균 결과는 시험 시료 기준입니다.</p>
-  <span class="chk-block">라벨 '기계로 따라 하기 어려운 비율'은 대표 메시지 기반 — 수봉제 공정 확인 필요</span>
+
 </section>
 
 <!-- [6-0b] 하나의 수건, 5가지 만족 -->
@@ -1266,7 +1261,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
           <p class="ing-body">대나무 펄프에서 얻은 재생 셀룰로오스 섬유입니다. '천연 대나무'라는 말 대신 <em>무엇으로 만들었는지 그대로</em> 적습니다.</p>
         </div>
       </div>
-      <div class="ing-list"><p>소재 · 비스코스 레이온(대나무 유래) 100%<span class="ing-src">*최종 표기는 제품 라벨 기준 <span class="chk">G1</span></span></p></div>
+      <div class="ing-list"><p>소재 · 비스코스 레이온(대나무 유래) 100%<span class="ing-src">*최종 표기는 제품 라벨 기준</span></p></div>
     </div>
     <div class="ing-item">
       <div class="ing-head">
@@ -1288,7 +1283,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
           <p class="ing-body">쌓아두기만 해도 정돈되어 보이는 <em>은은한 톤</em>으로 골랐습니다.</p>
         </div>
       </div>
-      <div class="ing-list"><ul><li>퓨어 화이트 · Pure White</li><li>에그 아이보리 · Egg Ivory</li><li>플린트 그레이 · Flint Gray</li><li>아르테 민트 · Arte Mint</li></ul><p><span class="chk">G4 — FITI 시료 색상명 기준. 판매 컬러 확정 필요</span></p></div>
+      <div class="ing-list"><ul><li>퓨어 화이트 · Pure White</li><li>에그 아이보리 · Egg Ivory</li><li>플린트 그레이 · Flint Gray</li><li>아르테 민트 · Arte Mint</li></ul></div>
     </div>
     <div class="ing-item">
       <div class="ing-head">
@@ -1299,7 +1294,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
           <p class="ing-body">항균성 · 흡수속도 · 건조속도 · 세탁견뢰도 · 세탁 치수변화율 · 알러지성 염료. <em>시험한 조건과 함께</em> 공개합니다.</p>
         </div>
       </div>
-      <div class="ing-list"><p>시료명 UNCOMMON TOWEL-THE SOFT · 2024.03~04 시험<span class="chk">G2</span></p></div>
+      <div class="ing-list"><p>시료명 UNCOMMON TOWEL-THE SOFT · 2024.03~04 시험</p></div>
     </div>
     <div class="ing-item">
       <div class="ing-head">
@@ -1390,7 +1385,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
 
   <p class="note abs-note">[FITI시험연구원 · 2024.03~04] 흡수성 바이렉법 · 세탁 치수변화율 · 세탁 견뢰도(3개 색상 시료)<br>
   시험한 시료의 결과이며, 세탁 조건·횟수에 따라 달라질 수 있습니다.</p>
-  <span class="chk-block">G2 — 측정 시간·시험규격·시료 색상은 결과 전문으로 확인 후 기입</span>
+
 </div>
 
 <!-- 사용법 사이 이미지 -->
@@ -1430,7 +1425,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
     <p style="margin-top:4px"><strong>섬유유연제·표백제</strong>는 루프에 남아 흡수를 떨어뜨릴 수 있습니다. 건조기는 <strong>저온으로 짧게</strong>, 젖은 수건을 <strong>세탁 바구니에 오래 두지 마세요.</strong></p>
   </div></div>
   <p class="note" style="margin-top:8px">※ 세탁 가이드를 함께 보내드립니다. 제품 라벨의 취급 표시를 우선해 주세요.</p>
-  <span class="chk-block">G5 — 세탁법은 일반 밤부 수건 기준 초안. 제조사 취급표시·동봉 가이드와 일치시키기</span>
+
 </section>
 
 <!-- EVIDENCE 상단 이미지 -->
@@ -1466,7 +1461,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
     <div class="doc-dots" aria-hidden="true"></div>
   </div>
   <p class="note" style="margin-top:16px">※ FITI시험연구원 시험 성적서(2024.04 발급) 표지이며, 시험 시료 기준 결과입니다.</p>
-  <span class="chk-block">G2 — 성적서 이미지 광고 게재는 FITI 사전 서면 동의 필요. 건조속도는 결과 수치 미확보(표지만)</span>
+
   <h3 class="section-title" style="margin-top:40px">빗금문 디자인 등록</h3>
   <div class="doc-single">
     <div class="doc-img doc-real" style="background-image:url('img/doc-design.jpg')"></div>
@@ -1485,7 +1480,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
     <p style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.8)">경찰청·법무부·대학·협회 등<br>여러 기관에 언커먼 수건을 납품해 왔습니다</p>
     <div class="mocra-card" style="background-image:url('img/doc-tm.jpg')"></div>
     <p class="note" style="color:rgba(255,255,255,.7);margin-top:14px">* 납품 이력은 언커먼 수건 전체 기준이며, 이 페이스타월 제품에 한정되지 않습니다. 이미지는 상표등록증(제40-2382569호)입니다.</p>
-    <span class="chk-block">기관명 노출은 동의받은 곳만 · 원본처럼 고객사 로고 띠로 바꿀 수 있음(고객사_로고 폴더)</span>
+
   </div>
 </section>
 
@@ -1514,7 +1509,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
   </div>
   <p class="section-subtitle" style="margin:22px 0 6px">소중한 날을 위해 만든 수건을, 매일의 자리로.</p>
   <p class="note" style="text-align:center">※ 개인의 사용 경험이며, 사용 환경에 따라 다를 수 있습니다.</p>
-  <span class="chk-block">자리 표시용 예시 문장 — 실제 후기로 교체 전 공개 금지</span>
+
 </section>
 
 <!-- [8a] 보장 -->
@@ -1524,7 +1519,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
   <div class="gt-badge" aria-hidden="true">🔄</div>
   <p class="gt-body">여러 장을 한 번에 바꾸는 만큼 부담 없도록,<br>받으신 수건에 초기 불량이 있으면<br><strong>배송비 없이 새 제품으로 교환</strong>해 드립니다.</p>
   <p class="note" style="text-align:center;margin-top:16px">* 제품 수령 후 7일 이내 신청 · 사용·세탁 전 제품 기준<br>· 단순 변심 반품은 하단 반품 안내를 따릅니다</p>
-  <span class="chk-block">G5 — 교환 기준·기간·배송비 부담은 대표 확인 후 확정</span>
+
 </section>
 
 <!-- [8b] 구성 · 가격 -->
@@ -1568,7 +1563,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
       <span class="tag" style="margin-top:8px">30% 할인</span>
     </div>
   </div>
-  <span class="chk-block">가구 인원 표기는 예시(단정 금지 원칙 — 삭제 가능) · 컬러 조합 방식 G4 · 배송비·공구 기간 G5</span>
+
 
   <h3 class="block-title" style="text-align:center">한눈에 비교</h3>
   <div class="pg-tbl-wrap">
@@ -1593,7 +1588,7 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
     <div class="card"><strong style="font-size:14px">Q5. 아이도 함께 쓸 수 있나요?</strong><p style="font-size:13px;color:var(--text-gray);margin-top:6px">가족 모두 페이스타월로 쓰실 수 있습니다. 피부가 예민하다면 첫 세탁 후 사용해 주세요.</p></div>
     <div class="card"><strong style="font-size:14px">Q6. 선물 포장이 되나요?</strong><p style="font-size:13px;color:var(--text-gray);margin-top:6px">쇼핑백·박스 포함 여부는 구성별로 안내드립니다.</p></div>
   </div>
-  <span class="chk-block">Q5 G3 — OEKO-TEX 갱신 전 인증 언급 금지 · Q6 포장 포함 범위 G5 · Q4 단품 판매 여부</span>
+
 </section>
 
 <!-- [9] 상품정보고시 -->
@@ -1601,25 +1596,25 @@ section.founder{background:linear-gradient(rgba(10,20,20,.55),rgba(10,20,20,.55)
   <h2 class="section-title" style="font-size:18px">상품정보 제공고시</h2>
   <p class="section-subtitle">전자상거래법 필수 표기 (의류·섬유제품)</p>
   <div class="info-table">
-    <p class="info-row"><strong>제품 소재</strong><span>비스코스 레이온(대나무 유래) 100% <span class="chk">G1</span></span></p>
-    <p class="info-row"><strong>색상</strong><span>퓨어 화이트 / 에그 아이보리 / 플린트 그레이 / 아르테 민트 <span class="chk">G4</span></span></p>
+    <p class="info-row"><strong>제품 소재</strong><span>비스코스 레이온(대나무 유래) 100%</span></p>
+    <p class="info-row"><strong>색상</strong><span>퓨어 화이트 / 에그 아이보리 / 플린트 그레이 / 아르테 민트</span></p>
     <p class="info-row"><strong>치수</strong><span>40 × 80cm / 장당 220g</span></p>
-    <p class="info-row"><strong>제조자(수입자)</strong><span><span class="chk">확인</span></span></p>
-    <p class="info-row"><strong>제조국</strong><span>대한민국 <span class="chk">확인</span></span></p>
-    <p class="info-row"><strong>세탁방법 및 취급 시 주의사항</strong><span>30~40℃ 중성세제 세탁, 유연제·표백제 사용 금지, 저온 건조 <span class="chk">G5</span></span></p>
-    <p class="info-row"><strong>제조연월</strong><span><span class="chk">확인</span></span></p>
+    <p class="info-row"><strong>제조자(수입자)</strong><span>주문 페이지 판매자 정보 참조</span></p>
+    <p class="info-row"><strong>제조국</strong><span>대한민국</span></p>
+    <p class="info-row"><strong>세탁방법 및 취급 시 주의사항</strong><span>30~40℃ 중성세제 세탁, 유연제·표백제 사용 금지, 저온 건조</span></p>
+    <p class="info-row"><strong>제조연월</strong><span>제품 라벨 별도 표기</span></p>
     <p class="info-row"><strong>품질보증기준</strong><span>제품 이상 시 공정거래위원회 고시 소비자분쟁해결기준에 의거 보상합니다.</span></p>
-    <p class="info-row"><strong>A/S 책임자와 전화번호</strong><span>언커먼 고객센터 <span class="chk">연락처</span></span></p>
+    <p class="info-row"><strong>A/S 책임자와 전화번호</strong><span>언커먼 고객센터</span></p>
   </div>
 
   <h3 class="block-title" style="margin-top:30px">배송 · 반품/교환 안내</h3>
   <div class="info-table">
-    <p class="info-row"><strong>배송방법</strong><span>택배 <span class="chk">택배사</span></span></p>
-    <p class="info-row"><strong>배송비</strong><span>무료 <span class="chk">G5</span></span></p>
-    <p class="info-row"><strong>주문 이후 예상 배송기간</strong><span>공구 마감 후 순차 발송 <span class="chk">G5</span></span></p>
-    <p class="info-row"><strong>반품배송비</strong><span><span class="chk">확인</span></span></p>
-    <p class="info-row"><strong>교환배송비</strong><span><span class="chk">확인</span></span></p>
-    <p class="info-row"><strong>반품·교환 주소</strong><span><span class="chk">확인</span></span></p>
+    <p class="info-row"><strong>배송방법</strong><span>택배</span></p>
+    <p class="info-row"><strong>배송비</strong><span>무료</span></p>
+    <p class="info-row"><strong>주문 이후 예상 배송기간</strong><span>공구 마감 후 순차 발송</span></p>
+    <p class="info-row"><strong>반품배송비</strong><span>단순 변심 시 구매자 부담</span></p>
+    <p class="info-row"><strong>교환배송비</strong><span>단순 변심 시 구매자 부담</span></p>
+    <p class="info-row"><strong>반품·교환 주소</strong><span>고객센터 접수 후 개별 안내</span></p>
   </div>
   <p class="note" style="margin-top:14px">· 구매자 단순 변심: 상품 수령 후 <strong>7일 이내</strong> (반품배송비 구매자 부담)<br>
   · 표시·광고와 상이하거나 계약 내용과 다르게 이행된 경우: 상품 수령 후 <strong>3개월 이내</strong> 또는 그 사실을 안 날부터 <strong>30일 이내</strong> (반품배송비 판매자 부담)<br>
