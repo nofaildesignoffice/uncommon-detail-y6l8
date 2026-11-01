@@ -1466,6 +1466,18 @@ section.cause-sec:not(.ka-sec) .cz-txt::before{background:#F7F6F3!important;bord
 
 /* 데일리 사진: 위쪽 그라디언트 제거 */
 .sub-inner.daily-inner::before{display:none!important;background:none!important}
+
+/* 왜 언커먼: 하단 그라디언트를 다음 섹션(흰색)과 이어지게 */
+section.why-sec{background:#fff!important}
+.why-top{background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 42%,rgba(255,255,255,.6) 62%,rgba(255,255,255,.92) 80%,#fff 94%,#fff 100%),url('img/why.jpg') center top / cover no-repeat!important}
+/* 고민 섹션 장식: 젖은 수건 일러스트 */
+.wc-flake,.lw-flake{opacity:.9}
+/* 심지어 섹션: 위 비교 섹션과 같은 흰색 배경 */
+section.ka-sec{background:#fff!important}
+section.ka-sec .ac2-box{background:#F7F6F3!important;box-shadow:none!important}
+
+/* 7가지 디테일: 세로 수건 누끼컷 */
+.spic-sec .sp-figure{background:url('img/sp_towel.png') center / contain no-repeat!important;border-radius:0!important;filter:drop-shadow(0 12px 18px rgba(33,33,33,.16))!important}
 </style>
 </head>
 <body>
@@ -1575,11 +1587,11 @@ section.cause-sec:not(.ka-sec) .cz-txt::before{background:#F7F6F3!important;bord
   <h2 class="rs-title rv-up" style="text-align:left">닦는 순간,<br><strong>물기를 끌어올리는 힘</strong></h2>
 
   <div class="rs-pair rv-up">
-    <figure><img src="img/doc-abs.jpg" alt="FITI시험연구원 흡수성 시험 성적서 표지" style="object-fit:contain;background:#fff"><figcaption>흡수성 시험 성적서</figcaption></figure>
-    <figure><img src="img/loop.jpg" alt="언커먼 타올 표면 루프 확대"><figcaption class="on">표면 루프</figcaption></figure>
+    <figure><img src="img/abs_wick.jpg" alt="수건 끝을 물에 담그자 물이 위로 타고 올라오는 모습"><figcaption class="on">끝에서부터 끌어올리고</figcaption></figure>
+    <figure><img src="img/abs_drop.jpg" alt="루프 위 물방울이 섬유 속으로 스며드는 모습"><figcaption class="on">닿는 순간 스며들어요</figcaption></figure>
   </div>
 
-  <p class="note rs-note">* FITI시험연구원 흡수성 시험(바이렉법) 결과: 길이 방향 57mm · 너비 방향 59mm. 수건 끝을 물에 담가 일정 시간 동안 물이 올라온 높이를 잰 값입니다.<br>* 시험 시료(UNCOMMON TOWEL-THE SOFT) 기준이며, 실제 사용 시 느끼는 흡수감은 다를 수 있습니다.</p>
+  <p class="note rs-note">* FITI시험연구원 흡수성 시험(바이렉법) 결과: 길이 방향 57mm · 너비 방향 59mm. 수건 끝을 물에 담가 일정 시간 동안 물이 올라온 높이를 잰 값입니다.<br>* 시험 시료(UNCOMMON TOWEL-THE SOFT) 기준이며, 실제 사용 시 느끼는 흡수감은 다를 수 있습니다.<br>* 이미지는 이해를 돕기 위한 연출 이미지입니다.</p>
 </section>
 
 <!-- [08] 건조 그래프 -->
@@ -1651,7 +1663,7 @@ section.cause-sec:not(.ka-sec) .cz-txt::before{background:#F7F6F3!important;bord
 
 <!-- [11] 고민 -->
 <section class="worry wc">
-  <svg class="wc-flake" viewBox="-100 -100 200 200" aria-hidden="true"><path d="M0 -92C28 -48 62 -14 62 24A62 62 0 0 1 -62 24C-62 -14 -28 -48 0 -92Z" fill="#CFDCE4" fill-opacity=".8"/><path d="M-30 20A32 32 0 0 0 -6 52" stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none" opacity=".7"/></svg>
+  <svg class="wc-flake" viewBox="-100 -100 200 200" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-78 -62H78" stroke="#CFC9BE" stroke-width="7"/><circle cx="-78" cy="-62" r="7" fill="#CFC9BE"/><circle cx="78" cy="-62" r="7" fill="#CFC9BE"/><path d="M-52 -62V58q0 10 10 10h84q10 0 10-10V-62" fill="#F0EEE9" stroke="#DAD6CE" stroke-width="5"/><path d="M-52 38h104M-52 48h104" stroke="#DAD6CE" stroke-width="4"/><path d="M-30 -30v52M0 -30v62M30 -30v46" stroke="#E2DED6" stroke-width="3" opacity=".9"/><path d="M-18 84q-4 8 0 12q4-4 0-12z" fill="#BFE9E7" stroke="none"/><path d="M14 80q-4 8 0 12q4-4 0-12z" fill="#BFE9E7" stroke="none"/></g></svg>
   <h2 class="section-title rv-up" style="margin-bottom:30px;font-size:44px;line-height:1.15;letter-spacing:-.03em">젖은 수건 때문에<br><strong>매일 겪는 불편함</strong></h2>
   <div class="wp-list">
     <div class="wp rv-up"><figure class="wp-img"><img src="img/w1.jpg" alt="욕실에 젖은 채 걸려 있는 수건" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">저녁 욕실에서</span><p>아침에 쓴 수건이 <em>저녁까지 축축해요.</em> 욕실 문을 열면 꿉꿉한 냄새부터 나요.</p></div></div>
@@ -1666,7 +1678,7 @@ section.cause-sec:not(.ka-sec) .cz-txt::before{background:#F7F6F3!important;bord
 <!-- [12] 젖은 수건의 영향 -->
 <section class="low-sec">
   <h2 class="lw-head">
-    <svg class="lw-flake r" viewBox="-100 -100 200 200" aria-hidden="true"><path d="M0 -92C28 -48 62 -14 62 24A62 62 0 0 1 -62 24C-62 -14 -28 -48 0 -92Z" fill="#CFDCE4" fill-opacity=".8"/></svg>
+    <svg class="lw-flake r" viewBox="-100 -100 200 200" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-78 -62H78" stroke="#CFC9BE" stroke-width="7"/><circle cx="-78" cy="-62" r="7" fill="#CFC9BE"/><circle cx="78" cy="-62" r="7" fill="#CFC9BE"/><path d="M-52 -62V58q0 10 10 10h84q10 0 10-10V-62" fill="#F0EEE9" stroke="#DAD6CE" stroke-width="5"/><path d="M-52 38h104M-52 48h104" stroke="#DAD6CE" stroke-width="4"/><path d="M-30 -30v52M0 -30v62M30 -30v46" stroke="#E2DED6" stroke-width="3" opacity=".9"/><path d="M-18 84q-4 8 0 12q4-4 0-12z" fill="#BFE9E7" stroke="none"/><path d="M14 80q-4 8 0 12q4-4 0-12z" fill="#BFE9E7" stroke="none"/></g></svg>
     <span class="lw-h1 rv-up">일상의 <b>찝찝함</b>이<br>끝이 아니에요.</span>
     <i class="lw-line rv-up"></i>
     <span class="lw-h2 rv-up"><small>연구가 말하는</small><b>젖은 수건의 영향</b></span>
@@ -1772,8 +1784,6 @@ section.cause-sec:not(.ka-sec) .cz-txt::before{background:#F7F6F3!important;bord
   <p class="cc-note">* 건조 시간은 시험 시료 기준이며, 사용 환경에 따라 다릅니다.</p>
 </section>
 
-<!-- [19] 디테일 사진 (글 없음) -->
-<section class="sponge-sec" role="img" aria-label="언커먼 타올 빗금문 가장자리와 라벨"></section>
 
 <!-- [20] 원리 3단계 -->
 <section class="how-sec">
