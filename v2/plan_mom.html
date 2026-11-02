@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>언커먼 타올 상세페이지 기획 의도 · 아이 엄마</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+:root{--ink:#111;--sub:#555;--mute:#888;--line:#E4E4E4;--bg:#F4F4F4;--card:#fff;--on:#111}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:'Pretendard Variable',Pretendard,-apple-system,'Apple SD Gothic Neo',sans-serif;color:var(--ink);background:var(--bg);word-break:keep-all;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:40px;max-width:1240px;margin:0 auto;padding:32px 32px 0;height:100vh}
+.doc{position:relative;overflow-y:auto;padding:8px 8px 120px 0;scrollbar-width:thin}
+.phone{position:relative;align-self:start;height:calc(100vh - 64px);border-radius:28px;background:#000;padding:10px;box-shadow:0 18px 50px rgba(0,0,0,.18)}
+.phone iframe{width:100%;height:100%;border:0;border-radius:20px;background:#fff;display:block}
+.phone-cap{position:absolute;left:0;right:0;bottom:-26px;text-align:center;font-size:12px;color:var(--mute)}
+header h1{font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1.3}
+header .meta{margin-top:8px;font-size:13px;color:var(--mute)}
+header .lead{margin-top:20px;font-size:16px;line-height:1.75;color:#222}
+.how{margin-top:14px;font-size:13.5px;color:var(--sub);background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+h2{margin:56px 0 6px;font-size:22px;font-weight:800;letter-spacing:-.02em}
+h2 small{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--mute);margin-bottom:6px}
+.stage-lead{font-size:15px;color:var(--sub);line-height:1.7;margin-bottom:16px}
+table{width:100%;border-collapse:collapse;margin-top:18px;font-size:14px;background:#fff;border:1px solid var(--line)}
+th,td{padding:11px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;line-height:1.6}
+th{background:#FAFAFA;font-weight:700;font-size:13px;color:var(--sub)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:12px;cursor:pointer;transition:border-color .2s,box-shadow .2s}
+.card:hover{border-color:#bbb}
+.card.on{border-color:var(--on);box-shadow:0 0 0 1px var(--on)}
+.card h3{font-size:16.5px;font-weight:800;letter-spacing:-.02em;line-height:1.45;display:flex;gap:10px;align-items:baseline}
+.card h3 .no{flex:none;font-size:12px;font-weight:700;color:var(--mute);min-width:22px}
+.card h3 .go{margin-left:auto;flex:none;font-size:12px;font-weight:600;color:var(--mute)}
+.card ul{margin:10px 0 0 32px;font-size:14.5px;line-height:1.75;color:#333}
+.card li{margin-top:4px}
+.card b{color:var(--ink)}
+.closing{margin-top:56px}
+@media (max-width:960px){
+  .wrap{display:block;height:auto;padding:20px 16px 0}
+  .doc{overflow:visible;padding:0 0 60px}
+  .phone{align-self:stretch;position:sticky;top:0;z-index:5;height:46vh;border-radius:0 0 18px 18px;margin:0 -16px 20px;padding:0 0 8px}
+  .phone iframe{border-radius:0}
+  .phone-cap{display:none}
+  .wrap{display:flex;flex-direction:column-reverse}
+  header h1{font-size:24px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<main class="doc" id="doc">
+<header>
+  <h1>언커먼 타올 상세페이지 기획 의도 · 아이 엄마</h1>
+  <p class="meta">노페일 디자인 · 2026.11.02 · 마이온도 상세페이지 구조 적용 · 타겟별 4개 버전 중 아이 엄마</p>
+  <p class="meta" style="margin-top:6px">다른 버전 보기: <a href="plan.html">공통</a> · <a href="plan_beauty.html">뷰티케어</a> · <b>아이 엄마</b> · <a href="plan_skin.html">예민 피부(아토피)</a></p>
+  <p class="lead">이 버전은 <b>아이 얼굴과 머리를 매일 닦아 주는 엄마</b>를 위한 페이지입니다. "아이 수건은 털이 날리고, 하루에도 몇 장씩 빨아야 하고, 잘 안 마른다"는 불편을 <b>"아이 얼굴에 먼지 없이 닿고 빨리 마르는 한 장"</b>으로 바꾸도록 설계했습니다. 구성과 순서는 공통 버전과 같습니다.</p>
+  <p class="how">각 항목을 누르면 옆 화면의 상세페이지가 해당 섹션으로 이동합니다. 상세페이지를 스크롤하면 지금 보고 있는 섹션의 설명이 표시됩니다.</p>
+</header>
+
+<h2>이 버전의 타겟</h2>
+<table>
+<tr><th>항목</th><th>내용</th></tr>
+<tr><td>누구</td><td>2~6세 아이를 키우는 엄마, 예비맘. 맘카페·베이비페어에서 정보를 모으고 아이 피부에 닿는 소재·성분에 민감함</td></tr>
+<tr><td>불편한 순간</td><td>목욕 후 아이를 안고 닦을 때, 식사 후 얼굴을 닦을 때, 건조대가 아이 빨래로 가득할 때</td></tr>
+<tr><td>리서치 근거</td><td>아기 수건 사용기의 "먼지 때문에 찝찝한 부분", 잦은 세탁·건조기 사용 후에도 변형이 없는지가 구매 기준. 형광증백제·염료 걱정</td></tr>
+<tr><td>핵심 대비</td><td>털 날리고 매일 빨아도 안 마르는 수건 vs <b>먼지 없이 닿고 146분 만에 마르는 한 장</b></td></tr>
+<tr><td>쓰지 않는 표현</td><td>신생아용, 유아 전용, 100% 안전, 유해물질 제로, 무형광. 36개월 미만 유아용으로 표방하면 KC 안전확인 대상이 될 수 있어 "가족이 함께 쓰는 페이스타월"로 표현</td></tr>
+</table>
+
+<h2>설계 흐름 한눈에</h2>
+<p class="stage-lead">상단(1~3단계)은 결론부터 던져 빠르게 결정하는 고객을, 하단(4~5단계)은 문제부터 차근차근 쌓아 망설이는 고객을 설득합니다.</p>
+<table>
+<tr><th>단계</th><th>뇌가 하는 일</th><th>섹션</th></tr>
+<tr><td>1. 주의를 끈다</td><td>3초 안에 "나와 관련 있다"고 판단</td><td>인트로, 히어로, 매일 같이</td></tr>
+<tr><td>2. 원하게 만든다</td><td>머릿속에서 미리 써 봄</td><td>브랜드 비주얼·질문 대화, 데일리·요약, MADE IN KOREA, 흡수 결과, 146분 그래프</td></tr>
+<tr><td>3. 믿게 만든다</td><td>사람과 사람들을 통해 경계를 풂</td><td>대표 스토리, 50여 곳 납품</td></tr>
+<tr><td>4. 깊이 납득시킨다</td><td>문제 → 영향 → 목표 → 해답 → 반론 순으로 스스로 결론에 도달</td><td>고민, 젖은 수건의 영향, 도톰하고 보송해지면, 그래서 만들었다, 왜 언커먼인가, 다른 수건 비교, 막대그래프, 결론</td></tr>
+<tr><td>5. 불안을 없앤다</td><td>결제 직전의 작은 의심을 하나씩 해소</td><td>원리, 7가지 디테일, 밤부 비스코스, 시험·등록, 사용시 꼭 알아두세요, 사용법·사이즈·TIP·루틴, 몇 장이면 충분할까, 엔딩 컷, Q&amp;A, 상품정보 고시</td></tr>
+</table>
+
+<h2><small>STAGE 1</small>주의를 끈다</h2>
+<p class="stage-lead">3초 안에 "나와 관련 있다"고 느끼게 해서 스크롤을 멈추게 합니다.</p>
+
+<div class="card" data-sel="section.intro-sec"><h3><span class="no">01</span>인트로 — "아이 얼굴에 털을 남기는 / <s>호텔 수건 두꺼운 면 수건 극세사 수건</s>"<span class="go">보기 →</span></h3><ul>
+<li>엄마가 목욕 후 매번 보는 장면(아이 머리에 붙은 하얀 털)으로 시작해 "내 얘기"라고 느끼게 합니다.</li></ul></div>
+
+<div class="card" data-sel="section.hero"><h3><span class="no">02</span>히어로 — "아이 얼굴에도 먼지 없이 닿는 밤부 페이스타월"<span class="go">보기 →</span></h3><ul>
+<li>목욕 후 엄마가 아이를 닦아 주는 장면을 히어로로 써, <b>내 아이에게 쓰는 모습</b>을 먼저 떠올리게 합니다(점화 효과).</li>
+<li>"아이 전용"이 아니라 "아이 얼굴에도"라고 써, 가족 페이스타월이라는 사실을 지키면서 엄마의 관심사를 정확히 짚습니다.</li></ul></div>
+
+<div class="card" data-sel="section.stop-sec"><h3><span class="no">03</span>매일 같이 — "털 날리고 / 매일 빨고 / 덜 마르고 → 필요한 건 아이 얼굴에 먼지 없이 닿고 빨리 마르는 한 장"<span class="go">보기 →</span></h3><ul>
+<li>손실 회피: 엄마가 잃는 것은 시간과 안심입니다. 털, 끝없는 빨래, 마르지 않는 건조대를 먼저 보여줍니다.</li></ul></div>
+
+<h2><small>STAGE 2</small>원하게 만든다</h2>
+<p class="stage-lead">고객이 머릿속에서 제품을 미리 써 보게 해서 "갖고 싶다"는 마음을 만듭니다.</p>
+
+<div class="card" data-sel="section.sub:not(.daily)"><h3><span class="no">04</span>브랜드 비주얼 + 질문 대화 — "아이 얼굴에도, 먼지 없이 닿아요"<span class="go">보기 →</span></h3><ul>
+<li>뇌는 글보다 이미지를 훨씬 빠르게 처리합니다. 루프 확대 컷을 천천히 확대해 <b>손으로 만지는 듯한 감촉</b>부터 상상하게 합니다.</li>
+<li>맘카페에서 그대로 나올 법한 질문으로 시작하고, 젖은 직조와 146분으로 답합니다. 핀은 <b>먼지·건조</b>로 바꿨습니다.</li></ul></div>
+
+<div class="card" data-sel="section.sub.daily"><h3><span class="no">05</span>데일리 + 요약 — "씻기는 순서는 그대로, 수건만 바꾸세요"<span class="go">보기 →</span></h3><ul>
+<li>요약의 덧셈 공식을 "씻기 + 언커먼 한 장"으로 바꿔, 아이를 씻기는 엄마의 동작에 맞췄습니다.</li></ul></div>
+
+<div class="card" data-sel="section.band-sec"><h3><span class="no">06</span>MADE IN KOREA<span class="go">보기 →</span></h3><ul>
+<li>효과를 말하기 전에 <b>기본 신뢰</b>부터 깝니다. 매일 얼굴에 닿는 제품이라 어디서 만들었는지가 먼저 걸리기 때문입니다.</li></ul></div>
+
+<div class="card" data-sel="section.result-sec"><h3><span class="no">07</span>결과 — "흡수 높이 59mm · 닦는 순간, 물기를 끌어올리는 힘"<span class="go">보기 →</span></h3><ul>
+<li>숫자 하나를 가장 크게 보여줘 <b>기준점</b>을 심습니다(앵커링). "닦는 순간"의 약속을 먼저 숫자로 증명합니다.</li>
+<li>아래 두 장면(끝에서부터 물이 타고 오르는 모습, 루프에 물방울이 스며드는 모습)이 바이렉 시험이 무엇을 쟀는지 <b>설명 없이 보이게</b> 합니다. 연출 이미지임을 주석에 밝힙니다.</li></ul></div>
+
+<div class="card" data-sel="section.flow-sec"><h3><span class="no">08</span>146분 그래프 — "도톰한데도 빨리 마르는 한 장"<span class="go">보기 →</span></h3><ul>
+<li>히어로에서 던진 약속(146분)을 그래프로 <b>다시 확인</b>시킵니다. 같은 메시지를 다른 형식으로 반복하면 뇌는 그것을 더 사실로 받아들입니다.</li>
+<li>"흡수(07) → 건조(08)" 순서로 붙여, 닦을 때와 다 쓴 뒤 두 장면을 모두 채웠습니다. 마지막 구간만 민트로 칠해 시선이 "건조 완료"에 머물게 했습니다.</li></ul></div>
+
+<h2><small>STAGE 3</small>믿게 만든다</h2>
+<p class="stage-lead">판매자의 말이 아니라 사람과 사람들의 선택으로 경계를 풉니다. 여기까지가 빠르게 결정하는 고객을 위한 구간입니다.</p>
+
+<div class="card" data-sel="section.founder"><h3><span class="no">09</span>대표 스토리 — "소중한 날을 위한 수건, 신부타올에서 시작했습니다"<span class="go">보기 →</span></h3><ul>
+<li>사람은 정보보다 <b>이야기에 몰입</b>할 때 경계를 풉니다. 신부타올과 은방울꽃 카드는 대표 메시지에서 그대로 가져온 실제 이야기입니다.</li>
+<li>효과를 먼저 보여준 다음에 두어, "좋다"고 느낀 뒤 "그래서 이렇게 만든 거구나"로 <b>납득</b>되게 했습니다. 배경은 은방울꽃 카드가 담긴 상자 컷입니다.</li></ul></div>
+
+<div class="card" data-sel="section.reviews"><h3><span class="no">10</span>먼저 고른 곳들 — 고객 후기 자리 + "#50여_곳_납품"<span class="go">보기 →</span></h3><ul>
+<li>사람은 불확실할 때 <b>다른 사람의 선택</b>을 따라갑니다(사회적 증거). 첫 섹션은 네이버 스토어 실제 구매 후기로 채울 자리이고, 바로 아래에 납품 기관 로고를 둡니다.</li>
+<li>경찰청·법무부·대학처럼 까다롭게 고르는 곳의 이름이 권위까지 함께 빌려줍니다. 후기는 지어내지 않고 실제 리뷰만 옮깁니다.</li></ul></div>
+
+<h2><small>STAGE 4</small>깊이 납득시킨다</h2>
+<p class="stage-lead">망설이는 고객은 결론이 아니라 과정을 봐야 움직입니다. 문제 → 영향 → 목표 → 해답 → 반론 처리 순서로 한 계단씩 다시 쌓았습니다.</p>
+
+<div class="card" data-sel="section.worry"><h3><span class="no">11</span>고민 — "아이 수건 때문에 매일 겪는 불편함"<span class="go">보기 →</span></h3><ul>
+<li>목욕 후 털, 하루 몇 장씩 나오는 수건, 매일 빨아 뻣뻣해짐, 가득 찬 건조대, 덜 마른 수건의 쉰내, 성분 걱정 — 엄마의 하루에서 수건이 걸리는 여섯 장면입니다.</li></ul></div>
+
+<div class="card" data-sel="section.low-sec"><h3><span class="no">12</span>연구가 말하는 아이 수건이 중요한 이유 — 아이 피부 / 젖은 수건의 세균 / 세제·향 잔여물<span class="go">보기 →</span></h3><ul>
+<li>영아 각질층이 성인보다 약 30% 얇다는 측정 연구(Stamatas 2010)로 "아이 피부는 더 예민하다"는 엄마의 직감에 근거를 붙입니다.</li>
+<li>쉰내균 연구(Kubota 2012)와 AAD의 세제·향 관리 안내로 "빨리 마르고 유연제 없이 쓰는 수건"이 왜 필요한지 연결합니다. 제품 효능이 아닌 일반 연구임을 밝힙니다.</li></ul></div>
+
+<div class="card" data-sel="section.up1-sec"><h3><span class="no">13</span>아이 수건이 바뀌면, 어떤 변화가 생길까?<span class="go">보기 →</span></h3><ul>
+<li>털을 떼어낼 일이 줄고, 건조대가 빨리 비고, 유연제 없이 빨고, 가족이 함께 쓴다 — 엄마가 얻는 변화로 바꿨습니다.</li></ul></div>
+
+<div class="card" data-sel="section.made-sec"><h3><span class="no">14</span>그래서, 아이 얼굴에 먼지 없이 닿는 한 장을 위해 만들었습니다<span class="go">보기 →</span></h3><ul>
+<li>앞에서 세운 목표에 제품을 정답으로 끼워 넣습니다.</li></ul></div>
+
+<div class="card" data-sel="section.why-sec"><h3><span class="no">15</span>왜 다른 수건이 아닌 언커먼 타올이어야 하나?<span class="go">보기 →</span></h3><ul>
+<li>해답을 보여주면 뇌는 곧바로 <b>반론</b>을 떠올립니다("그냥 호텔 수건 사면 되잖아?"). 그 반론이 생기기 전에 먼저 꺼내서 답합니다.</li>
+<li>욕조 사진이 아래 비교 섹션의 흰 배경으로 자연스럽게 이어지게 해, 여기부터 다시 단호한 비교가 시작된다는 신호를 줍니다.</li></ul></div>
+
+<div class="card" data-sel="section.cause-sec:not(.ka-sec)"><h3><span class="no">16</span>얇은 면 / 두꺼운 호텔 / 극세사 수건 말풍선<span class="go">보기 →</span></h3><ul>
+<li>특정 브랜드가 아니라 고객이 아는 <b>수건 종류</b>로 나눠, 비난이 아니라 일상의 관찰로 들리게 했습니다.</li>
+<li>말풍선 형식은 대화를 엿듣는 느낌을 줘 광고라는 경계를 낮추고, 움직이는 아이콘(떨어지는 물방울, 도는 시곗바늘, 올라오는 냄새)이 짧은 문장을 1초 만에 이해시킵니다.</li></ul></div>
+
+<div class="card" data-sel="section.ka-sec"><h3><span class="no">17</span>심지어 + 막대그래프 (무게별 건조 시간)<span class="go">보기 →</span></h3><ul>
+<li>4단계의 <b>결정타</b>입니다. 무게가 늘수록 회색 막대가 길어지는데, 220g인 언커먼 막대만 색을 가진 채 얇은 수건 쪽 높이에 머뭅니다.</li>
+<li>뇌는 숫자보다 <b>길이와 색의 차이</b>를 훨씬 빠르게 받아들입니다. 설명을 읽지 않아도 "도톰한데 빨리 마른다"가 보이게 했습니다.</li></ul></div>
+
+<div class="card" data-sel="section.conclusion"><h3><span class="no">18</span>결론 — "먼지 없이 닿고 매일 빨아도 빨리 마르는 한 장입니다"<span class="go">보기 →</span></h3><ul>
+<li>처음의 핵심 문장과 같은 문형으로 닫습니다.</li></ul></div>
+
+<h2><small>STAGE 5</small>불안을 없앤다</h2>
+<p class="stage-lead">마음이 기운 고객도 결제 직전에는 작은 의심 하나에 멈춥니다. 마지막 구간은 그 의심을 하나씩 지우는 순서로 짰습니다.</p>
+
+<div class="card" data-sel="section.how-sec"><h3><span class="no">20</span>원리 — "머금고 / 거두고 / 날려 보내고"<span class="go">보기 →</span></h3><ul>
+<li>사람은 <b>작동 방식을 이해하면</b> 효과를 더 믿습니다. "두꺼운데 어떻게 빨리 마르지?"라는 의문을 그림 세 장으로 풉니다.</li>
+<li>같은 루프 단면을 세 번 반복하고 움직임(물방울 → 피부 → 공기)만 바꿔 <b>변화만 보이게</b> 했습니다.</li></ul></div>
+
+<div class="card" data-sel="section.spic-sec"><h3><span class="no">21</span>한 장에 담은 7가지 디테일<span class="go">보기 →</span></h3><ul>
+<li>원리를 가능하게 하는 요소를 해부도처럼 펼칩니다. 원형 확대 컷마다 질감이 달라, 글을 읽기 전에 "많은 게 들어 있다"는 느낌이 먼저 옵니다.</li>
+<li>가운데에는 실제 제품 사진을 누끼 따서 세로로 둔 한 장을 놓았습니다. 4번째 디테일은 <b>젖은 직조(먼지가 나지 않는 루프)</b>로, 고객 리서치에서 가장 큰 불만이었던 "얼굴에 남는 털"에 답합니다.</li></ul></div>
+
+<div class="card" data-sel="section.bb-sec"><h3><span class="no">21+</span>대나무에서 온 실, 밤부 비스코스 (추가 섹션)<span class="go">보기 →</span></h3><ul>
+<li>마이온도에는 없는 섹션으로, 리건 요청에 따라 7가지 디테일 다음에 넣었습니다. 디테일을 본 고객이 "그래서 밤부 비스코스가 뭐가 좋은데?"를 떠올리는 지점입니다.</li>
+<li>대나무 숲 → 대나무·펄프·섬유·실 순서로 <b>원료가 실이 되는 과정</b>을 눈으로 보여줘 낯선 소재명을 친숙하게 만듭니다.</li>
+<li>장점은 감촉, 수분율(ASTM 섬유 일반값), 빨리 자라는 원료 세 가지만 말합니다. "천연 항균", "친환경"처럼 근거가 없거나 규제에 걸리는 표현은 쓰지 않고, 재생 섬유라는 점을 주석으로 밝혀 <b>신뢰를 지킵니다</b>.</li></ul></div>
+
+<div class="card" data-sel="section.evi-sec"><h3><span class="no">22</span>아이 얼굴에도 닿는 수건, 시험부터 챙겼어요 + 디자인·상표 등록<span class="go">보기 →</span></h3><ul>
+<li>엄마는 결제 직전에 <b>성분부터 점검</b>합니다. 알러지성 염료 22종 불검출, 세탁 견뢰도, 치수변화를 원본 성적서와 함께 보여줍니다.</li>
+<li>시험한 항목만 말하고, 시험하지 않은 형광증백제·포름알데히드는 언급하지 않습니다.</li></ul></div>
+
+<div class="card" data-sel="section.step-sec"><h3><span class="no">23</span>사용시 꼭 알아두세요!<span class="go">보기 →</span></h3><ul>
+<li>이 제품의 실망 포인트는 "처음엔 물을 덜 먹는 것 같다", "접어 두니 늦게 마른다", "유연제를 넣었더니 흡수가 떨어졌다"입니다. 사람은 <b>예상한 실망에는 덜 실망합니다</b>. 미리 알려 반품과 낮은 평점을 막습니다.</li>
+<li>주의사항이지만 밝은 배경과 실물 컷으로 만들어 불안이 아니라 <b>배려</b>로 느껴지게 했습니다.</li></ul></div>
+
+<div class="card" data-sel="section.htu-sec"><h3><span class="no">24</span>사용법 → 사이즈 → TIP → 하루 루틴 → 몇 장이면 충분할까<span class="go">보기 →</span></h3><ul>
+<li>결정한 고객이 마지막에 확인하는 실무 정보입니다. 같은 욕실, 같은 조명의 컷으로 통일해 정보만 눈에 들어오게 했습니다.</li>
+<li>마이온도의 "사용 기간" 자리에는 "몇 장이면 충분할까"를 두어, 교체 주기 이야기에서 8·12·20장 구성과 장당 가격으로 <b>고민 시간 없이</b> 넘어가게 했습니다.</li></ul></div>
+
+<div class="card" data-sel="div.full-img"><h3><span class="no">25</span>엔딩 컷 (바구니 + 로고)<span class="go">보기 →</span></h3><ul>
+<li>사람은 경험 전체가 아니라 <b>가장 강렬했던 순간과 마지막 순간</b>으로 기억합니다(피크-엔드 법칙).</li>
+<li>히어로와 같은 햇빛 든 바구니 장면으로 돌아가 문구 없이 로고만 남겨, 마지막 기억이 정보가 아니라 브랜드가 되게 했습니다.</li></ul></div>
+
+<div class="card" data-sel="section.qna"><h3><span class="no">26</span>Q&amp;A → 상품정보 고시<span class="go">보기 →</span></h3><ul>
+<li>"아기한테 써도 되나요?"를 앞에 두고, 영유아 전용 제품이 아니라는 사실과 처음 쓸 때의 방법을 정직하게 답합니다. 기대를 정확히 맞춰야 반품과 낮은 평점을 막습니다.</li></ul></div>
+
+<h2 class="closing">페이지 전체를 관통하는 설계 원칙</h2>
+<p class="stage-lead">모든 섹션은 "먼지 없이 닿고 146분 만에 마르는 한 장"라는 약속 하나를 형식만 바꿔 반복합니다.</p>
+<table>
+<tr><th>원칙</th><th>적용</th></tr>
+<tr><td>대비로 기억시킨다</td><td>털 날리고 매일 빨아도 안 마르는 수건 vs <b>먼지 없이 닿고 146분 만에 마르는 한 장</b>를 인트로, 히어로, 매일 같이, 질문 대화, 결론에서 형식만 바꿔 반복</td></tr>
+<tr><td>밝은 톤을 끝까지 지킨다</td><td>문제 장면도 어둡게 그리지 않고 밝은 브랜드 톤 사진으로. 자사몰 팔레트(민트·티파니·웜 오프화이트)로 페이지 전체 색을 통일</td></tr>
+<tr><td>배경으로 리듬을 만든다</td><td>흰 배경과 웜 오프화이트 배경을 번갈아 두어, 어두운 배경 없이도 긴 페이지를 구간별로 나눠 읽게 함</td></tr>
+<tr><td>문제 장면에 제품을 쓰지 않는다</td><td>매일 같이·고민·영향 섹션은 일반 수건의 연출 사진으로, 언커먼 실물 사진은 해답 쪽에만 등장</td></tr>
+<tr><td>두 번 설득한다</td><td>상단은 빠르게 결정하는 고객을 위해 결론부터, 하단은 망설이는 고객을 위해 문제부터</td></tr>
+<tr><td>반론은 생기기 전에 꺼낸다</td><td>"두꺼운데 안 마르지 않나", 다른 수건과의 차이, 염료·세균, "처음엔 물을 덜 먹음"까지 고객이 떠올리기 전에 먼저 답함</td></tr>
+</table>
+</main>
+
+<aside class="phone"><iframe id="pv" src="mom.html" title="언커먼 타올 상세페이지 미리보기"></iframe><p class="phone-cap">상세페이지 미리보기 · 직접 스크롤할 수 있습니다</p></aside>
+</div>
+<script>
+(function(){
+  var pv=document.getElementById('pv'),cards=[].slice.call(document.querySelectorAll('.card[data-sel]')),lock=0;
+  function el(c){try{return pv.contentDocument.querySelector(c.dataset.sel)}catch(e){return null}}
+  function mark(c){cards.forEach(function(x){x.classList.toggle('on',x===c)})}
+  cards.forEach(function(c){c.addEventListener('click',function(){
+    var t=el(c);if(!t)return;var w=pv.contentWindow;
+    lock=Date.now();mark(c);
+    w.scrollTo({top:t.getBoundingClientRect().top+w.scrollY,behavior:'smooth'});
+  })});
+  pv.addEventListener('load',function(){
+    var w=pv.contentWindow,tick=false;
+    w.addEventListener('scroll',function(){
+      if(tick)return;tick=true;
+      requestAnimationFrame(function(){
+        tick=false;if(Date.now()-lock<900)return;
+        var mid=w.innerHeight*.35,cur=null;
+        cards.forEach(function(c){var t=el(c);if(t&&t.getBoundingClientRect().top<=mid)cur=c;});
+        if(cur&&!cur.classList.contains('on')){mark(cur);
+          if(window.innerWidth>960){var d=document.getElementById('doc');d.scrollTo({top:cur.offsetTop-80,behavior:'smooth'})}}
+      });
+    },{passive:true});
+  });
+})();
+</script>
+</body>
+</html>
