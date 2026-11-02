@@ -1,0 +1,354 @@
+<meta name="robots" content="noindex,nofollow">
+<title>언커먼 고객 문제 리서치</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 한 줄 리포트 컬럼(최대 880px) + 넓은 표는 가로 스크롤. 상단 결론 → 근거 → 타겟 → 실행 순 */
+:root{
+  --bg:#F7F6F3; --surface:#FFFFFF; --ink:#212121; --sub:#5E5E5B; --dim:#8E8C86;
+  --line:#E3E0D8; --mint:#0ABAB5; --mint-soft:#E2F5F4; --mint-ink:#057F7B;
+  --warn:#B4532A; --warn-soft:#FBEDE6; --ok:#2F7D4F; --ok-soft:#E6F3EA; --mid:#9A7B2E; --mid-soft:#F6F0DF;
+  --f-display:"Gowun Batang","Nanum Myeongjo",serif;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#171817; --surface:#202221; --ink:#ECEBE7; --sub:#B9B7B0; --dim:#8D8B85; --line:#33352F;
+  --mint:#37CFCA; --mint-soft:#163332; --mint-ink:#6FE0DC; --warn:#E8956E; --warn-soft:#3A251C;
+  --ok:#7CC79A; --ok-soft:#1C3125; --mid:#D9BC6C; --mid-soft:#332C18; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#171817; --surface:#202221; --ink:#ECEBE7; --sub:#B9B7B0; --dim:#8D8B85; --line:#33352F;
+  --mint:#37CFCA; --mint-soft:#163332; --mint-ink:#6FE0DC; --warn:#E8956E; --warn-soft:#3A251C;
+  --ok:#7CC79A; --ok-soft:#1C3125; --mid:#D9BC6C; --mid-soft:#332C18; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.72;word-break:keep-all;overflow-wrap:break-word}
+.wrap{max-width:880px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:48px 96px}
+h1,h2,h3{text-wrap:balance;margin:0}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(30px,5.4vw,44px);line-height:1.25;letter-spacing:-.02em}
+h2{font-family:var(--f-display);font-weight:700;font-size:clamp(23px,3.6vw,29px);line-height:1.35;letter-spacing:-.01em}
+h3{font-size:17px;font-weight:600;line-height:1.45}
+p{margin:0}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mint-ink)}
+.meta{color:var(--dim);font-size:13px}
+.stack{display:flex;flex-direction:column;gap:14px}
+section{display:flex;flex-direction:column;gap:18px;padding-top:56px}
+.lead{font-size:17px;color:var(--sub);max-width:65ch}
+hr{border:0;border-top:1px solid var(--line);margin:0}
+
+/* 결론 */
+.verdict{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;gap:16px}
+.verdict .q{font-size:14px;color:var(--dim)}
+.verdict .a{font-family:var(--f-display);font-size:clamp(21px,3.4vw,26px);line-height:1.45}
+.verdict .a mark{background:linear-gradient(transparent 58%,var(--mint-soft) 58%);color:inherit;padding:0 2px}
+.top3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.top3 > div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.top3 .n{font-family:var(--f-mono);font-size:13px;color:var(--mint-ink)}
+.top3 h3{font-size:16.5px}
+.top3 p{font-size:14px;color:var(--sub)}
+@media (max-width:720px){.top3{grid-template-columns:1fr}}
+
+/* 칩 */
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap;line-height:1.6}
+.c-ok{background:var(--ok-soft);color:var(--ok)}
+.c-mid{background:var(--mid-soft);color:var(--mid)}
+.c-no{background:var(--warn-soft);color:var(--warn)}
+.c-mint{background:var(--mint-soft);color:var(--mint-ink)}
+
+/* 표 */
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--line)}
+th{font-size:12.5px;font-weight:600;color:var(--dim);background:var(--bg);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td small{color:var(--dim);display:block;font-size:12.5px;margin-top:2px}
+
+/* 점수 막대 */
+.bar{display:flex;align-items:center;gap:8px;min-width:150px}
+.bar i{display:block;height:8px;border-radius:4px;background:var(--mint);opacity:.85}
+.bar span{font-family:var(--f-mono);font-size:13px;font-variant-numeric:tabular-nums}
+.bar.size i{background:var(--dim);opacity:.55}
+
+/* 비교 카드 */
+.cmp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cmp > div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.cmp ol{margin:0;padding-left:20px;font-size:14.5px}
+.cmp ol li{margin:2px 0}
+@media (max-width:640px){.cmp{grid-template-columns:1fr}}
+
+/* 탭 */
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{font:inherit;font-size:14.5px;font-weight:600;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--sub);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tabs button:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
+.panel{display:flex;flex-direction:column;gap:16px}
+.scene{background:var(--mint-soft);border-radius:12px;padding:16px 18px;font-size:14.5px}
+.scene b{color:var(--mint-ink)}
+.say{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.say > div{border-radius:12px;padding:16px 18px;font-size:14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.say .yes{background:var(--ok-soft)} .say .no{background:var(--warn-soft)}
+.say h3{font-size:14px}
+.say .yes h3{color:var(--ok)} .say .no h3{color:var(--warn)}
+.say ul{margin:0;padding-left:18px}
+@media (max-width:640px){.say{grid-template-columns:1fr}}
+.copy{border-left:3px solid var(--mint);padding:4px 0 4px 14px;font-family:var(--f-display);font-size:17px}
+
+/* 인용 */
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.quotes figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.quotes blockquote{margin:0;font-family:var(--f-display);font-size:16px;line-height:1.55}
+.quotes figcaption{font-size:12.5px;color:var(--dim)}
+.quotes a{color:var(--mint-ink)}
+@media (max-width:640px){.quotes{grid-template-columns:1fr}}
+
+/* 액션 */
+.act{counter-reset:a;display:flex;flex-direction:column;gap:10px}
+.act > div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 56px;position:relative;min-width:0}
+.act > div::before{counter-increment:a;content:counter(a);position:absolute;left:18px;top:15px;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--bg);font-family:var(--f-mono);font-size:13px;display:grid;place-items:center}
+.act h3{font-size:15.5px;margin-bottom:4px}
+.act p{font-size:14px;color:var(--sub)}
+.act .where{font-family:var(--f-mono);font-size:12px;color:var(--dim)}
+
+.alert{background:var(--warn-soft);border-radius:12px;padding:16px 18px;font-size:14.5px}
+.alert b{color:var(--warn)}
+.src{font-size:13px;color:var(--sub);columns:2;column-gap:28px;padding-left:18px;margin:0}
+.src li{break-inside:avoid;margin-bottom:6px}
+.src a{color:var(--mint-ink);word-break:break-all}
+@media (max-width:640px){.src{columns:1}}
+a{color:var(--mint-ink)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header class="stack">
+  <p class="eyebrow">UNCOMMON TOWEL · Customer Problem Research</p>
+  <h1>프리미엄 수건 고객은<br>무엇 때문에 불편한가</h1>
+  <p class="lead">"늦게 마른다"가 정말 우리 고객의 가장 큰 문제인지, Claude와 Codex가 각각 따로 조사한 뒤 결과를 맞춰 봤습니다. 일반 고객과 세 타겟(뷰티케어, 아이 엄마, 아토피)을 나눠 정리했습니다.</p>
+  <p class="meta">2026-11-02 · Claude 웹 조사 + Codex 웹 검색 118건 독립 조사 · 공개 웹에서 실제로 열어 본 자료만 근거로 사용</p>
+</header>
+
+<section>
+  <div class="verdict">
+    <p class="q">질문: 늦게 마르는 게 우리 고객의 핵심 페인포인트가 맞나?</p>
+    <p class="a">실제 불편은 맞지만 <mark>1순위는 아닙니다.</mark> 건조기 없이 실내에서 말리는 집, 장마철에 커지는 조건부 문제입니다. 고객이 느끼는 건 '늦게 마름' 자체보다 그 결과인 <mark>냄새와 찝찝함</mark>입니다.</p>
+    <p style="font-size:14px;color:var(--sub)">두 조사 모두 같은 결론입니다. 같은 커뮤니티 글 안에서도 "집에서는 밤새 다 마른다"는 반대 경험이 있었습니다. 또 146분이라는 시험값만으로는 경쟁 제품보다 빠르다고 말할 근거가 없습니다(동일 조건 비교 시험 없음).</p>
+  </div>
+
+  <h2 style="margin-top:12px">통합 Top 3 페인포인트</h2>
+  <div class="top3">
+    <div><span class="n">01</span><h3>세탁할수록 변한다</h3><p>처음엔 부드럽다가 몇 번 빨면 거칠어지고 뻣뻣해집니다. 비싸게 산 이유가 사라지는 문제라 프리미엄 구매자에게 배신감이 가장 큽니다.</p><span class="chip c-no">우리 근거: 부족</span></div>
+    <div><span class="n">02</span><h3>얼굴에 남는 먼지·털</h3><p>세안 직후 얼굴에 털이 붙고, 아이에게 쓰기 찝찝합니다. 일회용 페이스타월로 갈아타는 이유로 반복해서 등장합니다.</p><span class="chip c-no">우리 근거: 없음</span></div>
+    <div><span class="n">03</span><h3>냄새·위생 관리 부담</h3><p>빨아도 올라오는 쉰내, 다시 빨고 말려야 하는 노동입니다. 늦은 건조는 이 문제의 원인 중 하나로 들어갑니다.</p><span class="chip c-mid">우리 근거: 일부</span></div>
+  </div>
+  <div class="alert"><b>핵심 간극.</b> 고객이 가장 아파하는 문제(1·2위)와 우리가 근거를 가진 문제(흡수 57~59mm·건조 146분·황색포도상구균 99.9%)가 서로 다릅니다. 그래서 지금 상세페이지는 '근거 있는 것'부터 말하고 있고, 고객이 가장 먼저 확인하고 싶은 '세탁 후에도 그대로인가', '털이 안 나오나'에는 답하지 못합니다.</div>
+</section>
+
+<section>
+  <p class="eyebrow">Cross-check</p>
+  <h2>Claude와 Codex, 어디서 같고 어디서 달랐나</h2>
+  <div class="cmp">
+    <div><span class="chip c-mint">Claude (이전 1차 판단)</span>
+      <ol><li>몇 번 빨면 변함 (뻣뻣·보풀·털빠짐)</li><li>냄새(쉰내)</li><li>먼지·털 날림</li><li>처음에 물을 안 먹음</li><li>피부 자극·마찰</li><li>늦게 마름</li></ol></div>
+    <div><span class="chip c-mint">Codex (독립 조사)</span>
+      <ol><li>얼굴에 남는 먼지·털 + 청결 불안</li><li>세탁 후 거칠어짐·자극 우려</li><li>냄새·위생 관리 노동</li><li>(실행 우선) 흡수 체감</li><li>늦게 마름: 조건부</li></ol></div>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>쟁점</th><th>판정</th><th>내용</th></tr>
+    <tr><td>늦게 마름은 핵심이 아니다</td><td><span class="chip c-ok">일치</span></td><td>둘 다 조건부 문제로 판정. 냄새의 원인으로 내려야 한다.</td></tr>
+    <tr><td>Top 3 구성</td><td><span class="chip c-ok">일치</span></td><td>세탁 후 변화, 먼지·털, 냄새·위생이 공통. 순서만 다름.</td></tr>
+    <tr><td>1위가 무엇인가</td><td><span class="chip c-mid">차이</span></td><td>Claude는 '세탁 후 변함', Codex는 '먼지·털'. 둘 다 소비자 근거 강도가 비슷해(Codex 점수 F3·I4 동점) 실제 리뷰 코딩으로 가려야 한다.</td></tr>
+    <tr><td>흡수 불만</td><td><span class="chip c-mid">보강</span></td><td>Codex가 뱀부 특유의 "미끌거리고 흡수 안 되는 느낌" 불만을 찾음. Claude는 '새 수건 첫 흡수' 문제로만 봤다.</td></tr>
+    <tr><td>세탁법 부담</td><td><span class="chip c-mid">보강</span></td><td>Codex가 "건조기 써도 되나", "삶아도 되나"가 뱀부 구매를 망설이게 하는 이유임을 찾음(빈도 F4로 가장 반복).</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <p class="eyebrow">Ranking</p>
+  <h2>문제 14개, 크기와 우리 근거로 점수화</h2>
+  <p class="lead" style="font-size:15px">F 빈도(관찰 강도) · I 강도 · S 해결가능성(지금 우리 근거로 답할 수 있는 정도), 각 1~5점. 문제 크기는 F×I로 따로 봤습니다. 시장 비율이 아니라 공개 자료에서 본 정성 점수입니다.</p>
+  <div class="tbl"><table>
+    <tr><th>문제</th><th>F</th><th>I</th><th>S</th><th>문제 크기 (F×I)</th><th>실행 점수 (F×I×S)</th></tr>
+    <tr><td>세탁·건조 관리 부담<small>건조기·삶기·표백 가능? 세탁법이 까다롭다</small></td><td class="num">4</td><td class="num">4</td><td class="num">1</td><td><div class="bar size"><i style="width:80px"></i><span>16</span></div></td><td><div class="bar"><i style="width:21px"></i><span>16</span></div></td></tr>
+    <tr><td>세탁 후 거칠어짐<small>"수건은 빨면 빨수록 거칠어져서"</small></td><td class="num">3</td><td class="num">4</td><td class="num">2</td><td><div class="bar size"><i style="width:60px"></i><span>12</span></div></td><td><div class="bar"><i style="width:32px"></i><span>24</span></div></td></tr>
+    <tr><td>얼굴에 남는 먼지·털<small>"수건을 사용하면 먼지도 많고"</small></td><td class="num">3</td><td class="num">4</td><td class="num">1</td><td><div class="bar size"><i style="width:60px"></i><span>12</span></div></td><td><div class="bar"><i style="width:16px"></i><span>12</span></div></td></tr>
+    <tr><td>흡수 체감 부족<small>"미끌거리고 흡수 안 되는 느낌"</small></td><td class="num">3</td><td class="num">4</td><td class="num">3</td><td><div class="bar size"><i style="width:60px"></i><span>12</span></div></td><td><div class="bar"><i style="width:48px"></i><span>36</span></div></td></tr>
+    <tr><td>재사용 수건 위생 불안<small>일회용 페이스타월로 전환하는 이유</small></td><td class="num">3</td><td class="num">4</td><td class="num">2</td><td><div class="bar size"><i style="width:60px"></i><span>12</span></div></td><td><div class="bar"><i style="width:32px"></i><span>24</span></div></td></tr>
+    <tr><td>여러 장 사기엔 비쌈<small>교체·세트 비용, 실패 구매 부담</small></td><td class="num">4</td><td class="num">3</td><td class="num">1</td><td><div class="bar size"><i style="width:60px"></i><span>12</span></div></td><td><div class="bar"><i style="width:16px"></i><span>12</span></div></td></tr>
+    <tr><td>반복되는 냄새(쉰내)<small>"불쾌한 냄새 때문에 엄청 스트레스"</small></td><td class="num">2</td><td class="num">4</td><td class="num">2</td><td><div class="bar size"><i style="width:40px"></i><span>8</span></div></td><td><div class="bar"><i style="width:21px"></i><span>16</span></div></td></tr>
+    <tr><td>소재·안전 주장 신뢰<small>천연? 항균? 100%? 어디까지 믿나</small></td><td class="num">2</td><td class="num">4</td><td class="num">2</td><td><div class="bar size"><i style="width:40px"></i><span>8</span></div></td><td><div class="bar"><i style="width:21px"></i><span>16</span></div></td></tr>
+    <tr style="background:var(--mint-soft)"><td><b>늦게 마름</b><small>"장마철에 안말라 겨울에 또 안 말라"</small></td><td class="num">2</td><td class="num">3</td><td class="num">3</td><td><div class="bar size"><i style="width:30px"></i><span>6</span></div></td><td><div class="bar"><i style="width:24px"></i><span>18</span></div></td></tr>
+    <tr><td>올이 너저분·뜯길 것 같음</td><td class="num">2</td><td class="num">3</td><td class="num">1</td><td><div class="bar size"><i style="width:30px"></i><span>6</span></div></td><td><div class="bar"><i style="width:8px"></i><span>6</span></div></td></tr>
+    <tr><td>흰색이 누렇게 변함</td><td class="num">2</td><td class="num">3</td><td class="num">1</td><td><div class="bar size"><i style="width:30px"></i><span>6</span></div></td><td><div class="bar"><i style="width:8px"></i><span>6</span></div></td></tr>
+    <tr><td>각질·당김·화장 들뜸<small>수건 때문이라는 직접 표현은 못 찾음</small></td><td class="num">1</td><td class="num">4</td><td class="num">1</td><td><div class="bar size"><i style="width:20px"></i><span>4</span></div></td><td><div class="bar"><i style="width:5px"></i><span>4</span></div></td></tr>
+    <tr><td>수축·형태 변화</td><td class="num">1</td><td class="num">3</td><td class="num">2</td><td><div class="bar size"><i style="width:15px"></i><span>3</span></div></td><td><div class="bar"><i style="width:8px"></i><span>6</span></div></td></tr>
+    <tr><td>크기·무게가 다루기 불편</td><td class="num">1</td><td class="num">2</td><td class="num">1</td><td><div class="bar size"><i style="width:10px"></i><span>2</span></div></td><td><div class="bar"><i style="width:3px"></i><span>2</span></div></td></tr>
+  </table></div>
+  <p class="meta">점수는 Codex 보고서의 F·I·S 값을 그대로 썼고, 문제 크기 순으로 다시 정렬했습니다. 늦게 마름은 문제 크기 6으로 14개 중 9위입니다.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Voices</p>
+  <h2>실제 소비자 표현</h2>
+  <div class="quotes">
+    <figure><blockquote>"수건은 빨면 빨수록 거칠어져서"</blockquote><figcaption>일회용 페이셜 타월로 바꾼 이유 · <a href="https://unpa.me/products/144177-facial-towel" target="_blank" rel="noopener">언니의파우치 리뷰</a></figcaption></figure>
+    <figure><blockquote>"수건을 사용하면 먼지도 많고 여드름이 나는 거 같아서"</blockquote><figcaption>소비자 인식이며 인과 근거는 아님 · <a href="https://unpa.me/products/192363-vegan-face-towel" target="_blank" rel="noopener">언니의파우치 리뷰</a></figcaption></figure>
+    <figure><blockquote>"미끌거리고 흡수 안 되는 느낌."</blockquote><figcaption>뱀부얀 수건 구매 경험 · <a href="https://www.82cook.com/entiz/read.php?bn=15&num=3173977" target="_blank" rel="noopener">82cook</a></figcaption></figure>
+    <figure><blockquote>"저같은 사람은 뱀부얀 수건 못쓸듯.."</blockquote><figcaption>건조기·삶기 관리법 때문에 망설임 · 같은 글 댓글</figcaption></figure>
+    <figure><blockquote>"장마철에 안말라 겨울에 또 안 말라 너무 번거롭네요."</blockquote><figcaption>두꺼운 흰 수건 사용 경험 · <a href="https://www.82cook.com/entiz/read.php?bn=15&num=1478763" target="_blank" rel="noopener">82cook</a> (2013)</figcaption></figure>
+    <figure><blockquote>"먼지 때문에 찝찝한 부분이 있어서,"</blockquote><figcaption>아기 목욕 수건 사용기 · <a href="https://lifewithjuni.tistory.com/9" target="_blank" rel="noopener">개인 블로그</a></figcaption></figure>
+    <figure><blockquote>"세탁 후 건조만 하면 마치 때타올처럼.. 뻣뻣해져서"</blockquote><figcaption>얼굴이 아플 정도라는 원글 · <a href="https://82cook.com/entiz/read.php?num=53237" target="_blank" rel="noopener">82cook</a></figcaption></figure>
+    <figure><blockquote>"불쾌한 냄새 때문에 엄청 스트레스를 받았어요."</blockquote><figcaption>여름철 수건 냄새 · <a href="https://roam09.tistory.com/" target="_blank" rel="noopener">개인 블로그</a></figcaption></figure>
+  </div>
+  <p class="meta">공개 페이지 9곳 기준이라 대표성은 없습니다. 맘카페·아토피 환자 커뮤니티는 로그인 벽 때문에 충분히 보지 못했습니다.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Targets</p>
+  <h2>세 타겟별 페인포인트</h2>
+  <div class="tabs" role="tablist" aria-label="타겟 선택">
+    <button role="tab" id="tab-a" aria-selected="true" aria-controls="p-a">A 뷰티케어</button>
+    <button role="tab" id="tab-b" aria-selected="false" aria-controls="p-b">B 아이 엄마</button>
+    <button role="tab" id="tab-c" aria-selected="false" aria-controls="p-c">C 아토피</button>
+  </div>
+
+  <div class="panel" id="p-a" role="tabpanel" aria-labelledby="tab-a">
+    <div class="scene"><b>불편한 순간.</b> 아침 세안 직후 바로 기초·선크림·베이스로 넘어갈 때. 피부결과 이물감에 가장 예민한 시간입니다.</div>
+    <div class="tbl"><table>
+      <tr><th>순위</th><th>페인포인트</th><th>근거 강도</th><th>우리가 답할 수 있나</th></tr>
+      <tr><td class="num">1</td><td>얼굴에 먼지·털이 남아 다시 손봐야 함</td><td><span class="chip c-mid">F2 · I4</span></td><td><span class="chip c-no">없음</span> 저보풀 시험 없음</td></tr>
+      <tr><td class="num">2</td><td>거친 촉감, 여러 번 문질러야 하는 느낌</td><td><span class="chip c-mid">F2 · I4</span></td><td><span class="chip c-mid">일부</span> 흡수 수치만</td></tr>
+      <tr><td class="num">3</td><td>물기가 남거나, 닦을수록 당길 것 같은 불안</td><td><span class="chip c-mid">F2 · I3</span></td><td><span class="chip c-mid">일부</span> 바이렉 57~59mm</td></tr>
+      <tr><td class="num">4</td><td>재사용 수건 위생이 꺼려져 일회용을 계속 삼</td><td><span class="chip c-ok">F3 · I4</span></td><td><span class="chip c-mid">일부</span> 특정 균 항균 가공</td></tr>
+      <tr><td class="num">5</td><td>수건 바꾸면 각질·화장 들뜸도 나아지길 기대</td><td><span class="chip c-no">F1 · 가설</span></td><td><span class="chip c-no">불가</span> 효능 근거 없음</td></tr>
+    </table></div>
+    <div class="say">
+      <div class="yes"><h3>말할 수 있는 것</h3><ul><li>밤부 비스코스 100%, 40×80cm, 220g</li><li>흡수 시험값 (시험 조건 병기)</li><li>"세안 후 얼굴에 바로 닿는 한 장" 같은 사용 장면</li></ul></div>
+      <div class="no"><h3>쓰면 안 되는 것</h3><ul><li>화장이 잘 먹는 수건, 각질 개선</li><li>TEWL 감소, 피부장벽 보호·회복</li><li>시술 후 회복, 여드름 예방</li><li>민감 피부 테스트 완료 (시험 없이)</li></ul></div>
+    </div>
+    <p class="copy">문안 방향: "세안 직후 얼굴에 가장 먼저 닿는 한 장" · 화장 효과가 아니라 닿는 경험으로 말하기</p>
+    <p class="meta">'수건 때문에 화장이 뜬다'는 직접 소비자 표현은 찾지 못했습니다. 이 타겟의 고민과 수건을 잇는 건 아직 가설입니다. 젤리 님 팔로워에게 수건을 먼저 언급하지 않고 '세안 후 불편'을 묻는 설문으로 확인해야 합니다.</p>
+  </div>
+
+  <div class="panel" id="p-b" role="tabpanel" aria-labelledby="tab-b" hidden>
+    <div class="scene"><b>불편한 순간.</b> 목욕 후 젖은 아이를 안고 닦을 때, 식사·세수 뒤 얼굴을 하루에도 여러 번 닦을 때. 세탁도 그만큼 잦습니다.</div>
+    <div class="tbl"><table>
+      <tr><th>순위</th><th>페인포인트</th><th>근거 강도</th><th>우리가 답할 수 있나</th></tr>
+      <tr><td class="num">1</td><td>먼지가 남아 아이에게 쓰기 찝찝함 (입·코)</td><td><span class="chip c-mid">F2 · I4</span></td><td><span class="chip c-no">없음</span> 저보풀 시험 없음</td></tr>
+      <tr><td class="num">2</td><td>자주 빨고 건조기 돌려도 그대로여야 함</td><td><span class="chip c-mid">F2 · I4</span></td><td><span class="chip c-mid">일부</span> 견뢰도·치수변화 시험 보유, 수치 미확인</td></tr>
+      <tr><td class="num">3</td><td>형광증백제·포름알데히드·염료 불안</td><td><span class="chip c-no">F1 · I4</span></td><td><span class="chip c-mid">일부</span> 알러지성 염료 22종만</td></tr>
+      <tr><td class="num">4</td><td>부드러우면서 다루기 쉬운 크기·두께</td><td><span class="chip c-mid">F2 · I3</span></td><td><span class="chip c-mid">일부</span> 40×80·220g 아기용 적합성 미확인</td></tr>
+      <tr><td class="num">5</td><td>여분을 여러 장 갖추는 비용</td><td><span class="chip c-mid">F2 · I3</span></td><td><span class="chip c-no">없음</span></td></tr>
+    </table></div>
+    <div class="say">
+      <div class="yes"><h3>말할 수 있는 것</h3><ul><li>검사한 항목과 결과를 그대로 공개</li><li>국내 생산</li><li>세탁 조건 안내 (검증된 것만)</li></ul></div>
+      <div class="no"><h3>쓰면 안 되는 것</h3><ul><li>신생아도 100% 안전, 입에 넣어도 안전</li><li>유해물질 제로, 무형광·무포름알데히드 (시험 없이)</li><li>OEKO-TEX Class I 인증 (현재 만료·범위 불명확)</li></ul></div>
+    </div>
+    <div class="alert"><b>베이비페어 전에 확인할 것.</b> 36개월 미만 유아용으로 표방하면 KC 안전확인 대상이 될 수 있습니다(KATRI 안내). 성인 페이스타월을 아기용으로 홍보하기 전에 시험기관에 분류를 먼저 확인해야 합니다. OEKO-TEX는 국내 법정 절차를 대신하지 않습니다.</div>
+    <p class="copy">문안 방향: "가족이 매일 쓰는 수건, 검사한 항목부터 확인하세요"</p>
+  </div>
+
+  <div class="panel" id="p-c" role="tabpanel" aria-labelledby="tab-c" hidden>
+    <div class="scene"><b>불편한 순간.</b> 씻은 직후 피부가 당길 때, 땀을 닦을 때, 예민한 부위에 천이 닿을 때. 세제·소재를 바꿔도 불편이 반복됩니다.</div>
+    <div class="tbl"><table>
+      <tr><th>순위</th><th>페인포인트</th><th>근거 강도</th><th>우리가 답할 수 있나</th></tr>
+      <tr><td class="num">1</td><td>천의 접촉·마찰이 자극이 될까</td><td><span class="chip c-mid">F2 · I4</span></td><td><span class="chip c-mid">일부</span> 소재·구조 설명만</td></tr>
+      <tr><td class="num">2</td><td>닦고 나면 더 건조해질까, 물기를 얼마나 남겨야 하나</td><td><span class="chip c-mid">F2 · I4</span></td><td><span class="chip c-no">없음</span> 수분 유지 효과 근거 없음</td></tr>
+      <tr><td class="num">3</td><td>황색포도상구균 때문에 악화될까</td><td><span class="chip c-no">F1 · I4</span></td><td><span class="chip c-no">불가</span> 항균 시험 ≠ 피부 효과</td></tr>
+      <tr><td class="num">4</td><td>세제·향·유연제 잔여물과 까다로운 관리</td><td><span class="chip c-no">F1 · I4</span></td><td><span class="chip c-mid">일부</span> 세탁 안내로 대응</td></tr>
+      <tr><td class="num">5</td><td>면, 레이온, 실크 중 무엇을 골라야 하나</td><td><span class="chip c-no">F1 · I3</span></td><td><span class="chip c-no">없음</span></td></tr>
+    </table></div>
+    <p style="font-size:14.5px">연구 근거로 보면 아토피 피부의 병변 부위 약 70%에서 황색포도상구균이 발견됩니다(Totté 2016 메타분석). 그러나 "균이 많다 → 항균 수건 → 아토피 완화"는 두 단계가 검증되지 않았습니다. 고급 소재인 실크 의류로 300명을 시험한 RCT에서도 습진 개선을 확인하지 못했습니다(Thomas 2017).</p>
+    <div class="say">
+      <div class="yes"><h3>말할 수 있는 것</h3><ul><li>소재, 가공 여부(항균 가공), 시험 항목을 투명하게</li><li>"자극 요인을 줄이는 세탁법" 같은 관리 안내</li></ul></div>
+      <div class="no"><h3>쓰면 안 되는 것</h3><ul><li>아토피에 좋다·적합, 아토피 완화·예방</li><li>가려움 개선, 피부염 원인균 제거</li><li>"아토피 환자도 추천" 후기 재게시</li></ul></div>
+    </div>
+    <div class="alert"><b>규제.</b> 일반 수건에 질병 효능을 암시하면 표시광고법(실증 의무)과 의료기기법 제26조 제7항(의료기기 오인 광고 금지) 검토 대상입니다. 작은 글씨의 "개인차 있음" 문구로 해소되지 않습니다. 이 타겟은 광고 문구에서 직접 부르지 말고, 인플루언서·커뮤니티 맥락으로 도달하는 편이 안전합니다.</div>
+  </div>
+
+  <h3 style="margin-top:8px">세 타겟 비교</h3>
+  <div class="tbl"><table>
+    <tr><th></th><th>A 뷰티케어</th><th>B 아이 엄마</th><th>C 아토피</th></tr>
+    <tr><td><b>공통 문제</b></td><td colspan="3">피부에 닿는 촉감 · 얼굴에 남는 먼지 · 청결감 · 세탁 후에도 유지되는가</td></tr>
+    <tr><td><b>고유 기대</b></td><td>물기·이물 없이 다음 루틴으로</td><td>안전 근거, 잦은 세탁·건조기, 크기</td><td>자극 요인 최소화, 보습 루틴과 양립</td></tr>
+    <tr><td><b>구매 전 볼 것</b></td><td>저보풀, 젖은 촉감, 세탁 후 비교</td><td>용도별 안전 요건, 완제품 시험</td><td>가공 정보, 과장 효능 없는지</td></tr>
+    <tr><td><b>우리 강점 후보</b></td><td>흡수 시험, 명확한 소재·규격</td><td>검사 항목 공개, 국내 생산</td><td>가공·시험 범위를 투명하게</td></tr>
+    <tr><td><b>가장 부족한 근거</b></td><td>저보풀, 피부·화장 효과</td><td>영유아 적합성, 건조기 내구</td><td>환자 대상 안전·효능</td></tr>
+    <tr><td><b>늦은 건조의 비중</b></td><td>낮음 (여분 적을 때만)</td><td>중간 (세탁량 많음)</td><td>중간 (청결 관리)</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <p class="eyebrow">Bamboo Viscose</p>
+  <h2>뱀부 비스코스 수건 특유의 리스크</h2>
+  <div class="tbl"><table>
+    <tr><th>쟁점</th><th>근거</th><th>우리에게 주는 의미</th></tr>
+    <tr><td>젖으면 약해짐</td><td>비스코스는 젖으면 강도가 30~50% 떨어질 수 있음 (섬유 데이터베이스)</td><td>"오래 써도 그대로"를 세게 주장하기 전에 반복 세탁 후 상태 확인 필요</td></tr>
+    <tr><td>미끌거림, 덜 닦이는 체감</td><td>뱀부얀 구매자의 실제 불만</td><td>바이렉 수치가 체감까지 증명하진 않음. 실사용 리뷰로 보완</td></tr>
+    <tr><td>세탁법 충돌</td><td>"건조기 써도 되나", "삶아도 되나"가 구매 장벽</td><td>검증된 세탁법을 구매 버튼 근처에 명확히</td></tr>
+    <tr><td>천연 항균 오해</td><td>미국 FTC: 가공된 뱀부 레이온이 원료의 항균성을 유지한다는 주장은 근거 필요</td><td>현재처럼 "항균 가공"임을 분명히 유지</td></tr>
+    <tr><td>털빠짐</td><td>"비스코스가 면보다 덜 빠진다"는 독립 근거 없음</td><td>포지셔닝 v3의 '무먼지' 소구는 시험 전까지 보류</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <p class="eyebrow">For the detail page</p>
+  <h2>현재 상세페이지 v2에 바로 적용할 것</h2>
+  <div class="act">
+    <div><p class="where">worry · low-sec · ka-sec</p><h3>고민 섹션의 중심을 '건조'에서 '세탁 후 변함·먼지·냄새'로 옮기기</h3><p>지금 고민 6개 중 절반이 건조·눅눅함입니다. "새로 산 수건도 금방 뻣뻣해져요", "얼굴에 털이 묻어요"를 앞으로 올리고, 건조는 냄새의 원인으로 묶는 구성이 고객 실제 순위에 맞습니다.</p></div>
+    <div><p class="where">ka-sec "심지어" 그래프</p><h3>무게별 건조 시간 비교 그래프의 출처 재검토</h3><p>비교값(얇은 면 120분·호텔 면 170분·헤비 면 210분)은 '대표 메세지.txt'의 AI 답변식 설명에서 왔고 원 시험 자료가 없습니다. 동일 조건 비교 시험이 아니므로 "얇은 수건에 가까운 시간"이라는 비교도 근거가 약합니다. 그래프를 빼거나 시험 원본을 확보해야 합니다.</p></div>
+    <div><p class="where">daily · how-sec</p><h3>"톡톡 눌러 닦기" 사용법 문구 점검</h3><p>Voegeli(2008) 연구에서 두드려 말리기는 부드럽게 문지르기보다 낫지 않았고, 피부를 젖은 상태와 비슷하게 남겼습니다. "문지르지 않고 눌러만 줘도"라는 문구는 이 연구와 어긋날 수 있어 "가볍게 닦아 물기를 거두세요" 정도로 바꾸는 편이 안전합니다.</p></div>
+    <div><p class="where">low-sec 01 세균</p><h3>Gerba 교수 '약 90% 대장균군' 인용 원문 확인</h3><p>이번 조사에서 원문 논문을 확인하지 못했습니다. 언론 재인용만으로 수치를 쓰면 실증 요구에 대응하기 어렵습니다.</p></div>
+    <div><p class="where">htu-sec · 구매 영역</p><h3>세탁·건조기 안내를 구매 버튼 근처로</h3><p>세탁법 부담이 빈도 1위(F4)였습니다. 건조기 가능 여부, 온도, 유연제 사용 여부를 제조 기준대로 명확히 쓰면 구매 장벽을 바로 낮출 수 있습니다.</p></div>
+    <div><p class="where">reviews (진행 중)</p><h3>네이버 실제 후기로 순위 확정</h3><p>우리 제품 리뷰에서 '좋았던 점'과 경쟁사(테토·송월 뱀부·더그란·TWB) 1~3점 리뷰를 세면 1위가 '세탁 후 변함'인지 '먼지'인지 가려집니다. 고객 후기 섹션도 이 키워드 순서로 고르면 됩니다.</p></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Next</p>
+  <h2>먼저 확보해야 할 근거</h2>
+  <div class="tbl"><table>
+    <tr><th>우선</th><th>확인할 것</th><th>왜</th></tr>
+    <tr><td><span class="chip c-no">최우선</span></td><td>털빠짐(보풀) 시험: 첫 세탁·5회·20회 후, 동일 조건 비교 제품과</td><td>Top 3 중 근거가 전혀 없는 항목</td></tr>
+    <tr><td><span class="chip c-no">최우선</span></td><td>반복 세탁 후 촉감·형태: 견뢰도·치수변화율 성적서 원본 수치</td><td>장당 17,000원의 가치를 증명하는 핵심</td></tr>
+    <tr><td><span class="chip c-no">최우선</span></td><td>FITI 성적서 원본 (지금은 표지만 있음)과 광고 사용 동의</td><td>146분·57~59mm·99.9% 모두 원본 조건 병기가 필요</td></tr>
+    <tr><td><span class="chip c-mid">높음</span></td><td>네이버 리뷰 키워드 코딩 (우리 + 경쟁사)</td><td>이번 정성 순위를 실제 빈도로 확정</td></tr>
+    <tr><td><span class="chip c-mid">높음</span></td><td>젤리 팔로워 설문: 세안 후 불편을 수건 언급 없이 질문</td><td>뷰티케어 타겟과 수건의 연결 확인</td></tr>
+    <tr><td><span class="chip c-mid">높음</span></td><td>영유아용 판매 시 KC 분류 확인, OEKO-TEX 갱신</td><td>베이비페어 진출의 선행 조건</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <p class="eyebrow">Sources</p>
+  <h2 style="font-size:20px">주요 출처</h2>
+  <ul class="src">
+    <li>Voegeli D. (2008) The effect of washing and drying practices on skin barrier function. <a href="https://pubmed.ncbi.nlm.nih.gov/18199943/" target="_blank" rel="noopener">PubMed</a> · <a href="https://eprints.soton.ac.uk/50376" target="_blank" rel="noopener">Southampton</a></li>
+    <li>Huh 등 (2002) 거친 마찰과 피부 수분·TEWL. <a href="https://pubmed.ncbi.nlm.nih.gov/11918583/" target="_blank" rel="noopener">PubMed</a></li>
+    <li>Kubota 등 (2012) Moraxella osloensis와 세탁물 냄새. <a href="https://pubmed.ncbi.nlm.nih.gov/22367080/" target="_blank" rel="noopener">PubMed</a></li>
+    <li>Totté 등 (2016) 아토피와 황색포도상구균 메타분석. <a href="https://pubmed.ncbi.nlm.nih.gov/26994362/" target="_blank" rel="noopener">PubMed</a></li>
+    <li>Thomas 등 (2017) CLOTHES RCT, 실크 의류와 아동 습진. <a href="https://pubmed.ncbi.nlm.nih.gov/28399154/" target="_blank" rel="noopener">PubMed</a></li>
+    <li>은 코팅 섬유와 아토피 S. aureus (2003, 2006). <a href="https://pubmed.ncbi.nlm.nih.gov/12835542/" target="_blank" rel="noopener">PubMed</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/16684280/" target="_blank" rel="noopener">PubMed</a></li>
+    <li>미국피부과학회 아토피 자가관리. <a href="https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/self-care" target="_blank" rel="noopener">AAD</a></li>
+    <li>미국 FTC, 뱀부 섬유 표시. <a href="https://consumer.ftc.gov/articles/bamboo-fabrics" target="_blank" rel="noopener">FTC</a></li>
+    <li>OEKO-TEX STANDARD 100. <a href="https://www.oeko-tex.com/en/our-standards/oeko-tex-standard-100" target="_blank" rel="noopener">OEKO-TEX</a></li>
+    <li>KATRI 유아용 섬유제품 안전확인. <a href="https://www.katri.re.kr/kr/product/safe/contentsid/1176/index.do" target="_blank" rel="noopener">KATRI</a></li>
+    <li>한국소비자원 습식 스포츠타월 안전실태조사 (2024). <a href="https://www.isafe.go.kr/DATA/bbs/85/20240223045312797.pdf" target="_blank" rel="noopener">PDF</a></li>
+    <li>표시·광고의 공정화에 관한 법률. <a href="https://law.go.kr/LSW/lsInfoP.do?lsId=002011" target="_blank" rel="noopener">법령</a> · 의료기기법 제26조 <a href="https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1033867805" target="_blank" rel="noopener">조문</a></li>
+    <li>비스코스 습윤 강도. <a href="https://uniformreuse.co.uk/fabric_bamboo.html" target="_blank" rel="noopener">Uniform Reuse 섬유 DB</a></li>
+    <li>호텔 수건 품질 관리 (워커힐). <a href="https://www.khan.co.kr/article/202608010600005" target="_blank" rel="noopener">경향신문</a></li>
+    <li>소비자 리뷰: <a href="https://unpa.me/products/144177-facial-towel" target="_blank" rel="noopener">언니의파우치 1</a> · <a href="https://unpa.me/products/192363-vegan-face-towel" target="_blank" rel="noopener">언니의파우치 2</a> · <a href="https://www.82cook.com/entiz/read.php?bn=15&num=3173977" target="_blank" rel="noopener">82cook 뱀부</a> · <a href="https://www.82cook.com/entiz/read.php?bn=15&num=1478763" target="_blank" rel="noopener">82cook 흰수건</a> · <a href="https://82cook.com/entiz/read.php?num=53237" target="_blank" rel="noopener">82cook 뻣뻣함</a> · <a href="https://www.82cook.com/entiz/read.php?bn=15&num=1466438" target="_blank" rel="noopener">82cook 아토피</a> · <a href="https://lifewithjuni.tistory.com/9" target="_blank" rel="noopener">아기 수건 사용기</a> · <a href="https://twb.co.kr/product/%EB%A9%9C%EB%9E%80%EC%A7%80-%ED%8E%98%EC%9D%B4%EC%8A%A4-%EC%95%84%EC%9D%B4%EB%B3%B4%EB%A6%AC/1371/category/83/display/1/" target="_blank" rel="noopener">TWB 후기</a></li>
+  </ul>
+  <p class="meta">이 리포트는 탐색 리서치입니다. 한국 프리미엄 수건 구매자 전체의 불만 비율을 나타내지 않습니다. 법률 부분은 공개 법령 기반 실무 검토이며 유권해석이 아닙니다.</p>
+</section>
+</div>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  function show(t){tabs.forEach(function(b){var on=b===t;b.setAttribute('aria-selected',on);document.getElementById(b.getAttribute('aria-controls')).hidden=!on});}
+  tabs.forEach(function(b,i){
+    b.addEventListener('click',function(){show(b)});
+    b.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(d){var n=tabs[(i+d+tabs.length)%tabs.length];n.focus();show(n)}});
+  });
+})();
+</script>
